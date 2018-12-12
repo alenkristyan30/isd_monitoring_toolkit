@@ -78,6 +78,7 @@
       return false;
     }
     $('#add').click(function() {
+      $('#modaltitle').text('Add');
       $('#action').val('Add');
       $('#surname').val('');
       $('#firstname').val('');
@@ -86,11 +87,13 @@
       $('#divsel').val('');
       $('#username').val('');
       $('#password').val('');
+      $('#image_file').empty();
       $('#male').prop('checked', false);
       $('#female').prop('checked', false);
       $('label').removeClass("active");
     });
     $(document).on('click', 'a[name="edit"]', function() {
+      $('#modaltitle').text('Edit');
       $('#action').val('Edit');
       var id = $(this).attr('id');
       $.ajax({
@@ -138,6 +141,35 @@
               table.ajax.reload();
             }
           })
+        }
+      })
+    });
+    $(document).on('click', 'a[name="view"]', function() {
+      $('#modalviewtitle').text('Details');
+      $('#action').val('View');
+      var id = $(this).attr('id');
+      $.ajax({
+        url: 'fetch_single.php',
+        method: 'POST',
+        data: {
+          id: id
+        },
+        dataType: 'json',
+        success: function(data) {
+          $('#id').val(id);
+          $('label').addClass("active");
+          $('#modalview').modal('show');
+          $('#surnameview').text(data.sname);
+          $('#firstnameview').text(data.fname);
+          $('#middlename').val(data.mname);
+          $('#nameext').val(data.extname);
+          $('#divsel option:selected').text(data.divsel);
+          $('#username').val(data.username);
+          if (data.gender == 'Male') {
+            $('#male').prop('checked', true);
+          } else {
+            $('#female').prop('checked', true);
+          }
         }
       })
     });

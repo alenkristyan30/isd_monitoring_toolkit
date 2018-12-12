@@ -1,38 +1,114 @@
 <?php include('../layout/header.php'); ?>
-<body class="white">
-  <div class="d-flex justify-content-center mt-5">
-    <div class="card z-depth-0 col-md-5 col-md-offset-3">
-      <div class="card-body">
-        <div class="text-center mb-5">
-          <img src="../dist/img/logo.png" class="w-25 mx-auto"></img>
-        </div>
-        <p class="card-subtitle text-center text-black-50 mb-5">Welcome back! Please login to your account.</p>
 
-        <form method="POST" id="vform" onsubmit="return Validate()" class="text-center needs-validation" novalidate="novalidate">
-          <div id="alert" role="alert"></div>
-          <div class="md-form">
-            <label for="username">Username</label>
-            <input type="text" name="username" class="form-control " id="username" value="" required="required">
-            <div class="invalid-feedback">
-              Username is required
-            </div>
+<style>
+
+       .intro-2 {
+           background: url("../dist/img/intro-bg.jpeg")no-repeat center center;
+           background-size: cover;
+       }
+       /**
+       .card {
+           background-color: rgba(229, 228, 255, 0.2);
+       }
+       .md-form label {
+           color: #ffffff;
+       }**/
+       h6 {
+           line-height: 1.7;
+       }
+
+       html,
+       body,
+       header,
+       .view {
+         height: 100%;
+       }
+
+       @media (min-width: 560px) and (max-width: 740px) {
+         html,
+         body,
+         header,
+         .view {
+           height: 650px;
+         }
+       }
+
+       @media (min-width: 800px) and (max-width: 850px) {
+         html,
+         body,
+         header,
+         .view  {
+           height: 650px;
+         }
+       }
+
+       .card {
+           margin-top: 30px;
+           /*margin-bottom: -45px;*/
+
+       }
+       /**
+       .md-form input[type=text]:focus:not([readonly]),
+       .md-form input[type=password]:focus:not([readonly]) {
+           border-bottom: 1px solid #8EDEF8;
+           box-shadow: 0 1px 0 0 #8EDEF8;
+       }
+       .md-form input[type=text]:focus:not([readonly])+label,
+       .md-form input[type=password]:focus:not([readonly])+label {
+           color: #8EDEF8;
+       }
+
+       .md-form .form-control {
+           color: #fff;
+       }
+        **/
+
+   </style>
+
+<body>
+  <section class="view intro-2">
+    <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto">
+
+                  <!--Form with header-->
+                  <div class="card wow fadeIn p-5" data-wow-delay="0.3s">
+                    <div class="card-body">
+                      <div class="text-center mb-5">
+                        <img src="../dist/img/logo.png" class="w-25 mx-auto"></img>
+                      </div>
+                      <p class="card-subtitle text-center text-black-50 mb-5">Welcome back! Please login to your account.</p>
+
+                      <form method="POST" id="vform" onsubmit="return Validate()" class="text-center needs-validation" novalidate="novalidate">
+                        <div id="alert" role="alert"></div>
+                        <div class="md-form">
+                          <label for="username">Username</label>
+                          <input type="text" name="username" class="form-control " id="username" value="" required="required">
+                          <div class="invalid-feedback">
+                            Username is required
+                          </div>
+                        </div>
+                        <div class="md-form">
+                          <label for="password">Password</label>
+                          <input type="password" name="password" class="form-control " id="password" value="" required="required">
+                          <div class="invalid-feedback">
+                            Password is required
+                          </div>
+                        </div>
+                        <div class="mt-5">
+                          <button class="btn aqua-gradient btn-rounded waves-effect waves-light z-depth-0" type="submit">Sign in</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!--/Form with header-->
+
+              </div>
           </div>
-          <div class="md-form">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="form-control " id="password" value="" required="required">
-            <div class="invalid-feedback">
-              Password is required
-            </div>
-          </div>
-          <div class="mt-5">
-            <button class="btn aqua-gradient btn-rounded waves-effect waves-light z-depth-0" type="submit">Sign in</button>
-          </div>
-        </form>
       </div>
     </div>
-  </div>
-  <div class="text-center py-1 fixed-bottom mb-5">© 2018 Copyright
-  </div>
+  </section>
 
   <?php include('../layout/footer.php'); ?>
   <script>
