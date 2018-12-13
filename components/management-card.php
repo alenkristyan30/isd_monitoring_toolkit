@@ -1,52 +1,49 @@
 <section>
-  <section>
+
+  <section class="section pb-3 text-center">
     <div class="row">
-      <div class="col">
-        <div class="mb-3" align="left">
-          <button type="button" class="btn default-color-dark" id="add" data-toggle="modal" data-target="#exampleModalCenter">
-            <i class="fal fa-plus pr-1"></i>ADD
-          </button>
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card testimonial-card">
+          <div class="card-up teal lighten-2">
+          </div>
+          <div class="avatar mx-auto white"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title mt-1">John Doe</h4>
+            <hr>
+            <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
+              adipisci.</p>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="mb-3" align="right">
-          <button type="button" class="btn primary-color-dark">
-            <i class="fal fa-list"></i>
-          </button>
-          <button type="button" class="btn secondary-color-dark">
-            <i class="fal fa-grip-horizontal"></i>
-          </button>
+
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card testimonial-card">
+          <div class="card-up blue lighten-2">
+          </div>
+          <div class="avatar mx-auto white"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title mt-1">Anna Aston</h4>
+            <hr>
+            <p><i class="fa fa-quote-left"></i> Neque cupiditate assumenda in maiores repudiandae mollitia
+              architecto.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-
-  <section>
-    <div class="card mb-5 ">
-      <div class="card-body table-responsive">
-        <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-          <thead>
-            <tr>
-              <th class="th-sm">Username
-              </th>
-              <th class="th-sm">Surname
-              </th>
-              <th class="th-sm">Firstname
-              </th>
-              <th class="th-sm">Middlename
-              </th>
-              <th class="th-sm">Name extension
-              </th>
-              <th class="th-sm">Division
-              </th>
-              <th class="th-sm">Gender
-              </th>
-              <th class="th-sm">Action
-              </th>
-            </tr>
-          </thead>
-        </table>
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card testimonial-card">
+          <div class="card-up deep-purple lighten-2"></div>
+          <div class="avatar mx-auto white"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title mt-1">Maria Kate</h4>
+            <hr>
+            <p><i class="fa fa-quote-left"></i> Delectus impedit saepe officiis ab aliquam repellat, rem totam
+              unde ducimus.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

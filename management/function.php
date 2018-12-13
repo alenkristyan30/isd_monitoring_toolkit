@@ -1,5 +1,6 @@
 <?php
     include '../config/database.php';
+
     $sname = $_POST['surname'];
     $fname = $_POST['firstname'];
     $mname = $_POST['middlename'];
@@ -8,12 +9,12 @@
     $divsel = $_POST['divsel'];
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $new_name = rand(). '.' ."jpeg";
-	  $destination = '../uploads/' . $new_name;
-    move_uploaded_file($_FILES['image_file']['tmp_name'], $destination);
     $action = $_POST['action'];
     $id = $_POST['id'];
     if ($action == 'Add') {
+        $new_name = rand(). '.' ."jpeg";
+        $destination = '../uploads/' . $new_name;
+        move_uploaded_file($_FILES['image_file']['tmp_name'], $destination);
         mysqli_query($connect, "INSERT INTO userinfo( sname, fname, mname, extname, division, gender , userimg )VALUES('$sname' , '$fname' , '$mname' , '$extname' , '$divsel' , '$gender', '$new_name' )");
         mysqli_query($connect, "INSERT INTO useracc( username, password )VALUES('$username' , MD5('$password'))");
         echo 'Added Successfully';

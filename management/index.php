@@ -61,21 +61,21 @@
     })
 
     function Validate() {
-      $.ajax({
-        url: 'function.php',
-        method: 'POST',
-        data: $('#vform').serialize(),
-        success: function(data) {
-          swal(data, '', 'success', {
-            closeOnClickOutside: false
-          }).then((value) => {
-            $('#exampleModalCenter').modal('hide');
-            toastr["success"]("I was launched via jQuery!");
-            table.ajax.reload();
-          })
-        }
-      })
-      return false;
+        $.ajax({
+          url: 'function.php',
+          method: 'POST',
+          data: $('#vform').serialize(),
+          success: function(data) {
+            swal(data, '', 'success', {
+              closeOnClickOutside: false
+            }).then((value) => {
+              $('#exampleModalCenter').modal('hide');
+              toastr["success"]("I was launched via jQuery!");
+              table.ajax.reload();
+            })
+          }
+        })
+        return false;
     }
     $('#add').click(function() {
       $('#modaltitle').text('Add');
@@ -161,15 +161,17 @@
           $('#modalview').modal('show');
           $('#surnameview').text(data.sname);
           $('#firstnameview').text(data.fname);
-          $('#middlename').val(data.mname);
-          $('#nameext').val(data.extname);
-          $('#divsel option:selected').text(data.divsel);
-          $('#username').val(data.username);
-          if (data.gender == 'Male') {
-            $('#male').prop('checked', true);
-          } else {
-            $('#female').prop('checked', true);
-          }
+          $('#middlenameview').text(data.mname);
+          $('#nameextview').text(data.extname);
+          $('#divisionview').text(data.divsel);
+          $('#usernameview').text(data.username);
+          $('#genderview').text(data.gender);
+            if (data.gender == 'Male') {
+              $('#img_src').attr('src' , '../dist/img/male-avatar.png' );
+            }
+            else {
+                $('#img_src').attr('src' , '../dist/img/female-avatar.png' );
+            }
         }
       })
     });
