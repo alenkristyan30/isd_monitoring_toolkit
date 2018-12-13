@@ -3,17 +3,17 @@
     <div class="row">
       <div class="col">
         <div class="mb-3" align="left">
-          <button type="button" class="btn default-color-dark" id="add" data-toggle="modal" data-target="#exampleModalCenter">
+          <button type="button" class="btn default-color" id="add" data-toggle="modal" data-target="#exampleModalCenter">
             <i class="fal fa-plus pr-1"></i>ADD
           </button>
         </div>
       </div>
       <div class="col">
         <div class="mb-3" align="right">
-          <button type="button" class="btn primary-color-dark">
+          <button type="button" class="btn primary-color">
             <i class="fal fa-list"></i>
           </button>
-          <button type="button" class="btn secondary-color-dark">
+          <button type="button" class="btn secondary-color">
             <i class="fal fa-grip-horizontal"></i>
           </button>
         </div>

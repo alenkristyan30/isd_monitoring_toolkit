@@ -20,7 +20,7 @@
               <hr>
             </div>
 
-            <div class="w-50">
+            <div class="w-75 mx-auto mt-5">
               <div class="md-form">
                 <label for="surname" class="active">Account Id</label>
                 <p>sampple</p>
@@ -42,7 +42,7 @@
               <hr>
             </div>
 
-            <div class="w-50">
+            <div class="w-75 mx-auto mt-5">
               <div class="md-form">
                 <label for="surname" class="active">Surname</label>
                 <input type="text" name="acro" class="form-control" id="acro" required="required" placeholder=" ">
@@ -84,7 +84,7 @@
               <hr>
             </div>
 
-            <div class="w-50">
+            <div class="w-75 mt-5 mx-auto">
               <h4>Change Password</h4>
               <div class="md-form">
                 <label for="surname" class="active">Current password</label>
@@ -118,7 +118,7 @@
             </div>
 
 
-            <div class="w-50 mt-5">
+            <div class="w-75 mt-5 mx-auto">
               <h4>Change username</h4>
               <div class="md-form">
                 <label for="surname">new username</label>
@@ -136,7 +136,7 @@
             </div>
 
 
-            <div class="w-50 mt-5">
+            <div class="w-75 mx-auto mt-5 mb-5">
               <h4>Deactivate</h4>
               <div class="mt-2">
                 <button class="btn btn-danger btn-rounded waves-effect waves-light z-depth-0" type="submit">Deactivate</button>

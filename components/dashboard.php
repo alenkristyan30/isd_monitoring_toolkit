@@ -4,10 +4,16 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-male primary-color"></i>
+          <i class="fa fa-male blue" style="padding-left: 2.5rem; padding-right : 2.5rem;"></i>
           <div class="data">
-            <p>BOY</p>
-            <h4 class="font-weight-bold dark-grey-text">2</h4>
+            <p>MALE</p>
+            <?php  require_once('../config/database.php');
+              $sql = mysqli_query($connect, "SELECT COUNT(gender) FROM userinfo WHERE gender = 'Male'");
+                while ($row = mysqli_fetch_assoc($sql))
+                {
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(gender)']."</h4>";
+                  }
+              ?>
           </div>
         </div>
         <div class="card-body card-body-cascade">
@@ -21,17 +27,22 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-female pink"></i>
+          <i class="fa fa-female pink" style="padding-left: 2.5rem; padding-right : 2.5rem;"></i>
           <div class="data">
-            <p>GIRL</p>
-            <h4 class="font-weight-bold dark-grey-text">20</h4>
+            <p>FEMALE</p>
+            <?php  require_once('../config/database.php');
+              $sql = mysqli_query($connect, "SELECT COUNT(gender) FROM userinfo WHERE gender = 'Female'");
+                while ($row = mysqli_fetch_assoc($sql))
+                {
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(gender)']."</h4>";
+                  }
+              ?>
           </div>
         </div>
         <div class="card-body card-body-cascade">
           <div class="progress mb-3">
             <div class="progress-bar red accent-2" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-
         </div>
       </div>
     </div>
@@ -39,10 +50,41 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-pie-chart light-blue lighten-1"></i>
+          <i class="fa fa-users red"></i>
           <div class="data">
-            <p>Total Systems</p>
-            <h4 class="font-weight-bold dark-grey-text">29</h4>
+            <p>REGISTERED USERS</p>
+            <?php  require_once('../config/database.php');
+              $sql = mysqli_query($connect, "SELECT COUNT(id) FROM userinfo");
+                while ($row = mysqli_fetch_assoc($sql))
+                {
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(id)']."</h4>";
+                  }
+              ?>
+          </div>
+        </div>
+        <div class="card-body card-body-cascade">
+          <div class="progress mb-3">
+            <div class="progress-bar red accent-2" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card card-cascade cascading-admin-card">
+        <div class="admin-up">
+          <i class="fa fa-users orange"></i>
+          <div class="data">
+            <p>ADMINS</p>
+            <?php  require_once('../config/database.php');
+              $sql = mysqli_query($connect, "SELECT COUNT(id) FROM useracc WHERE type = 'admin'");
+                while ($row = mysqli_fetch_assoc($sql))
+                {
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(id)']."</h4>";
+                  }
+              ?>
           </div>
         </div>
         <div class="card-body card-body-cascade">
@@ -57,10 +99,40 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-bar-chart red accent-2"></i>
+          <i class="fa fa-building amber"></i>
           <div class="data">
-            <p>Admin Members</p>
-            <h4 class="font-weight-bold dark-grey-text">10</h4>
+            <p>DIVISIONS</p>
+            <?php  require_once('../config/database.php');
+              $sql = mysqli_query($connect, "SELECT COUNT(id) FROM division");
+                while ($row = mysqli_fetch_assoc($sql))
+                {
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(id)']."</h4>";
+                  }
+              ?>
+          </div>
+        </div>
+        <div class="card-body card-body-cascade">
+          <div class="progress mb-3">
+            <div class="progress-bar red accent-2" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card card-cascade cascading-admin-card">
+        <div class="admin-up">
+          <i class="fa fa-stream green"></i>
+          <div class="data">
+            <p>REGISTERED SYSTEM</p>
+            <?php  require_once('../config/database.php');
+              $sql = mysqli_query($connect, "SELECT COUNT(id) FROM infosys");
+                while ($row = mysqli_fetch_assoc($sql))
+                {
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(id)']."</h4>";
+                  }
+              ?>
           </div>
         </div>
         <div class="card-body card-body-cascade">
@@ -72,25 +144,40 @@
       </div>
     </div>
 
-  </div>
-
-  <div class="row">
-    <section>
-
-      <div class="row">
-        <div class="col-md-7">
-          <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-            <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-              <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-            </div>
-            <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-              <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-            </div>
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card card-cascade cascading-admin-card">
+        <div class="admin-up">
+          <i class="fa fa-stream purple"></i>
+          <div class="data">
+            <p>REGISTERED SYSTEM</p>
+            <?php  require_once('../config/database.php');
+              $sql = mysqli_query($connect, "SELECT COUNT(id) FROM infosys");
+                while ($row = mysqli_fetch_assoc($sql))
+                {
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(id)']."</h4>";
+                  }
+              ?>
           </div>
-          <canvas id="pieChart" width="652" height="326" class="chartjs-render-monitor" style="display: block; width: 652px; height: 326px;"></canvas>
+        </div>
+        <div class="card-body card-body-cascade">
+          <div class="progress mb-3">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
         </div>
       </div>
+    </div>
 
-    </section>
+    <div class="col-xl-9 col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <canvas id="pieChart"></canvas>
+
+
+        </div>
+      </div>
+    </div>
+
   </div>
+
 </section>

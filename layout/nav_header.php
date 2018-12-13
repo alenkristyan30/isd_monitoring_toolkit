@@ -1,11 +1,9 @@
 <nav class="navbar fixed-top navbar-expand-sm scrolling-navbar double-nav">
-  <!-- SideNav slide-out button -->
   <div class="float-left">
     <a href="#" data-activates="slide-out" class="button-collapse black-text">
       <i class="fal fa-bars"></i>
     </a>
   </div>
-  <!-- Breadcrumb-->
   <div class="breadcrumb-dn mr-auto">
     <p id="side-val" name="side-val"></p>
   </div>
