@@ -62,7 +62,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form method="POST" id="vform" onsubmit="return Validate()" class="text-center needs-validation">
+            <form method="POST" id="vform" onsubmit="return Validate()" class="text-center needs-validation" novalidate>
 
               <div class="w-75 mx-auto">
 
@@ -129,10 +129,11 @@
                     <?php  require_once('../config/database.php');
                       $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
                     <select class="mdb-select md-form" searchable="Search here.." id="divsel" name="divsel" required>
+                        <option value="" disabled selected>Choose your country</option>
                       <?php
                           while ($row = mysqli_fetch_assoc($sql))
                           {
-                            echo "<option value='".$row['id']."'>".$row['divname']."</option>";
+                            echo "<option value='".$row['divid']."'>".$row['divname']."</option>";
                             }
                         ?>
                     </select>
@@ -147,7 +148,10 @@
 
                     <div class="md-form">
                       <label for="password">Password</label>
-                      <input type="password" name="password" class="form-control" id="password" min="8" aria-describedby="ext">
+                      <input type="password" name="password" class="form-control" id="password" min="8" aria-describedby="ext"  required>
+                      <div class="invalid-feedback">
+                        Password is required
+                      </div>
                       <small id="ext-mute" class="form-text text-muted">
 
                         All new passwords must contain at least 8 characters.

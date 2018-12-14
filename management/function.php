@@ -15,12 +15,12 @@
         $new_name = rand(). '.' ."jpeg";
         $destination = '../uploads/' . $new_name;
         move_uploaded_file($_FILES['image_file']['tmp_name'], $destination);
-        mysqli_query($connect, "INSERT INTO userinfo( sname, fname, mname, extname, division, gender , userimg )VALUES('$sname' , '$fname' , '$mname' , '$extname' , '$divsel' , '$gender', '$new_name' )");
+        mysqli_query($connect, "INSERT INTO userinfo( sname, fname, mname, extname, div_id, gender , userimg )VALUES('$sname' , '$fname' , '$mname' , '$extname' , '$divsel' , '$gender', '$new_name' )");
         mysqli_query($connect, "INSERT INTO useracc( username, password )VALUES('$username' , MD5('$password'))");
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE userinfo SET sname = '$sname', fname = '$fname' , mname = '$mname',  extname = '$extname', division = '$divsel',  gender = '$gender' WHERE id = $id");
+        mysqli_query($connect, "UPDATE userinfo SET sname = '$sname', fname = '$fname' , mname = '$mname',  extname = '$extname', div_id = '$divsel',  gender = '$gender' WHERE id = $id");
         mysqli_query($connect, "UPDATE useracc SET username = '$username', password = MD5('$password') WHERE id = $id");
         echo 'Update Successfully';
     }

@@ -125,7 +125,7 @@
         <div class="admin-up">
           <i class="fa fa-stream green"></i>
           <div class="data">
-            <p>REGISTERED SYSTEM</p>
+            <p>SECTIONS</p>
             <?php  require_once('../config/database.php');
               $sql = mysqli_query($connect, "SELECT COUNT(id) FROM infosys");
                 while ($row = mysqli_fetch_assoc($sql))

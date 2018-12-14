@@ -56,7 +56,7 @@
       },
       'columnDefs': [
         {
-          'targets': 2,
+          'targets': 3,
           'orderable': false
         }
       ]
@@ -80,6 +80,7 @@
       $('#action').val('Add');
       $('#divid').val('');
       $('#divname').val('');
+      $('#divdes').val('');
 
     });
     $(document).on('click', 'a[name="edit"]', function () {
@@ -98,6 +99,8 @@
           $('#exampleModalCenter').modal('show');
           $('#divid').val(data.divcode);
           $('#divname').val(data.divname);
+          $('#divdes').val(data.divdes);
+
         }
       })
     });

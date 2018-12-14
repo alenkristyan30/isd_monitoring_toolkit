@@ -31,6 +31,8 @@
               </th>
               <th class="th-sm">Full Division Name
               </th>
+              <th class="th-sm">Description
+              </th>
               <th class="th-sm">Action
               </th>
             </tr>
@@ -54,31 +56,44 @@
             <form method="POST" id="vform" onsubmit="return Validate()" class="text-center needs-validation">
 
               <div class="w-75 mx-auto">
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="md-form">
+                      <label for="divid">Division Id</label>
+                      <input type="text" name="divid" class="form-control" id="divid" rows="1"  required="required">
+                      <div class="invalid-feedback">
+                        Division Id is required
+                      </div>
+                    </div>
 
-                <div class="md-form">
-                  <label for="divid">Division Id</label>
-                  <input type="text" name="divid" class="form-control" id="divid" required="required">
-                  <div class="invalid-feedback">
-                    Division Id is required
+                    <div class="md-form">
+                      <label for="divname">Full Division Name</label>
+                      <textarea type="text" name="divname" class="form-control md-textarea" id="divname" required="required"></textarea>
+                      <div class="invalid-feedback">
+                        Full Division Name is required
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <div class="col-sm ">
 
-                <div class="md-form">
-                  <label for="divname">Full Division Name</label>
-                  <textarea type="text" name="divname" class="form-control md-textarea" id="divname" required="required"></textarea>
-                  <div class="invalid-feedback">
-                    Full Division Name is required
+                    <div class="md-form">
+                      <label for="divname">Description</label>
+                      <textarea type="text" name="divdes" class="form-control md-textarea" id="divdes" required="required"></textarea>
+                      <div class="invalid-feedback">
+                        Full Division Name is required
+                      </div>
+                    </div>
                   </div>
                 </div>
 
               </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-rounded red" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn aqua-gradient btn-rounded waves-effect waves-light">Save changes</button>
-              <input type="hidden" name="action" id="action">
-              <input type="hidden" name="id" id="id">
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-rounded red" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn aqua-gradient btn-rounded waves-effect waves-light">Save changes</button>
+            <input type="hidden" name="action" id="action">
+            <input type="hidden" name="id" id="id">
+          </div>
           </form>
         </div>
       </div>

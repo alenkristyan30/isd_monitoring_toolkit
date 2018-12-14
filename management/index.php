@@ -61,6 +61,17 @@
     })
 
     function Validate() {
+
+      if (  $('#surname').val('') == '' && ) {
+
+      }
+        $('#surname').val('');
+        $('#firstname').val('');
+        $('#middlename').val('');
+        $('#nameext').val('');
+        $('#divsel').val('');
+        $('#username').val('');
+        $('#password').val('');
         $.ajax({
           url: 'function.php',
           method: 'POST',
@@ -70,7 +81,7 @@
               closeOnClickOutside: false
             }).then((value) => {
               $('#exampleModalCenter').modal('hide');
-              toastr["success"]("I was launched via jQuery!");
+              toastr["success"]("Successfully Added");
               table.ajax.reload();
             })
           }
@@ -90,7 +101,8 @@
       $('#image_file').empty();
       $('#male').prop('checked', false);
       $('#female').prop('checked', false);
-      $('label').removeClass("active");
+        $('#vform').removeClass('was-validated');
+
     });
     $(document).on('click', 'a[name="edit"]', function() {
       $('#modaltitle').text('Edit');
@@ -111,7 +123,7 @@
           $('#firstname').val(data.fname);
           $('#middlename').val(data.mname);
           $('#nameext').val(data.extname);
-          $('#divsel option:selected').text(data.divsel);
+          $('#divsel').val(data.divsel);
           $('#username').val(data.username);
           if (data.gender == 'Male') {
             $('#male').prop('checked', true);
