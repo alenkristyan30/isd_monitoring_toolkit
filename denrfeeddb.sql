@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2018 at 09:52 AM
+-- Generation Time: Dec 14, 2018 at 03:49 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -29,9 +29,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `division` (
-  `id` int(11) NOT NULL,
+  `divid` int(11) NOT NULL,
   `divcode` varchar(20) NOT NULL,
   `divname` varchar(100) NOT NULL,
+  `divdes` varchar(100) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,8 +40,14 @@ CREATE TABLE `division` (
 -- Dumping data for table `division`
 --
 
-INSERT INTO `division` (`id`, `divcode`, `divname`, `timestamp`) VALUES
-(1, 'DASDAS', 'Development Administrative Service Demonstration Association', '2018-12-11 07:06:42');
+INSERT INTO `division` (`divid`, `divcode`, `divname`, `divdes`, `timestamp`) VALUES
+(2, 'IT', 'Information Technology', 'INFORMATION AND TECHNOLOGY ', '2018-12-14 01:04:30'),
+(3, 'BM', 'BUSINESS MANAGEMENT', 'ACCOUNTING , MANAGER', '2018-12-14 01:05:02'),
+(4, 'TM', 'TOURISM MANAGEMENT', 'EROPLANO', '2018-12-14 01:05:42'),
+(5, 'HRM', 'HOTEL AND RESTO. MANAGEMENT', 'KAIN LUTO ', '2018-12-14 01:06:42'),
+(6, 'COE ', 'COMPUTER ENGINEER', 'ENGINEERING', '2018-12-14 01:07:14'),
+(7, 'PH', 'PHILIPPINES ', 'FILIPINO , TAGALOG , BISAYA , ILOCAN at iba pa', '2018-12-14 01:07:55'),
+(8, 'ISD ', 'INFORMATION SYSTEM DEPARTMENT', 'DENR - INFORMATION SYSTEM DEPARTMENT ', '2018-12-14 01:08:51');
 
 -- --------------------------------------------------------
 
@@ -99,18 +106,10 @@ INSERT INTO `infosys` (`id`, `code_name`, `sysname`, `sysdescription`, `created`
 CREATE TABLE `useracc` (
   `id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(1000) NOT NULL,
+  `password` varchar(40) NOT NULL,
   `type` varchar(50) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `useracc`
---
-
-INSERT INTO `useracc` (`id`, `username`, `password`, `type`, `timestamp`) VALUES
-(29, 'asd', 'a8f5f167f44f4964e6c998dee827110c', '', '2018-12-13 04:41:11'),
-(32, 'asdasd', '7815696ecbf1c96e6894b779456d330e', '', '2018-12-13 04:45:14');
 
 -- --------------------------------------------------------
 
@@ -124,20 +123,11 @@ CREATE TABLE `userinfo` (
   `fname` varchar(20) NOT NULL,
   `mname` varchar(20) NOT NULL,
   `extname` varchar(20) NOT NULL,
-  `division` varchar(50) NOT NULL,
-  `gender` varchar(10) NOT NULL,
+  `div_id` int(11) NOT NULL,
+  `gender` varchar(6) NOT NULL,
   `userimg` varchar(100) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `userinfo`
---
-
-INSERT INTO `userinfo` (`id`, `sname`, `fname`, `mname`, `extname`, `division`, `gender`, `userimg`, `timestamp`) VALUES
-(28, 'asd', 'asd', 'asd', 'asd', '1', 'Male', '1380273340.jpeg', '2018-12-13 02:53:16'),
-(29, 'asd', 'asd', 'asd', 'asd', '1', 'Male', '1587539351.jpeg', '2018-12-13 03:40:56'),
-(32, 'jorolan', 'asd', 'asd', 'asdasd', '1', 'Female', '451810301.jpeg', '2018-12-13 04:45:14');
 
 --
 -- Indexes for dumped tables
@@ -147,7 +137,7 @@ INSERT INTO `userinfo` (`id`, `sname`, `fname`, `mname`, `extname`, `division`, 
 -- Indexes for table `division`
 --
 ALTER TABLE `division`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`divid`);
 
 --
 -- Indexes for table `infosys`
@@ -175,25 +165,25 @@ ALTER TABLE `userinfo`
 -- AUTO_INCREMENT for table `division`
 --
 ALTER TABLE `division`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `divid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `infosys`
 --
 ALTER TABLE `infosys`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `useracc`
 --
 ALTER TABLE `useracc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `userinfo`
 --
 ALTER TABLE `userinfo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
