@@ -13,7 +13,7 @@
     $id = $_POST['id'];
     if ($action == 'Add'){
         mysqli_query($connect, "INSERT INTO userinfo( sname, fname, mname, extname, div_id,  pos_id, gender , userimg )VALUES('$sname' , '$fname' , '$mname' , '$extname' , '$divsel' , '$possel', '$gender', '$new_name' )");
-        mysqli_query($connect, "INSERT INTO useracc( username, password )VALUES('$username' , MD5('$password'))");
+        mysqli_query($connect, "INSERT INTO useracc( username, password , type )VALUES('$username' , MD5('$password'), 2)");
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
