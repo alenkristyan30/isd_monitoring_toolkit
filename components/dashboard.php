@@ -268,10 +268,15 @@
                   <a class="text-default" href="">Jethuro</a>
                   <soan class="pull-right display-6">
                     2018-12-13 13:59:10
-                  </span>
+                    </span>
                 </h5>
-                <span><i class="fa fa-quote-left pr-2"></i>POOR<i class="fa fa-quote-right pr-2"></i></span>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                <div class="text-center ml-md-3" >
+                  <div class="row"><i class="fa fa-quote-left pr-2"></i><h1>EXCELLENT</h1><i class="fa fa-quote-right pr-2"></i></div>
+                </div>
+                <div class="col">
+                  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                </div>
               </div>
             </div>
           </div>

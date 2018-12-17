@@ -16,6 +16,7 @@
   <script>
     $(document).ready(function() {
       $('#divsel').materialSelect();
+        $('#possel').materialSelect();
     });
   </script>
   <script>
@@ -85,6 +86,7 @@
       $('#middlename').val('');
       $('#nameext').val('');
       $('#divsel').val('');
+      $('#possel').val('');
       $('#username').val('');
       $('#password').val('');
       $('#image_file').empty();
@@ -112,7 +114,8 @@
           $('#firstname').val(data.fname);
           $('#middlename').val(data.mname);
           $('#nameext').val(data.extname);
-          $('#divsel option:selected').val(data.divsel);
+          $('#divsel').val(data.divsel);
+            $('#possel').val(data.possel);
           $('#username').val(data.username);
           if (data.gender == 'Male') {
             $('#male').prop('checked', true);
@@ -150,7 +153,7 @@
       $('#action').val('View');
       var id = $(this).attr('id');
       $.ajax({
-        url: 'fetch_single.php',
+        url: ' view_fetch.php',
         method: 'POST',
         data: {
           id: id
@@ -165,6 +168,7 @@
           $('#middlenameview').text(data.mname);
           $('#nameextview').text(data.extname);
           $('#divisionview').text(data.divsel);
+            $('#positionview').text(data.possel);
           $('#usernameview').text(data.username);
           $('#genderview').text(data.gender);
             if (data.gender == 'Male') {

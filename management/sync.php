@@ -1,6 +1,6 @@
 <?php
     include '../config/database.php';
-    $sql = mysqli_query($connect, "SELECT userinfo.id, username , sname, fname, mname, extname, divcode, gender FROM userinfo INNER JOIN division ON division.divid = userinfo.div_id INNER JOIN useracc ON useracc.id = userinfo.id");
+    $sql = mysqli_query($connect, "SELECT userinfo.id, username , sname, fname, mname, extname, divcode, postitle, gender FROM userinfo INNER JOIN division ON division.divid = userinfo.div_id INNER JOIN useracc ON useracc.id = userinfo.id  INNER JOIN position ON position.posid = userinfo.pos_id");
     $output = array('data' => array());
     while ($row = mysqli_fetch_assoc($sql)) {
         $button =
@@ -15,7 +15,7 @@
             $row['mname'],
             $row['extname'],
             $row['divcode'],
-              $row['divcode'],
+            $row['postitle'],
             $row['gender'],
             $button
         );
