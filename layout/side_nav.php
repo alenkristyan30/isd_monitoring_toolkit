@@ -21,10 +21,13 @@
           <div class="collapsible-body">
             <ul>
               <li>
-                <a href="../admin_management" class="waves-effect">Admin Account</a>
+                <a href="../accounts" class="waves-effect">Account</a>
               </li>
               <li>
-                <a href="../management" class="waves-effect">User management</a>
+                <a href="../admin_management" class="waves-effect">Administrator</a>
+              </li>
+              <li>
+                <a href="../management" class="waves-effect">User</a>
               </li>
               <li>
                 <a href="../system_management" class="waves-effect">System management</a>
@@ -49,7 +52,7 @@
           <div class="collapsible-body">
             <ul>
               <li>
-                <a href="../reports" class="waves-effect">System feedback</a>
+                <a href="../reports" class="waves-effect">feedback</a>
               </li>
             </ul>
           </div>

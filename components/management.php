@@ -1,4 +1,8 @@
 <section>
+  <div class="text-left">
+    <h3>User Management</h3>
+    <hr>
+  </div>
   <section>
     <div class="row">
       <div class="col">
@@ -8,7 +12,7 @@
           </button>
         </div>
       </div>
-      <div class="col">
+      <!--div class="col">
         <div class="mb-3" align="right">
           <button type="button" class="btn primary-color">
             <i class="fal fa-list"></i>
@@ -17,7 +21,7 @@
             <i class="fal fa-grip-horizontal"></i>
           </button>
         </div>
-      </div>
+      </div-->
     </div>
   </section>
 
