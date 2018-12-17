@@ -40,6 +40,8 @@
               </th>
               <th class="th-sm">Division
               </th>
+              <th class="th-sm">Position
+              </th>
               <th class="th-sm">Gender
               </th>
               <th class="th-sm">Action
@@ -251,6 +253,17 @@
                   <div class="col-sm">
                     <?php  require_once('../config/database.php');
                       $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
+                    <select class="mdb-select md-form" searchable="Search here.." id="divsel" name="divsel" required>
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['divid']."'>".$row['divname']."</option>";
+                            }
+                        ?>
+                    </select>
+
+                    <?php  require_once('../config/database.php');
+                      $sql = mysqli_query($connect, "SELECT * FROM position"); ?>
                     <select class="mdb-select md-form" searchable="Search here.." id="divsel" name="divsel" required>
                       <?php
                           while ($row = mysqli_fetch_assoc($sql))

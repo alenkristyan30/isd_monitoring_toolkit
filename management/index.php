@@ -55,23 +55,12 @@
         method: 'POST'
       },
       'columnDefs': [{
-        'targets': 7,
+        'targets': 8,
         'orderable': false
       }]
     })
 
     function Validate() {
-
-      if (  $('#surname').val('') == '' && ) {
-
-      }
-        $('#surname').val('');
-        $('#firstname').val('');
-        $('#middlename').val('');
-        $('#nameext').val('');
-        $('#divsel').val('');
-        $('#username').val('');
-        $('#password').val('');
         $.ajax({
           url: 'function.php',
           method: 'POST',
@@ -123,7 +112,7 @@
           $('#firstname').val(data.fname);
           $('#middlename').val(data.mname);
           $('#nameext').val(data.extname);
-          $('#divsel').val(data.divsel);
+          $('#divsel option:selected').val(data.divsel);
           $('#username').val(data.username);
           if (data.gender == 'Male') {
             $('#male').prop('checked', true);

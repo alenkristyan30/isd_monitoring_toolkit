@@ -36,7 +36,7 @@
                 <a href="../division" class="waves-effect">Section</a>
               </li>
               <li>
-                <a href="../division" class="waves-effect">Position</a>
+                <a href="../position" class="waves-effect">Position</a>
               </li>
             </ul>
           </div>
@@ -49,7 +49,7 @@
           <div class="collapsible-body">
             <ul>
               <li>
-                <a href="../reports" class="waves-effect">System</a>
+                <a href="../reports" class="waves-effect">System feedback</a>
               </li>
             </ul>
           </div>

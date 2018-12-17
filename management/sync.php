@@ -15,6 +15,7 @@
             $row['mname'],
             $row['extname'],
             $row['divcode'],
+              $row['divcode'],
             $row['gender'],
             $button
         );

@@ -8,7 +8,7 @@
   </header>
   <main>
     <div class="container-fluid">
-      <?php include('../components/division.php'); ?>
+      <?php include('../components/position.php'); ?>
     </div>
   </main>
   <?php include('../layout/footer.php'); ?>
@@ -69,7 +69,7 @@
         success: function (data) {
           swal(data, '', 'success', {closeOnClickOutside: false}).then((value) => {
             $('#exampleModalCenter').modal('hide');
-            toastr["success"]("I was launched via jQuery!");
+            toastr["success"]("Successful");
             table.ajax.reload();
           })
         }
@@ -78,8 +78,8 @@
     }
     $('#add').click(function () {
       $('#action').val('Add');
-      $('#acro').val('');
-      $('#fdname').val('');
+      $('#postitle').val('');
+      $('#posdes').val('');
 
     });
     $(document).on('click', 'a[name="edit"]', function () {
@@ -96,8 +96,8 @@
           $('#id').val(id);
           $('label').addClass("active");
           $('#exampleModalCenter').modal('show');
-          $('#acro').val(data.acro);
-          $('#fdname').val(data.fdname);
+          $('#postitle').val(data.postitle);
+          $('#posdes').val(data.posdes);
         }
       })
     });
@@ -117,7 +117,7 @@
               action: 'Delete'
             },
             success: function (data) {
-              toastr["info"]("I was launched via jQuery!");
+              toastr["info"]("Successfully deleted");
               table.ajax.reload();
             }
           })
