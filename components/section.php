@@ -26,10 +26,10 @@
   </section>
 
   <section>
-    <div class="card mb-5 ">
+    <div class="card mb-5 col-md-10">
       <div class="card-body table-responsive">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-          <thead>
+          <thead class="elegant-color white-text">
             <tr>
               <th class="th-sm">Name
               </th>
@@ -65,16 +65,15 @@
 
                     <div class="md-form">
                       <label for="divname">Section Name</label>
-                      <textarea type="text" name="secname" class="form-control md-textarea" id="secname" required="required"></textarea>
+                      <input type="text" name="secname" class="form-control" id="secname" required="required">
                       <div class="invalid-feedback">
                         Section Name is required
                       </div>
                     </div>
-
                     <?php  require_once('../config/database.php');
                       $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
                     <select class="mdb-select md-form" searchable="Search here.." id="divsel" name="divsel" required>
-                        <option value="" disabled selected>Choose division</option>
+                        <option value="" disabled selected>Division</option>
                       <?php
                           while ($row = mysqli_fetch_assoc($sql))
                           {
@@ -83,9 +82,6 @@
                         ?>
                     </select>
 
-                  </div>
-                  <div class="col-sm ">
-
                     <div class="md-form">
                       <label for="divname">Description</label>
                       <textarea type="text" name="secdes" class="form-control md-textarea" id="secdes" required="required"></textarea>
@@ -93,6 +89,10 @@
                       Description is required
                       </div>
                     </div>
+                  </div>
+                  <div class="col-sm ">
+
+
                   </div>
                 </div>
 

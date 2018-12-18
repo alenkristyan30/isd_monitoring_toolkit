@@ -17,6 +17,7 @@
     $(document).ready(function() {
       $('#divsel').materialSelect();
         $('#possel').materialSelect();
+        $('#secsel').materialSelect();
     });
   </script>
   <script>

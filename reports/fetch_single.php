@@ -1,16 +1,15 @@
 <?php
     include '../config/database.php';
     $id = $_POST['id'];
-    $sql = mysqli_query($connect, "SELECT sname , fname , mname , extname , div_id , pos_id, gender , username FROM userinfo INNER JOIN useracc ON useracc.id = userinfo.id WHERE userinfo.id = $id");
+    $sql = mysqli_query($connect, "SELECT reportid , username , code_name, reportstatus, reportcateg, reportcomment, reports.timestamp FROM reports INNER JOIN useracc ON useracc.id = reports.user_id INNER JOIN infosys ON infosys.sysid = reports.sys_id WHERE reports.reportid = $id");
     $row = mysqli_fetch_assoc($sql);
     $output = array(
-        "sname" => $row['sname'],
-        "fname" => $row['fname'],
-        "mname" => $row['mname'],
-        "extname" => $row['extname'],
-        "divsel" => $row['div_id'],
-          "possel" => $row['pos_id'],
-        "gender" => $row['gender'],
-        "username" => $row['username']
+      "reportidview" => $row['reportid'],
+      "usernameview" => $row['username'],
+      "systemview" => $row['code_name'],
+      "categoryview" => $row['reportcateg'],
+      "statusview" => $row['reportstatus'],
+      "commentview" => $row['reportcomment'],
+      "timestamnpview" => $row['timestamp']
     );
     echo json_encode($output);

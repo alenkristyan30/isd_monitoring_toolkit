@@ -82,17 +82,7 @@
       $('#modaltitle').text('Add');
       $('#action').val('Add');
       $('#surname').val('');
-      $('#firstname').val('');
-      $('#middlename').val('');
-      $('#nameext').val('');
-      $('#divsel').val('');
-      $('#possel').val('');
-      $('#username').val('');
-      $('#password').val('');
-      $('#image_file').empty();
-      $('#male').prop('checked', false);
-      $('#female').prop('checked', false);
-        $('#vform').removeClass('was-validated');
+      $('#vform').removeClass('was-validated');
 
     });
     $(document).on('click', 'a[name="assign"]', function() {
@@ -110,18 +100,13 @@
           $('#id').val(id);
           $('label').addClass("active");
           $('#exampleModalCenter').modal('show');
-          $('#surname').val(data.sname);
-          $('#firstname').val(data.fname);
-          $('#middlename').val(data.mname);
-          $('#nameext').val(data.extname);
-          $('#divsel').val(data.divsel);
-            $('#possel').val(data.possel);
-          $('#username').val(data.username);
-          if (data.gender == 'Male') {
-            $('#male').prop('checked', true);
-          } else {
-            $('#female').prop('checked', true);
-          }
+          $('#reportidassign').text(data.reportidview);
+          $('#usernameassign').text(data.usernameview);
+          $('#systemassign').text(data.systemview);
+          $('#categoryassign').text(data.categoryview);
+          $('#statusassign').text(data.statusview);
+          $('#commentassign').text(data.commentview);
+          $('#timestamnpassign').text(data.timestamnpview);
         }
       })
     });

@@ -146,6 +146,18 @@
                     </select>
 
                     <?php  require_once('../config/database.php');
+                      $sql = mysqli_query($connect, "SELECT * FROM section"); ?>
+                    <select class="mdb-select md-form" searchable="Search here.." id="secsel" name="secsel" required>
+                        <option value="" disabled selected>Choose section</option>
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['secid']."'>".$row['secname']."</option>";
+                            }
+                        ?>
+                    </select>
+
+                    <?php  require_once('../config/database.php');
                       $sql = mysqli_query($connect, "SELECT * FROM position"); ?>
                     <select class="mdb-select md-form" searchable="Search here.." id="possel" name="possel" required>
                         <option value="" disabled selected>Choose position</option>
