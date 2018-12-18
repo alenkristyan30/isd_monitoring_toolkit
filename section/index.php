@@ -84,7 +84,7 @@
     $('#add').click(function () {
       $('#action').val('Add');
       $('#secname').val('');
-      $('#divname').val('');
+      $('#divsel').val('');
       $('#secdes').val('');
 
     });
@@ -102,9 +102,9 @@
           $('#id').val(id);
           $('label').addClass("active");
           $('#exampleModalCenter').modal('show');
-          $('#divid').val(data.divcode);
-          $('#divname').val(data.divname);
-          $('#divdes').val(data.divdes);
+          $('#secname').val(data.secname);
+          $('#divsel').val(data.divsel);
+          $('#secdes').val(data.secdes);
 
         }
       })

@@ -1,4 +1,4 @@
-<section>
+ <section>
   <div class="text-left">
     <h3>User Management</h3>
     <hr>
@@ -30,7 +30,7 @@
     <div class="card mb-5 ">
       <div class="card-body table-responsive">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-          <thead>
+          <thead class="blue white-text">
             <tr>
               <th class="th-sm">Username
               </th>

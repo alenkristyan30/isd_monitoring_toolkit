@@ -31,7 +31,7 @@
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead>
             <tr>
-              <th class="th-sm">Secname
+              <th class="th-sm">Name
               </th>
               <th class="th-sm">Division
               </th>

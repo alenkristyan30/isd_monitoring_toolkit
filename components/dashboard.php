@@ -126,6 +126,30 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
+          <i class="fa fa-layer-group blue"></i>
+          <div class="data">
+            <p>SECTIONS</p>
+            <?php  require_once('../config/database.php');
+              $sql = mysqli_query($connect, "SELECT COUNT(secid) FROM section");
+                while ($row = mysqli_fetch_assoc($sql))
+                {
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(secid)']."</h4>";
+                  }
+              ?>
+          </div>
+        </div>
+        <div class="card-body card-body-cascade">
+          <div class="progress mb-3">
+            <div class="progress-bar red accent-2" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card card-cascade cascading-admin-card">
+        <div class="admin-up">
           <i class="fa fa-stream green"></i>
           <div class="data">
             <p>POSITIONS</p>

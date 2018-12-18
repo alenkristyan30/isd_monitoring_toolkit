@@ -1,18 +1,18 @@
 <?php
     include '../config/database.php';
-    $divcode = $_POST['divid'];
-    $divname = $_POST['divname'];
-    $divdes = $_POST['divdes'];
+    $secname = $_POST['secname'];
+    $divsel = $_POST['divsel'];
+    $secdes = $_POST['secdes'];
     $action = $_POST['action'];
     $id = $_POST['id'];
     if ($action == 'Add') {
-        mysqli_query($connect, "INSERT INTO division( divcode , divname , divdes )VALUES('$divcode' , '$divname' , '$divdes')");
+        mysqli_query($connect, "INSERT INTO section( secname , div_id , secdes )VALUES('$secname' , '$divsel' , '$secdes')");
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE division SET divcode = '$divcode' , divname = '$divname' , divdes = '$divdes'  WHERE id = $id");
+        mysqli_query($connect, "UPDATE section SET secname = '$secname' , div_id = '$divsel' , secdes = '$secdes'  WHERE secid = $id");
         echo 'Update Successfully';
     }
     if ($action == 'Delete') {
-        mysqli_query($connect, "DELETE FROM division WHERE divid = $id");
+        mysqli_query($connect, "DELETE FROM section WHERE secid = $id");
     }
