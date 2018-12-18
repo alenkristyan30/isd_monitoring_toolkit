@@ -1,6 +1,6 @@
 <section>
   <div class="text-left">
-    <h3>Division</h3>
+    <h3>Section</h3>
     <hr>
   </div>
   <section>
@@ -31,9 +31,9 @@
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead>
             <tr>
-              <th class="th-sm">Division Id
+              <th class="th-sm">Secname
               </th>
-              <th class="th-sm">Full Division Name
+              <th class="th-sm">Division
               </th>
               <th class="th-sm">Description
               </th>
@@ -62,29 +62,35 @@
               <div class="w-75 mx-auto">
                 <div class="row">
                   <div class="col-sm">
+
                     <div class="md-form">
-                      <label for="divid">Division Id</label>
-                      <input type="text" name="divid" class="form-control" id="divid" rows="1"  required="required">
+                      <label for="divname">Section Name</label>
+                      <textarea type="text" name="secname" class="form-control md-textarea" id="secname" required="required"></textarea>
                       <div class="invalid-feedback">
-                        Division Id is required
+                        Section Name is required
                       </div>
                     </div>
 
-                    <div class="md-form">
-                      <label for="divname">Full Division Name</label>
-                      <textarea type="text" name="divname" class="form-control md-textarea" id="divname" required="required"></textarea>
-                      <div class="invalid-feedback">
-                        Full Division Name is required
-                      </div>
-                    </div>
+                    <?php  require_once('../config/database.php');
+                      $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
+                    <select class="mdb-select md-form" searchable="Search here.." id="divsel" name="divsel" required>
+                        <option value="" disabled selected>Choose division</option>
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['divid']."'>".$row['divname']."</option>";
+                            }
+                        ?>
+                    </select>
+
                   </div>
                   <div class="col-sm ">
 
                     <div class="md-form">
                       <label for="divname">Description</label>
-                      <textarea type="text" name="divdes" class="form-control md-textarea" id="divdes" required="required"></textarea>
+                      <textarea type="text" name="secdes" class="form-control md-textarea" id="secdes" required="required"></textarea>
                       <div class="invalid-feedback">
-                        Full Division Name is required
+                      Description is required
                       </div>
                     </div>
                   </div>

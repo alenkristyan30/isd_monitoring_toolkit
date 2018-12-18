@@ -1,43 +1,22 @@
 <section>
   <div class="text-left">
-    <h3>Division</h3>
+    <h3>Accounts</h3>
     <hr>
   </div>
-  <section>
-    <div class="row">
-      <div class="col">
-        <div class="mb-3" align="left">
-          <button type="button" class="btn default-color" id="add" data-toggle="modal" data-target="#exampleModalCenter">
-            <i class="fal fa-plus pr-1"></i>ADD
-          </button>
-        </div>
-      </div>
-      <!--div class="col">
-        <div class="mb-3" align="right">
-          <button type="button" class="btn primary-color">
-            <i class="fal fa-list"></i>
-          </button>
-          <button type="button" class="btn secondary-color">
-            <i class="fal fa-grip-horizontal"></i>
-          </button>
-        </div>
-      </div-->
-    </div>
-  </section>
 
   <section>
-    <div class="card mb-5 ">
+    <div class="card mb-5 col-md-6">
       <div class="card-body table-responsive">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead>
             <tr>
-              <th class="th-sm">Division Id
+              <th class="th-sm">Account Id
               </th>
-              <th class="th-sm">Full Division Name
+              <th class="th-sm">Username
               </th>
-              <th class="th-sm">Description
+              <th class="th-sm">Type
               </th>
-              <th class="th-sm">Action
+              <th class="th-sm">Registered Date
               </th>
             </tr>
           </thead>
@@ -63,18 +42,10 @@
                 <div class="row">
                   <div class="col-sm">
                     <div class="md-form">
-                      <label for="divid">Division Id</label>
-                      <input type="text" name="divid" class="form-control" id="divid" rows="1"  required="required">
+                      <label for="divname">Position Title</label>
+                      <input type="text" name="postitle" class="form-control" id="postitle" required="required">
                       <div class="invalid-feedback">
-                        Division Id is required
-                      </div>
-                    </div>
-
-                    <div class="md-form">
-                      <label for="divname">Full Division Name</label>
-                      <textarea type="text" name="divname" class="form-control md-textarea" id="divname" required="required"></textarea>
-                      <div class="invalid-feedback">
-                        Full Division Name is required
+                        Position Title is required
                       </div>
                     </div>
                   </div>
@@ -82,9 +53,9 @@
 
                     <div class="md-form">
                       <label for="divname">Description</label>
-                      <textarea type="text" name="divdes" class="form-control md-textarea" id="divdes" required="required"></textarea>
+                      <textarea type="text" name="posdes" class="form-control md-textarea" id="posdes" required="required"></textarea>
                       <div class="invalid-feedback">
-                        Full Division Name is required
+                      Description is required
                       </div>
                     </div>
                   </div>

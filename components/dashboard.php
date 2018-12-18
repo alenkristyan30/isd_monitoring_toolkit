@@ -1,5 +1,8 @@
 <section class="mt-lg-5">
-  <div style="height: 5px"></div>
+  <div class="text-left">
+    <h3>Dashboards</h3>
+    <hr>
+  </div>
   <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
@@ -79,7 +82,7 @@
           <div class="data">
             <p>ADMINS</p>
             <?php  require_once('../config/database.php');
-              $sql = mysqli_query($connect, "SELECT COUNT(id) FROM useracc WHERE type = 'admin'");
+              $sql = mysqli_query($connect, "SELECT COUNT(id) FROM useracc WHERE type = 2");
                 while ($row = mysqli_fetch_assoc($sql))
                 {
                   echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(id)']."</h4>";
@@ -151,10 +154,10 @@
           <div class="data">
             <p>REGISTERED SYSTEM</p>
             <?php  require_once('../config/database.php');
-              $sql = mysqli_query($connect, "SELECT COUNT(id) FROM infosys");
+              $sql = mysqli_query($connect, "SELECT COUNT(sysid) FROM infosys");
                 while ($row = mysqli_fetch_assoc($sql))
                 {
-                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(id)']."</h4>";
+                  echo "<h4 class='font-weight-bold dark-grey-text'>".$row['COUNT(sysid)']."</h4>";
                   }
               ?>
           </div>
@@ -185,7 +188,7 @@
   <div class="row">
     <div class="col-xl-6 col-md-6 mb-4">
       <div class="text-left">
-        <h3>Top Ratings</h3>
+        <h3>Top 5 Ratings</h3>
         <hr>
       </div>
       <div class="card">
@@ -255,7 +258,7 @@
 
     <div class="col-xl-6 col-md-6 mb-4">
       <div class="text-left">
-        <h3>Top Ratings</h3>
+        <h3>Recent feedback</h3>
         <hr>
       </div>
       <div class="mb-4">
@@ -266,28 +269,47 @@
               <div class="media-body text-center text-md-left ml-md-3 ml-0">
                 <h5 class="mt-0">
                   <a class="text-default" href="">Jethuro</a>
-                  <soan class="pull-right display-6">
+                  <soan class="pull-right text-sm">
                     2018-12-13 13:59:10
                     </span>
                 </h5>
-                <div class="text-center ml-md-3" >
-                  <div class="row"><i class="fa fa-quote-left pr-2"></i><h1>EXCELLENT</h1><i class="fa fa-quote-right pr-2"></i></div>
-                </div>
-                <div class="col">
-                  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                </div>
+                <h4>Environmental Law Enforcement Management Information</h4>
+                <span class="badge green">Excellent</span>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </div>
             </div>
           </div>
         </div>
       </div>
 
-
+      <div class="mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="media d-block d-md-flex mt-3">
+              <img class="card-img-64 rounded-circle z-depth-1 d-flex mx-auto mb-3" src="../dist/img/male-avatar.png" alt="Generic placeholder image">
+              <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                <h5 class="mt-0">
+                  <a class="text-default" href="">Jethuro</a>
+                  <soan class="pull-right text-sm">
+                    2018-12-13 13:59:10
+                    </span>
+                </h5>
+                <h4>Environmental Law Enforcement Management Information</h4>
+                <span class="badge green">Excellent</span>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
-
   </div>
+
 
 </section>

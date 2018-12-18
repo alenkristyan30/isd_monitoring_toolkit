@@ -36,7 +36,7 @@
                 <a href="../division" class="waves-effect">Division</a>
               </li>
               <li>
-                <a href="../division" class="waves-effect">Section</a>
+                <a href="../section" class="waves-effect">Section</a>
               </li>
               <li>
                 <a href="../position" class="waves-effect">Position</a>
@@ -52,7 +52,10 @@
           <div class="collapsible-body">
             <ul>
               <li>
-                <a href="../reports" class="waves-effect">feedback</a>
+                <a href="../feedback" class="waves-effect">Feedback</a>
+              </li>
+              <li>
+                <a href="../reports" class="waves-effect">Reports</a>
               </li>
             </ul>
           </div>

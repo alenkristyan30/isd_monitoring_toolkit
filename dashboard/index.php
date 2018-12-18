@@ -65,7 +65,6 @@
 
   }
 </style>
-
 <body class="fixed-sn white-skin">
   <header>
     <?php include('../layout/side_nav.php'); ?>

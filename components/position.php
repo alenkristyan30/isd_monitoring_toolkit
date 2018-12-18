@@ -1,4 +1,8 @@
 <section>
+  <div class="text-left">
+    <h3>Position</h3>
+    <hr>
+  </div>
   <section>
     <div class="row">
       <div class="col">
@@ -8,7 +12,7 @@
           </button>
         </div>
       </div>
-      <div class="col">
+      <!--div class="col">
         <div class="mb-3" align="right">
           <button type="button" class="btn primary-color">
             <i class="fal fa-list"></i>
@@ -17,12 +21,12 @@
             <i class="fal fa-grip-horizontal"></i>
           </button>
         </div>
-      </div>
+      </div-->
     </div>
   </section>
 
   <section>
-    <div class="card mb-5 ">
+    <div class="card mb-5 col-md-6">
       <div class="card-body table-responsive">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead>
