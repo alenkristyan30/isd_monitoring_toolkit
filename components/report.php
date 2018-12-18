@@ -173,7 +173,7 @@
               <div class="row">
                 <div class="col-sm">
                   <div class="fileupload-wrapper">
-                    <img src="../dist/img/sample.png" id="img_src" name="img_src" class="img-fluid z-depth-1 " alt="Responsive image">
+                    <img src="" id="img_src" name="img_src" class="img-fluid z-depth-1 " alt="Responsive image">
                   </div>
                 </div>
 
@@ -187,30 +187,43 @@
                   </div>
 
                   <div class="md-form">
-                    <label for="">Fullname</label>
+                    <label for="">Username</label>
                     <div class="">
-                      <p class="text-justify"><span id="surnameview"></span> , <span id="firstnameview"></span> <span id="middlenameview"></span> <span id="nameextview"></span></p>
+                      <p class="text-justify"><span id="usernameview"></span></p>
                     </div>
 
                   </div>
                   <div class="md-form">
-                    <label for="">Gender</label>
+                    <label for="">System Name</label>
                     <div class="">
-                      <p class="text-justify"><span id="genderview"></span></p>
+                      <p class="text-justify"><span id="systemview"></span></p>
                     </div>
                   </div>
                   <div class="md-form">
-                    <label for="">Division</label>
+                    <label for="">Category</label>
                     <div class="">
-                      <p class="text-justify"><span id="divisionview"></span></p>
+                      <p class="text-justify"><span id="categoryview"></span></p>
                     </div>
                   </div>
                   <div class="md-form">
-                    <label for="">Position</label>
+                    <label for="">Status</label>
                     <div class="">
-                      <p class="text-justify"><span id="positionview"></span></p>
+                      <p class="text-justify"><span id="statusview"></span></p>
                     </div>
                   </div>
+                  <div class="md-form">
+                    <label for="">Date</label>
+                    <div class="">
+                      <p class="text-justify"><span id="timestamnpview"></span></p>
+                    </div>
+                  </div>
+                  <div class="md-form">
+                    <label for="">Comment</label>
+                    <div class="">
+                      <p class="text-justify"><span id="commentview"></span></p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>

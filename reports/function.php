@@ -16,7 +16,7 @@
         mysqli_query($connect, "INSERT INTO useracc( username, password , type )VALUES('$username' , MD5('$password'), 3)");
         echo 'Added Successfully';
     }
-    if ($action == 'Edit') {
+    if ($action == 'Assign') {
         mysqli_query($connect, "UPDATE userinfo SET sname = '$sname', fname = '$fname' , mname = '$mname',  extname = '$extname', div_id = '$divsel', pos_id = '$possel',  gender = '$gender' WHERE id = $id");
         mysqli_query($connect, "UPDATE useracc SET username = '$username', password = MD5('$password') WHERE id = $id");
         echo 'Update Successfully';

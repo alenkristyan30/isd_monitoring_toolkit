@@ -95,9 +95,9 @@
         $('#vform').removeClass('was-validated');
 
     });
-    $(document).on('click', 'a[name="edit"]', function() {
-      $('#modaltitle').text('Edit');
-      $('#action').val('Edit');
+    $(document).on('click', 'a[name="assign"]', function() {
+      $('#modaltitle').text('Assign');
+      $('#action').val('Assign');
       var id = $(this).attr('id');
       $.ajax({
         url: 'fetch_single.php',
@@ -164,19 +164,12 @@
           $('label').addClass("active");
           $('#modalview').modal('show');
           $('#reportidview').text(data.reportidview);
-          $('#firstnameview').text(data.fname);
-          $('#middlenameview').text(data.mname);
-          $('#nameextview').text(data.extname);
-          $('#divisionview').text(data.divsel);
-            $('#positionview').text(data.possel);
-          $('#usernameview').text(data.username);
-          $('#genderview').text(data.gender);
-            if (data.gender == 'Male') {
-              $('#img_src').attr('src' , '../dist/img/male-avatar.png' );
-            }
-            else {
-                $('#img_src').attr('src' , '../dist/img/female-avatar.png' );
-            }
+          $('#usernameview').text(data.usernameview);
+          $('#systemview').text(data.systemview);
+          $('#categoryview').text(data.categoryview);
+          $('#statusview').text(data.statusview);
+          $('#commentview').text(data.commentview);
+          $('#timestamnpview').text(data.timestamnpview);
         }
       })
     });
