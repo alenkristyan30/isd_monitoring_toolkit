@@ -1,5 +1,4 @@
 <?php include('../layout/header.php'); ?>
-
 <style>
 
   .intro-2 {
@@ -64,7 +63,6 @@
         **/
 
    </style>
-
 <body>
   <section class="view intro-2">
     <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
@@ -86,6 +84,13 @@
                       Username is required
                     </div>
                   </div>
+                  <div class="md-form">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control " id="password" value="" required="required">
+                    <div class="invalid-feedback">
+                      Password is required
+                    </div>
+                  </div>
                   <div class="mt-5">
                     <button class="btn aqua-gradient waves-effect waves-light z-depth-0" type="submit">NEXT</button>
                   </div>
@@ -97,7 +102,6 @@
       </div>
     </div>
   </section>
-
   <?php include('../layout/footer.php'); ?>
   <script>
     function Validate() {

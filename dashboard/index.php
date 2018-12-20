@@ -1,3 +1,4 @@
+<?php require_once('../config/session.php'); ?>
 <?php include('../layout/header.php'); ?>
 <style type="text/css">
   .cascading-admin-card {
@@ -61,10 +62,11 @@
   .chartjs-render-monitor {
     -webkit-animation: chartjs-render-animation 0.001s;
     animati onload="
-"on: chartjs-render-animation 0.001s;
+    "on: chartjs-render-animation 0.001s;
 
   }
 </style>
+
 <body class="fixed-sn white-skin">
   <header>
     <?php include('../layout/side_nav.php'); ?>
