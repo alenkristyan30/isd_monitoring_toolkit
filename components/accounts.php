@@ -8,7 +8,7 @@
     <div class="card mb-5 col-md-6">
       <div class="card-body table-responsive">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-          <thead>
+          <thead class="elegant-color white-text">
             <tr>
               <th class="th-sm">Account Id
               </th>

@@ -2,7 +2,7 @@
 
 <style>
 
-       .intro-2 {
+  .intro-2 {
            background: url("../dist/img/intro-bg.jpeg")no-repeat center center;
            background-size: cover;
        }
@@ -69,43 +69,31 @@
   <section class="view intro-2">
     <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
       <div class="container">
-          <div class="row">
-              <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto">
-
-                  <!--Form with header-->
-                  <div class="card wow fadeIn p-5" data-wow-delay="0.3s">
-                    <div class="card-body">
-                      <div class="text-center mb-5">
-                        <img src="../dist/img/logo.png" class="w-25 mx-auto"></img>
-                      </div>
-                      <p class="card-subtitle text-center text-black-50 mb-5">Welcome back! Please login to your account.</p>
-
-                      <form method="POST" id="vform" onsubmit="return Validate()" class="text-center needs-validation" novalidate="novalidate">
-                        <div id="alert" role="alert"></div>
-                        <div class="md-form">
-                          <label for="username">Username</label>
-                          <input type="text" name="username" class="form-control " id="username" value="" required="required">
-                          <div class="invalid-feedback">
-                            Username is required
-                          </div>
-                        </div>
-                        <div class="md-form">
-                          <label for="password">Password</label>
-                          <input type="password" name="password" class="form-control " id="password" value="" required="required">
-                          <div class="invalid-feedback">
-                            Password is required
-                          </div>
-                        </div>
-                        <div class="mt-5">
-                          <button class="btn aqua-gradient btn-rounded waves-effect waves-light z-depth-0" type="submit">Sign in</button>
-                        </div>
-                      </form>
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto">
+            <div class="card wow fadeIn p-5" data-wow-delay="0.3s">
+              <div class="card-body">
+                <div class="text-center mb-5">
+                  <img src="../dist/img/logo.png" class="w-25 mx-auto"></img>
+                </div>
+                <p class="card-subtitle text-center text-black-50 mb-5">Welcome back! Please login to your account.</p>
+                <form method="POST" id="vform" onsubmit="return Validate()" class="text-center needs-validation" novalidate="novalidate">
+                  <div id="alert" role="alert"></div>
+                  <div class="md-form">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="form-control " id="username" value="" required="required">
+                    <div class="invalid-feedback">
+                      Username is required
                     </div>
                   </div>
-                  <!--/Form with header-->
-
+                  <div class="mt-5">
+                    <button class="btn aqua-gradient waves-effect waves-light z-depth-0" type="submit">NEXT</button>
+                  </div>
+                </form>
               </div>
+            </div>
           </div>
+        </div>
       </div>
     </div>
   </section>
@@ -118,7 +106,7 @@
         url: 'login.php',
         method: 'POST',
         data: form,
-        success: function (data) {
+        success: function(data) {
           if (data == 'Success') {
             $('#alert').removeClass('alert alert-success');
             $('#alert').html('');
@@ -133,12 +121,12 @@
     }
   </script>
   <script>
-    (function () {
+    (function() {
       'use strict';
-      window.addEventListener('load', function () {
+      window.addEventListener('load', function() {
         var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
             if (form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
