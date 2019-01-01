@@ -17,7 +17,6 @@
           <div class="tab-pane fade in show active" id="panel104" role="tabpanel">
             <div class="text-left">
               <h2>Profile</h2>
-              <hr>
             </div>
 
             <div class="w-75 mx-auto mt-5">
