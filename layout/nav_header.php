@@ -44,7 +44,7 @@
         <span class="clearfix d-none d-sm-inline-block">Profile</span></a>
     </a>
     <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="userDropdown">
-      <a class="dropdown-item" href="../login">Log Out</a>
+      <a class="dropdown-item" href="../config/logout.php">Log Out</a>
       <a class="dropdown-item" href="../profile/">My account</a>
     </div>
   </li>

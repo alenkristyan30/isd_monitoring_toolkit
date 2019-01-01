@@ -1,4 +1,5 @@
 <?php require_once('../config/session.php'); ?>
+<?php require_once('../config/database.php'); ?>
 <?php include('../layout/header.php'); ?>
 <style type="text/css">
   .cascading-admin-card {
@@ -66,7 +67,6 @@
 
   }
 </style>
-
 <body class="fixed-sn white-skin">
   <header>
     <?php include('../layout/side_nav.php'); ?>

@@ -1,6 +1,6 @@
+<?php include("../config/validation.php");?>
 <?php include('../layout/header.php'); ?>
 <style>
-
   .intro-2 {
            background: url("../dist/img/intro-bg.jpeg")no-repeat center center;
            background-size: cover;
@@ -63,6 +63,7 @@
         **/
 
    </style>
+
 <body>
   <section class="view intro-2">
     <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
@@ -75,8 +76,17 @@
                   <img src="../dist/img/logo.png" class="w-25 mx-auto"></img>
                 </div>
                 <p class="card-subtitle text-center text-black-50 mb-5">Welcome back! Please login to your account.</p>
-                <form method="POST" id="vform" onsubmit="return Validate()" class="text-center needs-validation" novalidate="novalidate">
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="text-center needs-validation" novalidate="novalidate">
                   <div id="alert" role="alert"></div>
+                  <span>
+                    <?php if(!empty($errors)) {?>
+                    <div class="alert alert-warning fade show error" role="alert">
+                      <?php foreach ($errors as $key => $value) {
+                                      echo $value;
+                                  } ?>
+                    </div>
+                    <?php } ?>
+                  </span>
                   <div class="md-form">
                     <label for="username">Username</label>
                     <input type="text" name="username" class="form-control " id="username" value="" required="required">
@@ -92,7 +102,7 @@
                     </div>
                   </div>
                   <div class="mt-5">
-                    <button class="btn aqua-gradient waves-effect waves-light z-depth-0" type="submit">NEXT</button>
+                    <button class="btn aqua-gradient waves-effect waves-light z-depth-0" type="submit">ENTER</button>
                   </div>
                 </form>
               </div>
@@ -103,7 +113,7 @@
     </div>
   </section>
   <?php include('../layout/footer.php'); ?>
-  <script>
+  <!--script>
     function Validate() {
       var form = $('#vform').serialize();
       $.ajax({
@@ -123,7 +133,7 @@
       });
       return false
     }
-  </script>
+  </script-->
   <script>
     (function() {
       'use strict';

@@ -1,8 +1,10 @@
 <?php
+// check connection
 require_once '../config/database.php';
 session_start();
-if(isset($_SESSION['id'])) {
-    header('location:../login/');
+// check if users already logged in
+if(isset($_SESSION['user_id'])) {
+    header('location:../dashboard/');
     exit();
 }
 if( !empty($_POST) ) {
@@ -13,9 +15,11 @@ if( !empty($_POST) ) {
         $errors[] = '* Username/Password field is required';
     }
     else {
+        // if username exists
         $sql = "SELECT * FROM useracc WHERE username = '$username'";
         $query = $connect->query($sql);
         if( $query->num_rows > 0 ) {
+            // check username and password
             $password = md5($password);
             $sql = "SELECT * FROM useracc WHERE username = '$username' AND password = '$password'";
             $query = $connect->query($sql);
@@ -23,7 +27,7 @@ if( !empty($_POST) ) {
             $connect->close();
             if($query->num_rows == 1) {
                 $_SESSION['logged_in'] = true;
-                $_SESSION['id'] = $result['id'];
+                $_SESSION['user_id'] = $result['id'];
                 header('location:../dashboard/');
                 exit();
             }

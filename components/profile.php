@@ -7,13 +7,10 @@
             Profile</a>
             <a href="#panel105" class="list-group-item" data-toggle="tab" role="tab">
               Account</a>
-
         </div>
       </div>
       <div class="col-lg-6 mb-4">
-
         <div class="tab-content card">
-          <!--Panel 1-->
           <div class="tab-pane fade in show active" id="panel104" role="tabpanel">
             <div class="text-left">
               <h2>Profile</h2>
@@ -38,7 +35,6 @@
 
             <div class="text-left">
               <h2>User Information</h2>
-              <hr>
             </div>
 
             <div class="w-75 mx-auto mt-5">
@@ -80,7 +76,6 @@
           <div class="tab-pane fade" id="panel105" role="tabpanel">
             <div class="text-left">
               <h2>Account</h2>
-              <hr>
             </div>
 
             <div class="w-75 mt-5 mx-auto">
