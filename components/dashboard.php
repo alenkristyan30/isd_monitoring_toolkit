@@ -102,7 +102,7 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-building amber"></i>
+          <i class="fa fa-building amber" style="padding-left: 2rem; padding-right : 2rem;"></i>
           <div class="data">
             <p>DIVISIONS</p>
             <?php  require_once('../config/database.php');
@@ -126,7 +126,7 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-layer-group blue"></i>
+          <i class="fa fa-layer-group blue" style="padding-left: 2rem; padding-right : 2rem;"></i>
           <div class="data">
             <p>SECTIONS</p>
             <?php  require_once('../config/database.php');
@@ -150,7 +150,7 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-stream green"></i>
+          <i class="fa fa-stream green" style="padding-left: 2rem; padding-right : 2rem;"></i>
           <div class="data">
             <p>POSITIONS</p>
             <?php  require_once('../config/database.php');
@@ -174,7 +174,7 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-stream purple"></i>
+          <i class="fa fa-stream purple" style="padding-left: 2rem; padding-right : 2rem;"></i>
           <div class="data">
             <p>REGISTERED SYSTEM</p>
             <?php  require_once('../config/database.php');
