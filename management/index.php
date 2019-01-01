@@ -20,6 +20,11 @@
         $('#secsel').materialSelect();
     });
   </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#side-val').text("Management");
+    })
+  </script>
   <script>
     $('.mdb_upload').mdb_upload();
     $(".button-collapse").sideNav();

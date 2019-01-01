@@ -1,7 +1,7 @@
 <section class="mt-lg-5">
   <div class="text-left">
-    <h3>Dashboards</h3>
-    <hr>
+    <h3 class="pb-3">Dashboards</h3>
+
   </div>
   <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">

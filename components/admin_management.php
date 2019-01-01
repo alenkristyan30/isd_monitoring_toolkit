@@ -40,7 +40,7 @@
               </th>
               <th class="th-sm">Middlename
               </th>
-              <th class="th-sm">Name extension
+              <th class="th-sm">Extension
               </th>
               <th class="th-sm">Division
               </th>

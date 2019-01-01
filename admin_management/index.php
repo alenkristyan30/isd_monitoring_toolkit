@@ -13,6 +13,11 @@
     </div>
   </main>
   <?php include('../layout/footer.php'); ?>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#side-val').text("Admin");
+    })
+  </script>
   <script>
     $(document).ready(function() {
       $('#divsel').materialSelect();

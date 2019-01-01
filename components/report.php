@@ -10,7 +10,7 @@
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
             <tr>
-              <th class="th-sm">id
+              <th class="th-sm">Report id
               </th>
               <th class="th-sm">Username
               </th>
@@ -56,45 +56,45 @@
                     <div class="md-form">
                       <label for="">Report Id</label>
                       <div class="">
-                        <h3 class="text-justify"><span id="reportidassign"></span></h3>
+                        <h3 class="text-left"><span id="reportidassign"></span></h3>
                       </div>
                     </div>
 
                     <div class="md-form">
                       <label for="">Username</label>
                       <div class="">
-                        <p class="text-justify"><span id="usernameassign"></span></p>
+                        <p class="text-left"><span id="usernameassign"></span></p>
                       </div>
 
                     </div>
                     <div class="md-form">
                       <label for="">System Name</label>
                       <div class="">
-                        <p class="text-justify"><span id="systemassign"></span></p>
+                        <p class="text-left"><span id="systemassign"></span></p>
                       </div>
                     </div>
                     <div class="md-form">
                       <label for="">Category</label>
                       <div class="">
-                        <p class="text-justify"><span id="categoryassign"></span></p>
+                        <p class="text-left"><span id="categoryassign"></span></p>
                       </div>
                     </div>
                     <div class="md-form">
                       <label for="">Status</label>
                       <div class="">
-                        <p class="text-justify"><span id="statusassign"></span></p>
+                        <p class="text-left"><span id="statusassign"></span></p>
                       </div>
                     </div>
                     <div class="md-form">
                       <label for="">Date</label>
                       <div class="">
-                        <p class="text-justify"><span id="timestamnpassign"></span></p>
+                        <p class="text-left"><span id="timestamnpassign"></span></p>
                       </div>
                     </div>
                     <div class="md-form">
                       <label for="">Comment</label>
                       <div class="">
-                        <p class="text-justify"><span id="commentassign"></span></p>
+                        <p class="text-left"><span id="commentassign"></span></p>
                       </div>
                     </div>
 
@@ -158,45 +158,45 @@
                   <div class="md-form">
                     <label for="">Report Id</label>
                     <div class="">
-                      <h3 class="text-justify"><span id="reportidview"></span></h3>
+                      <h3 class="text-left"><span id="reportidview"></span></h3>
                     </div>
                   </div>
 
                   <div class="md-form">
                     <label for="">Username</label>
                     <div class="">
-                      <p class="text-justify"><span id="usernameview"></span></p>
+                      <p class="text-left"><span id="usernameview"></span></p>
                     </div>
 
                   </div>
                   <div class="md-form">
                     <label for="">System Name</label>
                     <div class="">
-                      <p class="text-justify"><span id="systemview"></span></p>
+                      <p class="text-left"><span id="systemview"></span></p>
                     </div>
                   </div>
                   <div class="md-form">
                     <label for="">Category</label>
                     <div class="">
-                      <p class="text-justify"><span id="categoryview"></span></p>
+                      <p class="text-left"><span id="categoryview"></span></p>
                     </div>
                   </div>
                   <div class="md-form">
                     <label for="">Status</label>
                     <div class="">
-                      <p class="text-justify"><span id="statusview"></span></p>
+                      <p class="text-left"><span id="statusview"></span></p>
                     </div>
                   </div>
                   <div class="md-form">
                     <label for="">Date</label>
                     <div class="">
-                      <p class="text-justify"><span id="timestamnpview"></span></p>
+                      <p class="text-left"><span id="timestamnpview"></span></p>
                     </div>
                   </div>
                   <div class="md-form">
                     <label for="">Comment</label>
                     <div class="">
-                      <p class="text-justify"><span id="commentview"></span></p>
+                      <p class="text-left"><span id="commentview"></span></p>
                     </div>
                   </div>
 

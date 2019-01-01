@@ -1,7 +1,6 @@
 <section>
   <div class="text-left">
-    <h3>Accounts</h3>
-    <hr>
+    <h3 class="pb-3">Accounts</h3>
   </div>
 
   <section>
@@ -10,7 +9,7 @@
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
             <tr>
-              <th class="th-sm">Account Id
+              <th class="th-sm">Id
               </th>
               <th class="th-sm">Username
               </th>
