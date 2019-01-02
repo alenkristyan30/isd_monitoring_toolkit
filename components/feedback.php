@@ -79,7 +79,7 @@
   <div class="card mb-5 ">
     <div class="card-body table-responsive">
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-        <thead class="black white-text">
+        <thead class="elegant-color white-text">
           <tr>
             <th class="th-sm">Fullname
             </th>
@@ -104,7 +104,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </span>
             </th>
-            <th><h3><span class="badge red lg font-weight-bold">VERY POOR</span></h3>
+            <th><h4><span class="badge red ">VERY POOR</span></h4>
             </th>
             <th>2018-12-13 13:59:10
             </th>
@@ -120,7 +120,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </span>
             </th>
-            <th><h3><span class="badge orange lg font-weight-bold">POOR</span></h3>
+            <th><h4><span class="badge orange ">POOR</span></h4>
             </th>
             <th>2018-12-13 13:59:10
             </th>
@@ -136,7 +136,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </span>
             </th>
-            <th><h3><span class="badge amber lg font-weight-bold">Average</span></h3>
+            <th><h4><span class="badge amber ">Average</span></h4>
             </th>
             <th>2018-12-13 13:59:10
             </th>
@@ -152,7 +152,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </span>
             </th>
-            <th><h3><span class="badge blue lg font-weight-bold">Good</span></h3>
+            <th><h4><span class="badge blue ">Good</span></h4>
             </th>
             <th>2018-12-13 13:59:10
             </th>
@@ -167,7 +167,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </span>
             </th>
-            <th><h3><span class="badge green lg font-weight-bold">Excellent</span></h3>
+            <th><h4><span class="badge green ">Excellent</span></h4>
             </th>
             <th>2018-12-13 13:59:10
             </th>

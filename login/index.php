@@ -63,7 +63,6 @@
         **/
 
    </style>
-
 <body>
   <section class="view intro-2">
     <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
@@ -102,7 +101,7 @@
                     </div>
                   </div>
                   <div class="mt-5">
-                    <button class="btn aqua-gradient waves-effect waves-light z-depth-0" type="submit">ENTER</button>
+                    <button class="btn aqua-gradient waves-effect waves-light z-depth-0" type="submit">Login</button>
                   </div>
                 </form>
               </div>
