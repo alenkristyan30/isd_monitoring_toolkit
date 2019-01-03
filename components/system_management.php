@@ -1,6 +1,6 @@
 <section>
   <div class="text-left">
-    <h3 class="pb-3">User Management</h3>
+    <h3 class="pb-3">System Management</h3>
   </div>
   <section>
     <div class="row">
@@ -32,7 +32,7 @@
             <tr>
               <th class="th-sm">Code Name
               </th>
-              <th class="th-sm">System Fullname
+              <th class="th-sm">System Name
               </th>
               <th class="th-sm">Description
               </th>
@@ -71,9 +71,9 @@
                       </div>
                     </div>
 
-                    <div class="md-form">
-                      <label for="sysname">System Fullname</label>
-                      <textarea type="text" name="sysname" class="form-control md-textarea " id="sysname" required></textarea>
+                    <div class="form-group">
+                      <label for="sysname" class="pull-left" style="font-size: .8rem">System Fullname</label>
+                      <textarea type="text" name="sysname" class="form-control rounded-0" id="sysname"  rows="10"  required></textarea>
                       <div class="invalid-feedback">
                         System Fullname is required
                       </div>
@@ -88,9 +88,9 @@
                       </div>
                     </div>
 
-                    <div class="md-form">
-                      <label for="sysdes">Description</label>
-                      <textarea type="text" name="sysdes" class="form-control md-textarea" id="sysdes" required="required"></textarea>
+                    <div class="form-group">
+                      <label for="sysdes" class="pull-left" style="font-size: .8rem">Description</label>
+                      <textarea type="text" name="sysdes" class="form-control rounded-0" id="sysdes" required="required"></textarea>
                       <div class="invalid-feedback">
                         Description is required
                       </div>

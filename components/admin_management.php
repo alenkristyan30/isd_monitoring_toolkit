@@ -80,7 +80,7 @@
                     <div class="md-form">
                       <label for="surname">Surname</label>
                       <input type="text" name="surname" class="form-control " id="surname" required>
-                      <div class="invalid-feedback">
+                      <div class="invalid-tooltip">
                         Surname is required
                       </div>
                     </div>
@@ -88,7 +88,7 @@
                     <div class="md-form">
                       <label for="firstname">First name</label>
                       <input type="text" name="firstname" class="form-control " id="firstname" required>
-                      <div class="invalid-feedback">
+                      <div class="invalid-tooltip">
                         Firstname is required
                       </div>
                     </div>

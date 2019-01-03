@@ -77,12 +77,15 @@
       return false;
     }
     $('#add').click(function () {
+        $('label').addClass("active");
+        $('#ModalLongTitle').text("Add");
       $('#action').val('Add');
       $('#postitle').val('');
       $('#posdes').val('');
 
     });
     $(document).on('click', 'a[name="edit"]', function () {
+      $('#ModalLongTitle').text("Edit");
       $('#action').val('Edit');
       var id = $(this).attr('id');
       $.ajax({

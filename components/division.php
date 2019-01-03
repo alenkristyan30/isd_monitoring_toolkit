@@ -30,9 +30,9 @@
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
             <tr>
-              <th class="th-sm">Division Id
+              <th class="th-sm">Division Code
               </th>
-              <th class="th-sm">Full Division Name
+              <th class="th-sm">Division Name
               </th>
               <th class="th-sm">Description
               </th>
@@ -81,7 +81,7 @@
 
                     <div class="md-form">
                       <label for="divname">Description</label>
-                      <textarea type="text" name="divdes" class="form-control md-textarea" id="divdes" required="required"></textarea>
+                      <textarea type="text" name="divdes" class="form-control" id="divdes" placeholder="..." style="height : 160px" required="required"></textarea>
                       <div class="invalid-feedback">
                         Full Division Name is required
                       </div>

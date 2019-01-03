@@ -1,7 +1,7 @@
 <?php
     include '../config/database.php';
     $id = $_POST['id'];
-    $sql = mysqli_query($connect, "SELECT * FROM infosys WHERE id = $id");
+    $sql = mysqli_query($connect, "SELECT * FROM infosys WHERE sysid = $id");
     $row = mysqli_fetch_assoc($sql);
     $output = array(
         "codename" => $row['code_name'],

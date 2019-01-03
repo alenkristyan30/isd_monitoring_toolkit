@@ -25,7 +25,7 @@
   </section>
 
   <section>
-    <div class="card mb-5 col-md-10">
+    <div class="card mb-5">
       <div class="card-body table-responsive">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
@@ -81,17 +81,16 @@
                         ?>
                     </select>
 
+
+                  </div>
+                  <div class="col-sm ">
                     <div class="md-form">
                       <label for="divname">Description</label>
-                      <textarea type="text" name="secdes" class="form-control md-textarea" id="secdes" required="required"></textarea>
+                      <textarea type="text" name="secdes" class="form-control" id="secdes" placeholder="..." required="required" style="height: 100px"></textarea>
                       <div class="invalid-feedback">
                       Description is required
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm ">
-
-
                   </div>
                 </div>
 

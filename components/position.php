@@ -25,7 +25,7 @@
   </section>
 
   <section>
-    <div class="card mb-5 col-md-8">
+    <div class="card mb-5 col-md-10">
       <div class="card-body table-responsive">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
@@ -48,7 +48,7 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header text-center">
-            <h5 class="modal-title w-100" id="exampleModalLongTitle">Modal title</h5>
+            <h5 class="modal-title w-100" id="ModalLongTitle"></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -71,7 +71,7 @@
 
                     <div class="md-form">
                       <label for="divname">Description</label>
-                      <textarea type="text" name="posdes" class="form-control md-textarea" id="posdes" required="required"></textarea>
+                      <textarea type="text" name="posdes" class="form-control" id="posdes" required="required"></textarea>
                       <div class="invalid-feedback">
                       Description is required
                       </div>

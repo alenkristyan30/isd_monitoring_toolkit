@@ -1,7 +1,6 @@
 <?php include('../layout/header.php'); ?>
 <link rel="stylesheet" href="../dist/css/datatable.style.css">
 <link rel="stylesheet" href="../dist/css/mduploader.css">
-
 <body class="fixed-sn white-skin">
   <header>
     <?php include('../layout/side_nav.php'); ?>
@@ -21,7 +20,7 @@
   <script>
     $(document).ready(function() {
       $('#divsel').materialSelect();
-        $('#possel').materialSelect();
+      $('#possel').materialSelect();
     });
   </script>
   <script>

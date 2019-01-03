@@ -82,6 +82,7 @@
       return false;
     }
     $('#add').click(function () {
+      $('label').addClass("active");
       $('#action').val('Add');
       $('#divid').val('');
       $('#divname').val('');
