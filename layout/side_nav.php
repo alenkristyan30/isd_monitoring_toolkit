@@ -27,7 +27,7 @@
                 <a href="../admin_management" class="waves-effect">Administrator</a>
               </li>
               <li>
-                <a href="../management" class="waves-effect">User</a>
+                <a href="../management" class="waves-effect">User Management</a>
               </li>
               <li>
                 <a href="../system_management" class="waves-effect">System management</a>

@@ -22,7 +22,7 @@
   </script>
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#side-val').text("Management");
+      $('#side-val').text("User Management");
     })
   </script>
   <script>

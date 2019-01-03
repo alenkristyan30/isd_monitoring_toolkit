@@ -1,5 +1,5 @@
  <section>
-  <div class="text-left mb-5">
+  <div class="text-left">
     <h3 class="pb-3"><strong>User Management</strong></h3>
   </div>
   <section>

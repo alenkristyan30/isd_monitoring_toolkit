@@ -12,6 +12,11 @@
     </div>
   </main>
   <?php include('../layout/footer.php'); ?>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#side-val').text("Division");
+    })
+  </script>
   <script>
     $(".button-collapse").sideNav();
     var container = document.querySelector('.custom-scrollbar');
