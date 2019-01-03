@@ -1,6 +1,6 @@
  <section>
   <div class="text-left mb-5">
-    <h3><strong>User Management</strong></h3>
+    <h3 class="pb-3"><strong>User Management</strong></h3>
   </div>
   <section>
     <div class="row">

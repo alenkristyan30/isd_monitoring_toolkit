@@ -7,7 +7,7 @@
             $row['id'],
             $row['username'],
             $row['type'],
-            $row['timestamp']
+            $row['datecreated']
         );
     }
     echo json_encode($output);

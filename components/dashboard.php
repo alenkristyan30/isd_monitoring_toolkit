@@ -174,7 +174,7 @@
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card card-cascade cascading-admin-card">
         <div class="admin-up">
-          <i class="fa fa-stream purple" style="padding-left: 2rem; padding-right : 2rem;"></i>
+          <i class="fa fa-stream purple"></i>
           <div class="data">
             <p>REGISTERED SYSTEM</p>
             <?php  require_once('../config/database.php');

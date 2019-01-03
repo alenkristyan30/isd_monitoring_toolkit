@@ -1,7 +1,6 @@
 <section>
   <div class="text-left">
-    <h3>Admin Management</h3>
-    <hr>
+    <h3 class="pb-3">Admin Management</h3>
   </div>
   <section>
     <div class="row">

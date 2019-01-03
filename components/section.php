@@ -1,7 +1,6 @@
 <section>
   <div class="text-left">
-    <h3>Section</h3>
-    <hr>
+    <h3 class="pb-3">Section</h3>
   </div>
   <section>
     <div class="row">

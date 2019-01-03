@@ -1,7 +1,6 @@
 <section>
   <div class="text-left">
-    <h3>Report</h3>
-    <hr>
+    <h3 class="pb-3">Reports</h3>
   </div>
 
   <section>
@@ -105,7 +104,7 @@
                     <?php  require_once('../config/database.php');
                       $sql = mysqli_query($connect, "SELECT useracc.id , sname , fname , mname FROM useracc INNER JOIN userinfo ON userinfo.id = useracc.id WHERE useracc.type = 2"); ?>
                     <select class="mdb-select md-form" searchable="Search here.." id="divsel" name="divsel" required>
-                      <option value="" disabled selected>Choose division</option>
+                      <option value="" disabled selected>Choose Person to Assign</option>
                       <?php
                           while ($row = mysqli_fetch_assoc($sql))
                           {

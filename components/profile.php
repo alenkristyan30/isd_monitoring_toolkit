@@ -15,61 +15,70 @@
             <div class="text-left">
               <h2>Profile</h2>
             </div>
-
+            <?php
+            include_once("../config/database.php");
+             $sql = "SELECT userinfo.id  , username , sname , fname , mname , extname , datecreated FROM useracc INNER JOIN userinfo ON useracc.id = userinfo.id WHERE useracc.id = $user";
+             $resultset = mysqli_query($connect, $sql) or die("database error:". mysqli_error($connect));
+             while( $record = mysqli_fetch_assoc($resultset) ) {
+               ?>
             <div class="w-75 mx-auto mt-5">
               <div class="md-form">
                 <label for="surname" class="active">Account Id</label>
-                <p>sampple</p>
+                <p><?php echo $record['id']; ?></p>
               </div>
 
               <div class="md-form mt-2">
                 <label for="surname" class="active">Username</label>
-                <p>sampple</p>
+                <p><?php echo $record['username']; ?></p>
               </div>
 
               <div class="md-form mt-2">
                 <label for="surname" class="active">Date Created</label>
-                <p>2018-12-07 16:33:47</p>
+                <p><?php echo $record['datecreated']; ?></p>
               </div>
             </div>
 
             <div class="text-left">
               <h2>User Information</h2>
             </div>
-
+            <form action="function.php" method="post">
+              <input type="hidden" name="id" id="id" value="<?php $record['id']; ?>">
             <div class="w-75 mx-auto mt-5">
               <div class="md-form">
                 <label for="surname" class="active">Surname</label>
-                <input type="text" name="acro" class="form-control" id="acro" required="required" placeholder=" ">
+                <input type="text" name="sname" class="form-control" id="sname" required="required" value="<?php echo $record['sname']; ?>" placeholder=" ">
                 <div class="invalid-feedback">
                   Acronym is required
                 </div>
               </div>
               <div class="md-form">
                 <label for="surname" class="active">Firstname</label>
-                <input type="text" name="acro" class="form-control" id="acro" required="required" placeholder=" ">
+                <input type="text" name="fname" class="form-control" id="fname" required="required" value="<?php echo $record['fname']; ?>" placeholder=" ">
                 <div class="invalid-feedback">
                   Acronym is required
                 </div>
               </div>
               <div class="md-form">
                 <label for="surname" class="active">Middlename</label>
-                <input type="text" name="acro" class="form-control" id="acro" required="required" placeholder=" ">
+                <input type="text" name="mname" class="form-control" id="mname" required="required" value="<?php echo $record['mname']; ?>" placeholder=" ">
                 <div class="invalid-feedback">
                   Acronym is required
                 </div>
               </div>
               <div class="md-form">
                 <label for="surname" class="active">Name Extension</label>
-                <input type="text" name="acro" class="form-control" id="acro" required="required" placeholder=" ">
+                <input type="text" name="extname" class="form-control" id="extname" required="required"  value="<?php echo $record['extname']; ?>" placeholder=" ">
                 <div class="invalid-feedback">
                   Acronym is required
                 </div>
               </div>
+              <?php } ?>
               <div class="mt-2">
                 <button class="btn aqua-gradient btn-rounded waves-effect waves-light z-depth-0" type="submit">Update user</button>
               </div>
             </div>
+          </form>
+
           </div>
           <!--/.Panel 1-->
           <!--Panel 2-->
