@@ -7,5 +7,4 @@
 <script type="text/javascript" src="../dist/js/sweetalert.min.js"></script>
 <script type="text/javascript" src="../dist/js/chart.js"></script>
 </body>
-
 </html>

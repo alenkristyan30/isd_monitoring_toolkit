@@ -24,34 +24,37 @@
     </div>
   </section>
   <section>
-    <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-      <thead class="elegant-color white-text">
-        <tr>
-          <th class="th-sm">Id
-          </th>
-          <th class="th-sm">Username
-          </th>
-          <th class="th-sm">Surname
-          </th>
-          <th class="th-sm">Firstname
-          </th>
-          <th class="th-sm">Middlename
-          </th>
-          <th class="th-sm">Extension
-          </th>
-          <th class="th-sm">Division
-          </th>
-          <th class="th-sm">Section
-          </th>
-          <th class="th-sm">Position
-          </th>
-          <th class="th-sm">Gender
-          </th>
-          <th class="th-sm">Action
-          </th>
-        </tr>
-      </thead>
-    </table>
+    <div class="table-responsive">
+      <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
+        <thead class="elegant-color white-text">
+          <tr>
+            <th class="th-sm">Id
+            </th>
+            <th class="th-sm">Username
+            </th>
+            <th class="th-sm">Surname
+            </th>
+            <th class="th-sm">Firstname
+            </th>
+            <th class="th-sm">Middlename
+            </th>
+            <th class="th-sm">Extension
+            </th>
+            <th class="th-sm">Division
+            </th>
+            <th class="th-sm">Section
+            </th>
+            <th class="th-sm">Position
+            </th>
+            <th class="th-sm">Gender
+            </th>
+            <th class="th-sm">Action
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
   </section>
 
   <section>

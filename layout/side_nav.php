@@ -13,8 +13,8 @@
             Dashboards
           </a>
         </li>
-        <li>
-          <a class="collapsible-header waves-effect arrow-r">
+        <li id="sidenav2parent">
+          <a class="collapsible-header waves-effect arrow-r" id="sidenav2">
             <i class="fa fa-users"></i>
             Management<i class="fal fa-angle-down rotate-icon"></i>
           </a>
@@ -26,8 +26,8 @@
               <li>
                 <a href="../admin_management" class="waves-effect">Administrator</a>
               </li>
-              <li>
-                <a href="../management" class="waves-effect">User Management</a>
+              <li id="management_side_parent">
+                <a href="../management" id="management_side" class="waves-effect">User Management</a>
               </li>
               <li>
                 <a href="../system_management" class="waves-effect">System management</a>
