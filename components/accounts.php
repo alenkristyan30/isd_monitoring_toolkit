@@ -4,7 +4,7 @@
   </div>
 
   <section>
-    <div class="card mb-5 col-md-6">
+    <div class="card mb-5 col-md-8">
       <div class="card-body table-responsive">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
