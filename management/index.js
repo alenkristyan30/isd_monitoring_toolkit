@@ -275,6 +275,7 @@ $(document).ready(function() {
   $('#side-val').text("User Management");
   $('#sidenav2').addClass("active");
   $('#sidenav2parent').addClass("active");
+  $('sidenav2parent').sideNav('show');
   $('#management_side_parent').addClass("active");
   $('#management_side').addClass("active");
 });
