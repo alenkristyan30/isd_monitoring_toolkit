@@ -16,8 +16,8 @@
   <script>
     $(document).ready(function() {
       $('#divsel').materialSelect();
-        $('#possel').materialSelect();
-        $('#secsel').materialSelect();
+      $('#possel').materialSelect();
+      $('#secsel').materialSelect();
     });
   </script>
   <script type="text/javascript">
@@ -52,179 +52,188 @@
           }, false);
         });
       }, false);
-    })();
+    })
   </script>
 
   <script>
-  function preventNumberInput(e){
-    var keyCode = (e.keyCode ? e.keyCode : e.which);
-    if (keyCode > 47 && keyCode < 58 || keyCode > 95 && keyCode < 107 ){
+    function preventNumberInput(e) {
+      var keyCode = (e.keyCode ? e.keyCode : e.which);
+      if (keyCode > 47 && keyCode < 58 || keyCode > 95 && keyCode < 107) {
         e.preventDefault();
+      }
     }
-  }
-  $(document).ready(function(){
-    $('#surname').keypress(function(e) {
+    $(document).ready(function() {
+      $('#surname').keypress(function(e) {
         preventNumberInput(e);
+      });
     });
-  });
   </script>
 
   <script>
-  var bool = false;
-  var table = $('#dtMaterialDesignExample').DataTable({
-    'order': [],
-    'ajax': {
-      url: 'sync.php',
-      method: 'POST'
-    },
-    'columnDefs': [{
-      'targets': 10,
-      'orderable': false
-    }]
-  })
+    var bool = false;
+    var table = $('#dtMaterialDesignExample').DataTable({
+      'order': [],
+      'ajax': {
+        url: 'sync.php',
+        method: 'POST'
+      },
+      'columnDefs': [{
+        'targets': 10,
+        'orderable': false
+      }]
+    })
 
-  function img_validation() {
-    var extension = $('#image_file').val().split('.').pop().toLowerCase();
-    if (extension != '') {
+    function img_validation() {
+      var extension = $('#image_file').val().split('.').pop().toLowerCase();
+      if (extension != '') {
         if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-            swal("Invalid image file", "", "warning").
-            then((value) => {
-                $('#image_file').val('');
-            });
-            bool = false;
-            return false;
+          swal("Invalid image file", "", "warning").
+          then((value) => {
+            $('#image_file').val('');
+          });
+          bool = false;
+          return false;
         }
-    }
-    if ($('#image_file').val() == "") {
+      }
+      if ($('#image_file').val() == "") {
         swal("Please input image", "", "warning");
         bool = false;
         return false;
-    } else {
+      } else {
         bool = true;
+      }
     }
-}
-function sname_validation() {
-    if ($('#surname').val() == '') {
+
+    function sname_validation() {
+      if ($('#surname').val() == '') {
         bool = false;
-    } else {
+      } else {
         $('#surname').removeClass('is-invalid');
         bool = true;
+      }
     }
-}
-function fname_validation() {
-    if ($('#firstname').val() == '') {
+
+    function fname_validation() {
+      if ($('#firstname').val() == '') {
         bool = false;
-    } else {
+      } else {
         $('#firstname').removeClass('is-invalid');
         bool = true;
+      }
     }
-}
-function mname_validation() {
-    if ($('#middlename').val() == '') {
+
+    function mname_validation() {
+      if ($('#middlename').val() == '') {
         bool = false;
-    } else {
+      } else {
         $('#middlename').removeClass('is-invalid');
         bool = true;
+      }
     }
-}
-function mname_validation() {
-    if ($('#middlename').val() == '') {
+
+    function mname_validation() {
+      if ($('#middlename').val() == '') {
         bool = false;
-    } else {
+      } else {
         $('#middlename').removeClass('is-invalid');
         bool = true;
+      }
     }
-}
-function gender_validation() {
-    if ($('input[name=gender]:checked').length > 0) {
-      bool = false;
-    } else {
-      $('gender').removeClass('is-invalid');
-      bool = true;
-    }
-}
-function division_validation() {
-    var opt = $('#divsel').val();
-    if (opt == "") {
+
+    function gender_validation() {
+      if ($('input[name=gender]:checked').length > 0) {
         bool = false;
-    } else {
+      } else {
+        $('gender').removeClass('is-invalid');
+        bool = true;
+      }
+    }
+
+    function division_validation() {
+      var opt = $('#divsel').val();
+      if (opt == "") {
+        bool = false;
+      } else {
         $('#divsel').removeClass('is-invalid');
         bool = true;
+      }
     }
-}
-function section_validation() {
-    var opt = $('#secsel').val();
-    if (opt == "") {
+
+    function section_validation() {
+      var opt = $('#secsel').val();
+      if (opt == "") {
         bool = false;
-    } else {
+      } else {
         $('#secsel').removeClass('is-invalid');
         bool = true;
+      }
     }
-}
 
-function position_validation() {
-    var opt = $('#possel').val();
-    if (opt == "") {
+    function position_validation() {
+      var opt = $('#possel').val();
+      if (opt == "") {
         bool = false;
-    } else {
+      } else {
         $('#possel').removeClass('is-invalid');
         bool = true;
+      }
     }
-}
-function username_validation() {
-    if ($('#username').val() == '') {
+
+    function username_validation() {
+      if ($('#username').val() == '') {
         bool = false;
-    } else {
+      } else {
         $('#username').removeClass('is-invalid');
         bool = true;
+      }
     }
-}
-function password_validation(){
-        if($('#password').val() == ''){
-            bool = false;
-        }
-        else if($('#password').val().length < 8){
-            $('#password').html('Password must be more than 8 characters!');
-            bool = false;
-        }
-        else{
-            $('#password').removeClass('is-invalid');
-            $('#password').html('');
-            bool = true;
-        }
+
+    function password_validation() {
+      if ($('#password').val() == '') {
+        bool = false;
+      } else if ($('#password').val().length < 8) {
+        $('#password').html('Password must be more than 8 characters!');
+        bool = false;
+      } else {
+        $('#password').removeClass('is-invalid');
+        $('#password').html('');
+        bool = true;
+      }
     }
+
     function validateAll() {
-        if (bool) {
-            $.ajax({
-                url: 'function.php',
-                method: 'POST',
-                  data: $('#vform').serialize(),
-                success: function (data) {
-                    swal(data, '', 'success', {
-                            closeOnClickOutside: false
-                        })
-                        .then((value) => {
-                          $('#exampleModalCenter').modal('hide');
-                          toastr["success"]("Successfully Added");
-                          table.ajax.reload();
-                        })
-                }
-            });
-        }
+      if (bool) {
+        $.ajax({
+          url: 'function.php',
+          method: 'POST',
+          data: $('#vform').serialize(),
+          success: function(data) {
+            swal(data, '', 'success', {
+                closeOnClickOutside: false
+              })
+              .then((value) => {
+                $('#exampleModalCenter').modal('hide');
+                toastr["success"]("Successfully Added");
+                table.ajax.reload();
+              })
+          }
+        });
+      }
     }
+
     function Validate() {
-    img_validation();
-    sname_validation();
-    fname_validation();
-    mname_validation();
-    gender_validation();
-    division_validation();
-    section_validation();
-    position_validation();
-    username_validation();
-    password_validation();
-    validateAll();
-        return false;
+      img_validation();
+      sname_validation();
+      fname_validation();
+      mname_validation();
+      gender_validation();
+      division_validation();
+      section_validation();
+      position_validation();
+      username_validation();
+      password_validation();
+      validateAll();
+      return false;
     }
     $('#add').click(function() {
       $('#modaltitle').text('Add');
@@ -241,7 +250,7 @@ function password_validation(){
       $('#image_file').empty();
       $('#male').prop('checked', false);
       $('#female').prop('checked', false);
-        $('#vform').removeClass('was-validated');
+      $('#vform').removeClass('was-validated');
 
     });
     $(document).on('click', 'a[name="edit"]', function() {
@@ -314,20 +323,21 @@ function password_validation(){
           $('#id').val(id);
           $('label').addClass("active");
           $('#modalview').modal('show');
+            $('#idview').text(data.userid);
           $('#surnameview').text(data.sname);
           $('#firstnameview').text(data.fname);
           $('#middlenameview').text(data.mname);
           $('#nameextview').text(data.extname);
           $('#divisionview').text(data.divsel);
+          $('#sectionview').text(data.secsel);
           $('#positionview').text(data.possel);
           $('#usernameview').text(data.username);
           $('#genderview').text(data.gender);
-            if (data.gender == 'Male') {
-              $('#img_src').attr('src' , '../dist/img/male-avatar.png' );
-            }
-            else {
-                $('#img_src').attr('src' , '../dist/img/female-avatar.png' );
-            }
+          if (data.gender == 'Male') {
+            $('#img_src').attr('src', '../dist/img/male-avatar.png');
+          } else {
+            $('#img_src').attr('src', '../dist/img/female-avatar.png');
+          }
         }
       })
     });

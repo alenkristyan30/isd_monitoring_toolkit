@@ -1,4 +1,4 @@
- <section class="mt-lg-5">
+<section class="mt-lg-5">
   <div class="text-left">
     <h3 class="pb-3"><strong>User Management</strong></h3>
   </div>
@@ -24,38 +24,34 @@
     </div>
   </section>
   <section>
-    <div class="card mb-5 ">
-      <div class="card-body table-responsive">
-        <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-          <thead class="elegant-color white-text">
-            <tr>
-              <th class="th-sm">Id
-              </th>
-              <th class="th-sm">Username
-              </th>
-              <th class="th-sm">Surname
-              </th>
-              <th class="th-sm">Firstname
-              </th>
-              <th class="th-sm">Middlename
-              </th>
-              <th class="th-sm">Extension
-              </th>
-              <th class="th-sm">Division
-              </th>
-              <th class="th-sm">Section
-              </th>
-              <th class="th-sm">Position
-              </th>
-              <th class="th-sm">Gender
-              </th>
-              <th class="th-sm">Action
-              </th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-    </div>
+    <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
+      <thead class="elegant-color white-text">
+        <tr>
+          <th class="th-sm">Id
+          </th>
+          <th class="th-sm">Username
+          </th>
+          <th class="th-sm">Surname
+          </th>
+          <th class="th-sm">Firstname
+          </th>
+          <th class="th-sm">Middlename
+          </th>
+          <th class="th-sm">Extension
+          </th>
+          <th class="th-sm">Division
+          </th>
+          <th class="th-sm">Section
+          </th>
+          <th class="th-sm">Position
+          </th>
+          <th class="th-sm">Gender
+          </th>
+          <th class="th-sm">Action
+          </th>
+        </tr>
+      </thead>
+    </table>
   </section>
 
   <section>
@@ -138,7 +134,7 @@
                       <?php  require_once('../config/database.php');
                         $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
                       <select class="mdb-select" searchable="Search here.." id="divsel" name="divsel" required>
-                          <option value="" disabled selected>Choose division</option>
+                        <option value="" disabled selected>Choose division</option>
                         <?php
                             while ($row = mysqli_fetch_assoc($sql))
                             {
@@ -155,7 +151,7 @@
                     <?php  require_once('../config/database.php');
                       $sql = mysqli_query($connect, "SELECT * FROM section"); ?>
                     <select class="mdb-select md-form" searchable="Search here.." id="secsel" name="secsel" required>
-                        <option value="" disabled selected>Choose section</option>
+                      <option value="" disabled selected>Choose section</option>
                       <?php
                           while ($row = mysqli_fetch_assoc($sql))
                           {
@@ -169,7 +165,7 @@
                     <?php  require_once('../config/database.php');
                       $sql = mysqli_query($connect, "SELECT * FROM position"); ?>
                     <select class="mdb-select md-form" searchable="Search here.." id="possel" name="possel" required>
-                        <option value="" disabled selected>Choose position</option>
+                      <option value="" disabled selected>Choose position</option>
                       <?php
                           while ($row = mysqli_fetch_assoc($sql))
                           {
@@ -189,7 +185,7 @@
 
                     <div class="md-form">
                       <label for="password">Password</label>
-                      <input type="password" name="password" class="form-control" id="password" min="8" aria-describedby="ext"  required>
+                      <input type="password" name="password" class="form-control" id="password" min="8" aria-describedby="ext" required>
                       <div class="invalid-feedback">
                         Password is required
                       </div>
@@ -239,6 +235,12 @@
                 <div class="col-sm">
 
                   <div class="md-form">
+                    <label for="">Id</label>
+                    <div class="">
+                      <p class="text-justify"><span id="idview"></span></p>
+                    </div>
+                  </div>
+                  <div class="md-form">
                     <label for="">Username</label>
                     <div class="">
                       <h3 class="text-justify"><span id="usernameview"></span></h3>
@@ -262,6 +264,12 @@
                     <label for="">Division</label>
                     <div class="">
                       <p class="text-justify"><span id="divisionview"></span></p>
+                    </div>
+                  </div>
+                  <div class="md-form">
+                    <label for="">Section</label>
+                    <div class="">
+                      <p class="text-justify"><span id="sectionview"></span></p>
                     </div>
                   </div>
                   <div class="md-form">
