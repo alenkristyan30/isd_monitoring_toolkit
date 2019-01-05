@@ -18,7 +18,7 @@
             <i class="fa fa-users"></i>
             Management<i class="fal fa-angle-down rotate-icon"></i>
           </a>
-          <div class="collapsible-body">
+          <div class="collapsible-body" id="management-nav">
             <ul>
               <li>
                 <a href="../accounts" class="waves-effect">Account</a>

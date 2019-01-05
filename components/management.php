@@ -28,7 +28,7 @@
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
         <thead class="elegant-color white-text">
           <tr>
-            <th class="th-sm">Id
+            <th class="th-sm" >Id
             </th>
             <th class="th-sm">Username
             </th>
