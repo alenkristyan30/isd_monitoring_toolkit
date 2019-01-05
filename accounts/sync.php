@@ -7,6 +7,7 @@
             $row['id'],
             $row['username'],
             $row['type'],
+              $row['accstatus'], 
             $row['datecreated']
         );
     }

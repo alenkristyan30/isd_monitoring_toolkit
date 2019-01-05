@@ -24,7 +24,7 @@
     </div>
   </section>
   <section>
-    <div class="table-responsive">
+    <div class="table-responsive col-md-12">
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
         <thead class="elegant-color white-text">
           <tr>

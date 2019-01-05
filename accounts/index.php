@@ -12,60 +12,7 @@
     </div>
   </main>
   <?php include('../layout/footer.php'); ?>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#side-val').text("Accounts");
-    })
-  </script>
-  <script>
-    $(".button-collapse").sideNav();
-    var container = document.querySelector('.custom-scrollbar');
-    Ps.initialize(container, {
-      wheelSpeed: 2,
-      wheelPropagation: true,
-      minScrollbarLength: 20
-    });
-
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-
-    $('.mdb_upload').mdb_upload();
-
-    $(function () {
-      'use strict';
-      window.addEventListener('load', function () {
-        var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-
-      $('#side-val').text("User Management");
-      $('.mdb-select').materialSelect();
-      $('.datepicker').pickadate();
-  </script>
-  <script>
-    var table = $('#dtMaterialDesignExample').DataTable({
-      'order': [],
-      'ajax': {
-        url: 'sync.php',
-        method: 'POST'
-      },
-      'columnDefs': [
-        {
-          'targets': 3,
-          'orderable': false
-        }
-      ]
-    })
+  <script type="text/javascript" src="account.js">
 
   </script>
   <script>

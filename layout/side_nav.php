@@ -7,8 +7,8 @@
     </li>
     <li>
       <ul class="collapsible collapsible-accordion">
-        <li>
-          <a href="../dashboard" class="collapsible-header waves-effect">
+        <li id="sidenav1parent">
+          <a href="../dashboard" class="collapsible-header waves-effect" id="sidenav1">
             <i class="fa fa-poll-people"></i>
             Dashboards
           </a>
@@ -20,8 +20,8 @@
           </a>
           <div class="collapsible-body" id="management-nav">
             <ul>
-              <li>
-                <a href="../accounts" class="waves-effect">Account</a>
+              <li id="acc_side_parent">
+                <a href="../accounts" id="acc_side" class="waves-effect">Account</a>
               </li>
               <li>
                 <a href="../admin_management" class="waves-effect">Administrator</a>
