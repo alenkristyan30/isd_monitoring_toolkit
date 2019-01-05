@@ -28,7 +28,7 @@
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
         <thead class="elegant-color white-text">
           <tr>
-            <th class="th-sm" >Id
+            <th class="th-sm">Id
             </th>
             <th class="th-sm">Username
             </th>
@@ -123,21 +123,22 @@
                         <div class="form-check">
                           <input type="radio" class="form-check-input" id="male" name="gender" value="Male" required>
                           <label class="form-check-label" for="male">Male</label>
+                          <div class="invalid-feedback">
+                            You must to select before submitting.
+                          </div>
                         </div>
-                        <div class="invalid-feedback">
-                          You must to select before submitting.
-                        </div>
+
                       </div>
                     </div>
                   </div>
 
                   <div class="col-sm">
-                    <div class="md-form">
+                    <div class="form-group">
                       <label for="divsel"></label>
                       <?php  require_once('../config/database.php');
                         $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
                       <select class="mdb-select" searchable="Search here.." id="divsel" name="divsel" required>
-                        <option value="" disabled selected>Choose division</option>
+                        <option value="" disabled>Choose division</option>
                         <?php
                             while ($row = mysqli_fetch_assoc($sql))
                             {
@@ -150,32 +151,37 @@
                       </div>
                     </div>
 
+                    <div class="form-group">
+                      <?php  require_once('../config/database.php');
+                        $sql = mysqli_query($connect, "SELECT * FROM section"); ?>
+                      <select class="mdb-select md-form" searchable="Search here.." id="secsel" name="secsel" required>
+                        <option value="" disabled>Choose section</option>
+                        <?php
+                            while ($row = mysqli_fetch_assoc($sql))
+                            {
+                              echo "<option value='".$row['secid']."'>".$row['secname']."</option>";
+                              }
+                          ?>
 
-                    <?php  require_once('../config/database.php');
-                      $sql = mysqli_query($connect, "SELECT * FROM section"); ?>
-                    <select class="mdb-select md-form" searchable="Search here.." id="secsel" name="secsel" required>
-                      <option value="" disabled selected>Choose section</option>
-                      <?php
-                          while ($row = mysqli_fetch_assoc($sql))
-                          {
-                            echo "<option value='".$row['secid']."'>".$row['secname']."</option>";
-                            }
-                        ?>
+                      </select>
+                      <div class="invalid-feedback">Example invalid custom select feedback</div>
+                    </div>
 
-                    </select>
+                    <div class="form-group">
+                      <?php  require_once('../config/database.php');
+                        $sql = mysqli_query($connect, "SELECT * FROM position"); ?>
+                      <select class="mdb-select md-form" searchable="Search here.." id="possel" name="possel" required>
+                        <option value="" disabled selected>Choose position</option>
+                        <?php
+                            while ($row = mysqli_fetch_assoc($sql))
+                            {
+                              echo "<option value='".$row['posid']."'>".$row['postitle']."</option>";
+                              }
+                          ?>
+                      </select>
+                      <div class="invalid-feedback">Example invalid custom select feedback</div>
+                    </div>
 
-
-                    <?php  require_once('../config/database.php');
-                      $sql = mysqli_query($connect, "SELECT * FROM position"); ?>
-                    <select class="mdb-select md-form" searchable="Search here.." id="possel" name="possel" required>
-                      <option value="" disabled selected>Choose position</option>
-                      <?php
-                          while ($row = mysqli_fetch_assoc($sql))
-                          {
-                            echo "<option value='".$row['posid']."'>".$row['postitle']."</option>";
-                            }
-                        ?>
-                    </select>
 
 
                     <div class="md-form">

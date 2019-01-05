@@ -120,11 +120,11 @@ function password_validation() {
   if ($('#password').val() == '') {
     bool = false;
   } else if ($('#password').val().length < 8) {
+    $('#password').removeClass('is-invalid');
     $('#password').html('Password must be more than 8 characters!');
     bool = false;
   } else {
     $('#password').removeClass('is-invalid');
-    $('#password').html('');
     bool = true;
   }
 }
@@ -162,6 +162,8 @@ function Validate() {
   validateAll();
   return false;
 }
+
+
 $('#add').click(function() {
   $('#modaltitle').text('Add');
   $('#action').val('Add');
