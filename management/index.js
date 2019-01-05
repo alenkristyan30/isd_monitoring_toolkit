@@ -279,3 +279,35 @@ $(document).ready(function() {
   $('#management_side_parent').addClass("active");
   $('#management_side').addClass("active");
 });
+
+
+
+
+
+$('.mdb_upload').mdb_upload();
+$(".button-collapse").sideNav();
+var container = document.querySelector('.custom-scrollbar');
+Ps.initialize(container, {
+  wheelSpeed: 2,
+  wheelPropagation: true,
+  minScrollbarLength: 20
+});
+
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+$(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    var forms = document.getElementsByClassName('needs-validation');
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})
