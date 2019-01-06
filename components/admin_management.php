@@ -1,6 +1,6 @@
-<section>
+<section class="mt-lg-5">
   <div class="text-left">
-    <h3 class="pb-3">Admin Management</h3>
+    <h3 class="pb-3"><strong>Admin Management</strong></h3>
   </div>
   <section>
     <div class="row">
@@ -23,37 +23,38 @@
       </div-->
     </div>
   </section>
-
-
   <section>
-    <div class="card mb-5 ">
-      <div class="card-body table-responsive">
-        <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-          <thead class="elegant-color white-text">
-            <tr>
-              <th class="th-sm">Username
-              </th>
-              <th class="th-sm">Surname
-              </th>
-              <th class="th-sm">Firstname
-              </th>
-              <th class="th-sm">Middlename
-              </th>
-              <th class="th-sm">Extension
-              </th>
-              <th class="th-sm">Division
-              </th>
-              <th class="th-sm">Position
-              </th>
-              <th class="th-sm">Gender
-              </th>
-              <th class="th-sm">Action
-              </th>
-            </tr>
-          </thead>
-        </table>
-      </div>
+    <div class="table-responsive col-md-12">
+      <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
+        <thead class="elegant-color white-text">
+          <tr>
+            <th class="th-sm">Id
+            </th>
+            <th class="th-sm">Username
+            </th>
+            <th class="th-sm">Surname
+            </th>
+            <th class="th-sm">Firstname
+            </th>
+            <th class="th-sm">Middlename
+            </th>
+            <th class="th-sm">Extension
+            </th>
+            <th class="th-sm">Division
+            </th>
+            <th class="th-sm">Section
+            </th>
+            <th class="th-sm">Position
+            </th>
+            <th class="th-sm">Gender
+            </th>
+            <th class="th-sm">Action
+            </th>
+          </tr>
+        </thead>
+      </table>
     </div>
+
   </section>
 
   <section>
@@ -74,28 +75,28 @@
                 <div class="row">
                   <div class="col-sm">
                     <div class="fileupload-wrapper">
-                      <input type="file" id="image_file" name="image_file" class="mdb_upload" />
+                      <input type="file" id="image_file" name="image_file" aria-describedby="fileInput" class="mdb_upload" />
                     </div>
 
                     <div class="md-form">
                       <label for="surname">Surname</label>
-                      <input type="text" name="surname" class="form-control " id="surname" required>
-                      <div class="invalid-tooltip">
+                      <input type="text" name="surname" class="form-control" id="surname" required>
+                      <div class="invalid-feedback">
                         Surname is required
                       </div>
                     </div>
 
                     <div class="md-form">
                       <label for="firstname">First name</label>
-                      <input type="text" name="firstname" class="form-control " id="firstname" required>
-                      <div class="invalid-tooltip">
+                      <input type="text" name="firstname" class="form-control" id="firstname" required>
+                      <div class="invalid-feedback">
                         Firstname is required
                       </div>
                     </div>
 
                     <div class="md-form">
                       <label for="middlename">Middle name</label>
-                      <input type="text" name="middlename" class="form-control " id="middlename" required>
+                      <input type="text" name="middlename" class="form-control" id="middlename" required>
                       <div class="invalid-feedback">
                         Lastname is required
                       </div>
@@ -110,7 +111,7 @@
                     </div>
 
                     <div align="left" class="pl-0 mt-0">
-                      <label for="username" style="color : #757575 ; font-size: .8rem">Gender</label>
+                      <label for="gender" style="color : #757575 ; font-size: .8rem">Gender</label>
                       <div class="">
 
                         <div class="form-check">
@@ -122,39 +123,65 @@
                         <div class="form-check">
                           <input type="radio" class="form-check-input" id="male" name="gender" value="Male" required>
                           <label class="form-check-label" for="male">Male</label>
+                          <div class="invalid-feedback">
+                            You must to select before submitting.
+                          </div>
                         </div>
-                        <div class="invalid-feedback">
-                          You must to select before submitting.
-                        </div>
+
                       </div>
                     </div>
                   </div>
 
                   <div class="col-sm">
+                    <div class="form-group">
+                      <label for="divsel"></label>
+                      <?php  require_once('../config/database.php');
+                        $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
+                      <select class="mdb-select" searchable="Search here.." id="divsel" name="divsel" required>
+                        <option value="" disabled>Choose division</option>
+                        <?php
+                            while ($row = mysqli_fetch_assoc($sql))
+                            {
+                              echo "<option value='".$row['divid']."'>".$row['divname']."</option>";
+                              }
+                          ?>
+                      </select>
+                      <div class="invalid-feedback">
+                        Username is required
+                      </div>
+                    </div>
 
-                    <?php  require_once('../config/database.php');
-                      $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
-                    <select class="mdb-select md-form" searchable="Search here.." id="divsel" name="divsel" required>
-                        <option value="" disabled selected>Choose division</option>
-                      <?php
-                          while ($row = mysqli_fetch_assoc($sql))
-                          {
-                            echo "<option value='".$row['divid']."'>".$row['divname']."</option>";
-                            }
-                        ?>
-                    </select>
+                    <div class="form-group">
+                      <?php  require_once('../config/database.php');
+                        $sql = mysqli_query($connect, "SELECT * FROM section"); ?>
+                      <select class="mdb-select md-form" searchable="Search here.." id="secsel" name="secsel" required>
+                        <option value="" disabled>Choose section</option>
+                        <?php
+                            while ($row = mysqli_fetch_assoc($sql))
+                            {
+                              echo "<option value='".$row['secid']."'>".$row['secname']."</option>";
+                              }
+                          ?>
 
-                    <?php  require_once('../config/database.php');
-                      $sql = mysqli_query($connect, "SELECT * FROM position"); ?>
-                    <select class="mdb-select md-form" searchable="Search here.." id="possel" name="possel" required>
+                      </select>
+                      <div class="invalid-feedback">Example invalid custom select feedback</div>
+                    </div>
+
+                    <div class="form-group">
+                      <?php  require_once('../config/database.php');
+                        $sql = mysqli_query($connect, "SELECT * FROM position"); ?>
+                      <select class="mdb-select md-form" searchable="Search here.." id="possel" name="possel" required>
                         <option value="" disabled selected>Choose position</option>
-                      <?php
-                          while ($row = mysqli_fetch_assoc($sql))
-                          {
-                            echo "<option value='".$row['posid']."'>".$row['postitle']."</option>";
-                            }
-                        ?>
-                    </select>
+                        <?php
+                            while ($row = mysqli_fetch_assoc($sql))
+                            {
+                              echo "<option value='".$row['posid']."'>".$row['postitle']."</option>";
+                              }
+                          ?>
+                      </select>
+                      <div class="invalid-feedback">Example invalid custom select feedback</div>
+                    </div>
+
 
 
                     <div class="md-form">
@@ -167,7 +194,7 @@
 
                     <div class="md-form">
                       <label for="password">Password</label>
-                      <input type="password" name="password" class="form-control" id="password" min="8" aria-describedby="ext"  required>
+                      <input type="password" name="password" class="form-control" id="password" min="8" aria-describedby="ext" required>
                       <div class="invalid-feedback">
                         Password is required
                       </div>
@@ -217,6 +244,12 @@
                 <div class="col-sm">
 
                   <div class="md-form">
+                    <label for="">Id</label>
+                    <div class="">
+                      <p class="text-justify"><span id="idview"></span></p>
+                    </div>
+                  </div>
+                  <div class="md-form">
                     <label for="">Username</label>
                     <div class="">
                       <h3 class="text-justify"><span id="usernameview"></span></h3>
@@ -240,6 +273,12 @@
                     <label for="">Division</label>
                     <div class="">
                       <p class="text-justify"><span id="divisionview"></span></p>
+                    </div>
+                  </div>
+                  <div class="md-form">
+                    <label for="">Section</label>
+                    <div class="">
+                      <p class="text-justify"><span id="sectionview"></span></p>
                     </div>
                   </div>
                   <div class="md-form">

@@ -23,8 +23,8 @@
               <li id="acc_side_parent">
                 <a href="../accounts" id="acc_side" class="waves-effect">Account</a>
               </li>
-              <li>
-                <a href="../admin_management" class="waves-effect">Administrator</a>
+              <li id="admin_side_parent">
+                <a href="../admin_management" id="admin_side" class="waves-effect">Admin Management</a>
               </li>
               <li id="management_side_parent">
                 <a href="../management" id="management_side" class="waves-effect">User Management</a>
