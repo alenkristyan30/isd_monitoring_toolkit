@@ -1,7 +1,8 @@
-<section>
+<section class="mt-lg-5">
   <div class="text-left">
-    <h3 class="pb-3">System Management</h3>
+    <h3 class="pb-3"><strong>System Management</strong></h3>
   </div>
+
   <section>
     <div class="row">
       <div class="col">
@@ -25,11 +26,12 @@
   </section>
 
   <section>
-    <div class="card mb-5 ">
-      <div class="card-body table-responsive">
+      <div class="table-responsive col-md-12">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
             <tr>
+              <th class="th-sm">Id
+              </th>
               <th class="th-sm">Code Name
               </th>
               <th class="th-sm">System Name
@@ -44,7 +46,6 @@
           </thead>
         </table>
       </div>
-    </div>
   </section>
 
   <section>

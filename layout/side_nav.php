@@ -21,15 +21,15 @@
           <div class="collapsible-body" id="management-nav">
             <ul>
               <li id="acc_side_parent">
-                <a href="../accounts" id="acc_side" class="waves-effect">Account</a>
+                <a href="../accounts"  class="waves-effect">Account</a>
               </li>
               <li id="admin_side_parent">
-                <a href="../admin_management" id="admin_side" class="waves-effect">Admin Management</a>
+                <a href="../admin_management" class="waves-effect">Admin Management</a>
               </li>
               <li id="management_side_parent">
-                <a href="../management" id="management_side" class="waves-effect">User Management</a>
+                <a href="../management" class="waves-effect">User Management</a>
               </li>
-              <li>
+              <li id="system_side_parent">
                 <a href="../system_management" class="waves-effect">System management</a>
               </li>
               <li>

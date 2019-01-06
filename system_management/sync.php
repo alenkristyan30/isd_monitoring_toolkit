@@ -7,6 +7,7 @@
         '<a name="edit" id="'.$row['sysid'].'" class="btn-sm btn-floating amber"><i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i></a>
         <a name="delete" id="'.$row['sysid'].'" class="btn-sm btn-floating red"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete"></i></a>';
         $output['data'][] = array(
+            $row['sysid'],
             $row['code_name' ],
             $row['sysname' ],
             $row['sysdescription' ],

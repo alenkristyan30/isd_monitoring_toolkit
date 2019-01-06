@@ -1,3 +1,6 @@
+<div class="mt-5">
+
+</div>
 <script type="text/javascript" src="../dist/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="../dist/js/compiled.0.min.js"></script>
 <script type="text/javascript" src="../dist/js/wysiwyg.min.js"></script>
