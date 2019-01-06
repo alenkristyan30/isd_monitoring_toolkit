@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-sm scrolling-navbar double-nav">
   <div class="float-left">
     <a href="#" data-activates="slide-out" class="button-collapse black-text">
-      <i class="fal fa-bars"></i>
+      <i class="fa fa-bars"></i>
     </a>
   </div>
   <div class="breadcrumb-dn mr-auto">
