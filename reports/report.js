@@ -12,7 +12,7 @@ var table = $('#dtMaterialDesignExample').DataTable({
 
 function Validate() {
   $.ajax({
-    url: 'function.php',
+    url: '',
     method: 'POST',
     data: $('#vform').serialize(),
     success: function(data) {

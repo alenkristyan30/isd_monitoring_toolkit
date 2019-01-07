@@ -20,9 +20,9 @@
           </div>
         </div>
         <div class="card-body card-body-cascade">
-          <div class="progress mb-3">
+          <!--div class="progress mb-3">
             <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
+          </div-->
         </div>
       </div>
     </div>
@@ -43,9 +43,7 @@
           </div>
         </div>
         <div class="card-body card-body-cascade">
-          <div class="progress mb-3">
-            <div class="progress-bar red accent-2" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -66,9 +64,7 @@
           </div>
         </div>
         <div class="card-body card-body-cascade">
-          <div class="progress mb-3">
-            <div class="progress-bar red accent-2" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
+
 
         </div>
       </div>
@@ -91,9 +87,7 @@
           </div>
         </div>
         <div class="card-body card-body-cascade">
-          <div class="progress mb-3">
-            <div class="progress-bar red accent-2" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
+
 
         </div>
       </div>
@@ -115,9 +109,7 @@
           </div>
         </div>
         <div class="card-body card-body-cascade">
-          <div class="progress mb-3">
-            <div class="progress-bar red accent-2" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
+
 
         </div>
       </div>
@@ -139,10 +131,6 @@
           </div>
         </div>
         <div class="card-body card-body-cascade">
-          <div class="progress mb-3">
-            <div class="progress-bar red accent-2" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -163,10 +151,6 @@
           </div>
         </div>
         <div class="card-body card-body-cascade">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -187,10 +171,6 @@
           </div>
         </div>
         <div class="card-body card-body-cascade">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -292,7 +272,7 @@
                     <a class="text-default" href="">Jethuro</a>
                     <span class="pull-right text-sm">
                       2018-12-13 13:59:10
-                      </span>
+                    </span>
                   </h5>
                   <h5>Environmental Law Enforcement Management Information</h5>
                   <span class="badge green">Excellent</span>
@@ -318,7 +298,7 @@
                     <a class="text-default" href="">Jethuro</a>
                     <span class="pull-right text-sm">
                       2018-12-13 13:59:10
-                      </span>
+                    </span>
                   </h5>
                   <h5>Environmental Law Enforcement Management Information</h5>
                   <span class="badge green">Excellent</span>

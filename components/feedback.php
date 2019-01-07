@@ -11,6 +11,11 @@
 
   </div>
 </section-->
+<section class="mt-lg-5">
+  <div class="text-left">
+    <h3 class="pb-3"><strong>Ratings</strong></h3>
+  </div>
+</section>
 <section>
     <div class="table-responsive">
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
@@ -73,7 +78,11 @@
       </table>
     </div>
 </section>
-
+<section class="mt-lg-5">
+  <div class="text-left">
+    <h3 class="pb-3"><strong>Feedback</strong></h3>
+  </div>
+</section>
 
 <section>
     <div class="table-responsive">

@@ -17,7 +17,7 @@
     $action = $_POST['action'];
     $id = $_POST['id'];
     if ($action == 'Add'){
-        mysqli_query($connect, "INSERT INTO userinfo( sname, fname, mname, extname, div_id, sec_id,  pos_id, gender )VALUES('$sname' , '$fname' , '$mname' , '$extname' , '$divsel' , '$secsel', '$possel', '$gender')");
+        mysqli_query($connect, "INSERT INTO userinfo( sname, fname, mname, extname, div_id, sec_id,  pos_id, gender , userimg)VALUES('$sname' , '$fname' , '$mname' , '$extname' , '$divsel' , '$secsel', '$possel', '$gender' , '$new_name')");
         mysqli_query($connect, "INSERT INTO useracc( username, password , type )VALUES('$username' , MD5('$password'), 3)");
         echo 'Added Successfully';
     }
