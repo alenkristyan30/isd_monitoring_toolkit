@@ -17,6 +17,9 @@
   </div>
 </section>
 <section>
+  <canvas id="myChart" style="max-width: 500px;"></canvas>
+</section>
+<section>
     <div class="table-responsive">
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
         <thead class="elegant-color white-text">

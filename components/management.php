@@ -2,6 +2,7 @@
   <div class="text-left">
     <h3 class="pb-3"><strong>User Management</strong></h3>
   </div>
+  
   <section>
     <div class="row">
       <div class="col">

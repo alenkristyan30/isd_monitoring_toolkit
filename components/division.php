@@ -70,23 +70,25 @@
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <label for="divname" class="pull-left" style="font-size: .8rem">Division Name</label>
-                      <textarea type="text" name="divname" class="form-control rounded-0" id="divname" rows="6" required="required"></textarea>
+                    <div class="md-form">
+                      <label for="divname">Division Name</label>
+                      <textarea type="text" name="divname" class="form-control md-textarea" id="divname" required="required"></textarea>
                       <div class="invalid-feedback">
                         Division Name is required
+                      </div>
+                    </div>
+
+                    <div class="md-form">
+                      <label for="divdes">Description</label>
+                      <textarea type="text" name="divdes" class="form-control md-textarea" id="divdes" required="required"></textarea>
+                      <div class="invalid-feedback">
+                        Description is required
                       </div>
                     </div>
                   </div>
 
                   <div class="col-sm ">
-                    <div class="form-group">
-                      <label for="divdes" class="pull-left" style="font-size: .8rem">Description</label>
-                      <textarea type="text" name="divdes" class="form-control rounded-0" id="divdes" rows="9" required="required"></textarea>
-                      <div class="invalid-feedback">
-                        Description is required
-                      </div>
-                    </div>
+
                   </div>
                 </div>
 

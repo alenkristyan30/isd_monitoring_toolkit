@@ -67,15 +67,16 @@
                         Position Title is required
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm ">
-                    <div class="form-group">
-                      <label for="posdes" class="pull-left" style="font-size: .8rem">Description</label>
-                      <textarea type="text" name="posdes" class="form-control rounded-0" id="posdes" rows="9" required="required"></textarea>
+                    <div class="md-form">
+                      <label for="posdes" class>Description</label>
+                      <textarea type="text" name="posdes" class="form-control md-textarea" id="posdes"  required="required"></textarea>
                       <div class="invalid-feedback">
                         Description is required
                       </div>
                     </div>
+                  </div>
+                  <div class="col-sm ">
+
                   </div>
                 </div>
 
