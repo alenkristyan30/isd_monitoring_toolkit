@@ -5,13 +5,6 @@
            background: url("../dist/img/intro-bg.jpeg")no-repeat center center;
            background-size: cover;
        }
-       /**
-       .card {
-           background-color: rgba(229, 228, 255, 0.2);
-       }
-       .md-form label {
-           color: #ffffff;
-       }**/
        h6 {
            line-height: 1.7;
        }
@@ -46,23 +39,8 @@
            /*margin-bottom: -45px;*/
 
        }
-       /**
-       .md-form input[type=text]:focus:not([readonly]),
-       .md-form input[type=password]:focus:not([readonly]) {
-           border-bottom: 1px solid #8EDEF8;
-           box-shadow: 0 1px 0 0 #8EDEF8;
-       }
-       .md-form input[type=text]:focus:not([readonly])+label,
-       .md-form input[type=password]:focus:not([readonly])+label {
-           color: #8EDEF8;
-       }
-
-       .md-form .form-control {
-           color: #fff;
-       }
-        **/
-
    </style>
+
 <body>
   <section class="view intro-2">
     <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
@@ -112,27 +90,6 @@
     </div>
   </section>
   <?php include('../layout/footer.php'); ?>
-  <!--script>
-    function Validate() {
-      var form = $('#vform').serialize();
-      $.ajax({
-        url: 'login.php',
-        method: 'POST',
-        data: form,
-        success: function(data) {
-          if (data == 'Success') {
-            $('#alert').removeClass('alert alert-success');
-            $('#alert').html('');
-            window.location = '../dashboard';
-          } else {
-            $('#alert').addClass('alert alert-danger alert-dismissible fade show');
-            $('#alert').html('Invalid Username or Password<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
-          }
-        }
-      });
-      return false
-    }
-  </script-->
   <script>
     (function() {
       'use strict';

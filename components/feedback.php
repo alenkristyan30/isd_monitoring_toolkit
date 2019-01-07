@@ -12,8 +12,7 @@
   </div>
 </section-->
 <section>
-  <div class="card mb-5 ">
-    <div class="card-body table-responsive">
+    <div class="table-responsive">
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
         <thead class="elegant-color white-text">
           <tr>
@@ -73,11 +72,11 @@
         </tbody>
       </table>
     </div>
-  </div>
 </section>
+
+
 <section>
-  <div class="card mb-5 ">
-    <div class="card-body table-responsive">
+    <div class="table-responsive">
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
         <thead class="elegant-color white-text">
           <tr>
@@ -175,5 +174,4 @@
         </tbody>
       </table>
     </div>
-  </div>
 </section>

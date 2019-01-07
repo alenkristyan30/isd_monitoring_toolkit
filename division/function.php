@@ -1,4 +1,5 @@
 <?php
+  session_start();
     include '../config/database.php';
     $divcode = $_POST['divid'];
     $divname = $_POST['divname'];
@@ -10,7 +11,7 @@
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE division SET divcode = '$divcode' , divname = '$divname' , divdes = '$divdes'  WHERE id = $id");
+        mysqli_query($connect, "UPDATE division SET divcode = '$divcode' , divname = '$divname' , divdes = '$divdes'  WHERE divid = $id");
         echo 'Update Successfully';
     }
     if ($action == 'Delete') {

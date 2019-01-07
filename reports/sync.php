@@ -4,8 +4,7 @@
     $output = array('data' => array());
     while ($row = mysqli_fetch_assoc($sql)) {
         $button =
-        '
-        <a name="view" id="'.$row['reportid'].'" class="btn-sm btn-floating blue"><i class="fas fa-eye" data-toggle="tooltip" data-placement="bottom" title="View" data-toggle="modal" data-target="#basicExampleModal"></i></a>
+        '<a name="view" id="'.$row['reportid'].'" class="btn-sm btn-floating blue"><i class="fas fa-eye" data-toggle="tooltip" data-placement="bottom" title="View" data-toggle="modal" data-target="#basicExampleModal"></i></a>
         <a name="assign" id="'.$row['reportid'].'" class="btn-sm btn-floating amber"><i class="fas fa-user-cog" data-toggle="tooltip" data-placement="bottom" title="Assign"></i></a>
         <a name="delete" id="'.$row['reportid'].'" class="btn-sm btn-floating red"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete"></i></a>';
         $output['data'][] = array(

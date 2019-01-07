@@ -32,7 +32,7 @@
               <li id="system_side_parent">
                 <a href="../system_management" class="waves-effect">System management</a>
               </li>
-              <li>
+              <li id="division_side_parent">
                 <a href="../division" class="waves-effect">Division</a>
               </li>
               <li>
@@ -44,17 +44,17 @@
             </ul>
           </div>
         </li>
-        <li>
-          <a class="collapsible-header waves-effect arrow-r">
+        <li id="sidenav3parent">
+          <a class="collapsible-header waves-effect arrow-r" id="sidenav3">
             <i class="fa fa-chart-area"></i>
             Report<i class="fal fa-angle-down rotate-icon"></i>
           </a>
-          <div class="collapsible-body">
+          <div class="collapsible-body" id="report-nav">
             <ul>
               <li>
                 <a href="../feedback" class="waves-effect">Feedback</a>
               </li>
-              <li>
+              <li id="report_side_parent">
                 <a href="../reports" class="waves-effect">Reports</a>
               </li>
             </ul>

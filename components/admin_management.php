@@ -2,6 +2,7 @@
   <div class="text-left">
     <h3 class="pb-3"><strong>Admin Management</strong></h3>
   </div>
+
   <section>
     <div class="row">
       <div class="col">
@@ -23,6 +24,7 @@
       </div-->
     </div>
   </section>
+
   <section>
     <div class="table-responsive col-md-12">
       <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">

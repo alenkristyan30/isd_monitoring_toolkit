@@ -1,7 +1,8 @@
-<section>
+<section class="mt-lg-5">
   <div class="text-left">
-    <h3 class="pb-3">Division</h3>
+    <h3 class="pb-3"><strong>Division</strong></h3>
   </div>
+
   <section>
     <div class="row">
       <div class="col">
@@ -25,12 +26,13 @@
   </section>
 
   <section>
-    <div class="card mb-5 ">
-      <div class="card-body table-responsive">
+      <div class="table-responsive col-md-10">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
             <tr>
-              <th class="th-sm">Division Code
+              <th class="th-sm">Id
+              </th>
+              <th class="th-sm">Entity Unknown
               </th>
               <th class="th-sm">Division Name
               </th>
@@ -42,7 +44,6 @@
           </thead>
         </table>
       </div>
-    </div>
   </section>
 
   <section>
@@ -62,28 +63,28 @@
                 <div class="row">
                   <div class="col-sm">
                     <div class="md-form">
-                      <label for="divid">Division Id</label>
+                      <label for="divid">Division Code</label>
                       <input type="text" name="divid" class="form-control" id="divid" rows="1"  required="required">
                       <div class="invalid-feedback">
-                        Division Id is required
+                        Division Code is required
                       </div>
                     </div>
 
-                    <div class="md-form">
-                      <label for="divname">Full Division Name</label>
-                      <textarea type="text" name="divname" class="form-control md-textarea" id="divname" required="required"></textarea>
+                    <div class="form-group">
+                      <label for="divname" class="pull-left" style="font-size: .8rem">Division Name</label>
+                      <textarea type="text" name="divname" class="form-control rounded-0" id="divname" rows="6" required="required"></textarea>
                       <div class="invalid-feedback">
-                        Full Division Name is required
+                        Division Name is required
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm ">
 
-                    <div class="md-form">
-                      <label for="divname">Description</label>
-                      <textarea type="text" name="divdes" class="form-control" id="divdes" placeholder="..." style="height : 160px" required="required"></textarea>
+                  <div class="col-sm ">
+                    <div class="form-group">
+                      <label for="divdes" class="pull-left" style="font-size: .8rem">Description</label>
+                      <textarea type="text" name="divdes" class="form-control rounded-0" id="divdes" rows="9" required="required"></textarea>
                       <div class="invalid-feedback">
-                        Full Division Name is required
+                        Description is required
                       </div>
                     </div>
                   </div>
