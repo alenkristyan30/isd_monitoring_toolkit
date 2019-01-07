@@ -1,7 +1,8 @@
-<section>
+<section class="mt-lg-5">
   <div class="text-left">
-    <h3 class="pb-3">Position</h3>
+    <h3 class="pb-3"><strong>Position</strong></h3>
   </div>
+
   <section>
     <div class="row">
       <div class="col">
@@ -25,11 +26,12 @@
   </section>
 
   <section>
-    <div class="card mb-5 col-md-10">
-      <div class="card-body table-responsive">
+      <div class="table-responsive col-md-10">
         <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
           <thead class="elegant-color white-text">
             <tr>
+              <th class="th-sm">Id
+              </th>
               <th class="th-sm">Position Title
               </th>
               <th class="th-sm">Description
@@ -40,7 +42,6 @@
           </thead>
         </table>
       </div>
-    </div>
   </section>
 
   <section>
@@ -68,12 +69,11 @@
                     </div>
                   </div>
                   <div class="col-sm ">
-
-                    <div class="md-form">
-                      <label for="divname">Description</label>
-                      <textarea type="text" name="posdes" class="form-control" id="posdes" required="required"></textarea>
+                    <div class="form-group">
+                      <label for="posdes" class="pull-left" style="font-size: .8rem">Description</label>
+                      <textarea type="text" name="posdes" class="form-control rounded-0" id="posdes" rows="9" required="required"></textarea>
                       <div class="invalid-feedback">
-                      Description is required
+                        Description is required
                       </div>
                     </div>
                   </div>

@@ -1,7 +1,8 @@
-<section>
+<section class="mt-lg-5">
   <div class="text-left">
-    <h3 class="pb-3">Section</h3>
+    <h3 class="pb-3"><strong>Section</strong></h3>
   </div>
+
   <section>
     <div class="row">
       <div class="col">
@@ -25,23 +26,23 @@
   </section>
 
   <section>
-    <div class="card mb-5">
-      <div class="card-body table-responsive">
-        <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-          <thead class="elegant-color white-text">
-            <tr>
-              <th class="th-sm">Name
-              </th>
-              <th class="th-sm">Division
-              </th>
-              <th class="th-sm">Description
-              </th>
-              <th class="th-sm">Action
-              </th>
-            </tr>
-          </thead>
-        </table>
-      </div>
+    <div class="table-responsive col-md-10">
+      <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
+        <thead class="elegant-color white-text">
+          <tr>
+            <th class="th-sm">Id
+            </th>
+            <th class="th-sm">Name
+            </th>
+            <th class="th-sm">Division
+            </th>
+            <th class="th-sm">Description
+            </th>
+            <th class="th-sm">Action
+            </th>
+          </tr>
+        </thead>
+      </table>
     </div>
   </section>
 
@@ -72,7 +73,7 @@
                     <?php  require_once('../config/database.php');
                       $sql = mysqli_query($connect, "SELECT * FROM division"); ?>
                     <select class="mdb-select md-form" searchable="Search here.." id="divsel" name="divsel" required>
-                        <option value="" disabled selected>Division</option>
+                      <option value="" disabled selected>Division</option>
                       <?php
                           while ($row = mysqli_fetch_assoc($sql))
                           {
@@ -84,11 +85,11 @@
 
                   </div>
                   <div class="col-sm ">
-                    <div class="md-form">
-                      <label for="divname">Description</label>
-                      <textarea type="text" name="secdes" class="form-control" id="secdes" placeholder="..." required="required" style="height: 100px"></textarea>
+                    <div class="form-group">
+                      <label for="secdes" class="pull-left" style="font-size: .8rem">Description</label>
+                      <textarea type="text" name="secdes" class="form-control rounded-0" id="secdes" rows="9" required="required"></textarea>
                       <div class="invalid-feedback">
-                      Description is required
+                        Description is required
                       </div>
                     </div>
                   </div>

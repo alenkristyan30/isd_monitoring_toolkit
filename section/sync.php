@@ -7,6 +7,7 @@
         '<a name="edit" id="'.$row['secid'].'" class="btn-sm btn-floating amber"><i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i></a>
         <a name="delete" id="'.$row['secid'].'" class="btn-sm btn-floating red"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete"></i></a>';
         $output['data'][] = array(
+            $row['secid' ],
             $row['secname' ],
             $row['divname' ],
             $row['secdes' ],

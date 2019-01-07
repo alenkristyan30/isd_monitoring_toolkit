@@ -11,9 +11,9 @@
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE infosys SET code_name = '$codename', sysname = '$sysname' , sysdescription = '$sysdes',  created = '$yrcreated' WHERE id = $id");
+        mysqli_query($connect, "UPDATE infosys SET code_name = '$codename', sysname = '$sysname' , sysdescription = '$sysdes',  created = '$yrcreated' WHERE sysid = $id");
         echo 'Update Successfully';
     }
     if ($action == 'Delete') {
-        mysqli_query($connect, "DELETE FROM infosys WHERE id = $id");
+        mysqli_query($connect, "DELETE FROM infosys WHERE sysid = $id");
     }

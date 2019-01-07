@@ -35,10 +35,10 @@
               <li id="division_side_parent">
                 <a href="../division" class="waves-effect">Division</a>
               </li>
-              <li>
+              <li id="section_side_parent">
                 <a href="../section" class="waves-effect">Section</a>
               </li>
-              <li>
+              <li  id="position_side_parent">
                 <a href="../position" class="waves-effect">Position</a>
               </li>
             </ul>
