@@ -74,9 +74,9 @@
 
                 <div class="row">
                   <div class="col-sm">
-                    <div class="fileupload-wrapper">
+                    <!--div class="fileupload-wrapper">
                       <input type="file" id="image_file" name="image_file" aria-describedby="fileInput" class="mdb_upload" />
-                    </div>
+                    </div-->
 
                     <div class="md-form">
                       <label for="surname">Surname</label>
