@@ -24,6 +24,12 @@
       </div-->
     </div>
   </section>
+  <p><?php
+$date = new DateTime();
+echo $date->format('Y-m-d H:i:s');
+?></p>
+
+
 
   <section>
       <div class="table-responsive col-md-10">
