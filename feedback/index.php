@@ -21,6 +21,13 @@
       wheelPropagation: true,
       minScrollbarLength: 20
     });
+    // Data Picker Initialization
+   $('.datepicker').pickadate();
+
+   // Material Select Initialization
+    $(document).ready(function () {
+      $('.mdb-select').material_select();
+    });
 
     $(function() {
       $('[data-toggle="tooltip"]').tooltip();
@@ -50,43 +57,82 @@
   </script>
 
   <script>
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255,99,132,1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
+  // Small chart
+     $(function () {
+       $('.min-chart#chart-sales').easyPieChart({
+         barColor: "#4caf50",
+         onStep: function (from, to, percent) {
+           $(this.el).find('.percent').text(Math.round(percent));
+         }
+       });
+     });
+
+     //Main chart
+     var ctxL = document.getElementById("lineChart-main").getContext('2d');
+     var myLineChart = new Chart(ctxL, {
+       type: 'line',
+       data: {
+         labels: ["January", "February", "March", "April", "May", "June", "July"],
+         datasets: [{
+           label: "My First dataset",
+           fillColor: "#fff",
+           backgroundColor: 'rgba(255, 255, 255, .3)',
+           borderColor: 'rgba(255, 255, 255, .9)',
+           data: [0, 10, 5, 2, 20, 30, 45],
+         }]
+       },
+       options: {
+         legend: {
+           labels: {
+             fontColor: "#fff",
+           }
+         },
+         scales: {
+           xAxes: [{
+             gridLines: {
+               display: true,
+               color: "rgba(255,255,255,.25)"
+             },
+             ticks: {
+               fontColor: "#fff",
+             },
+           }],
+           yAxes: [{
+             display: true,
+             gridLines: {
+               display: true,
+               color: "rgba(255,255,255,.25)"
+             },
+             ticks: {
+               fontColor: "#fff",
+             },
+           }],
+         }
+       }
+     });
+     //minimalist
+  $(function () {
+    $('.min-chart#chart-sales').easyPieChart({
+      barColor: "#4caf50",
+      onStep: function (from, to, percent) {
+        $(this.el).find('.percent').text(Math.round(percent));
       }
     });
+
+    $('.min-chart#chart-roi').easyPieChart({
+      barColor: "#F44336",
+      onStep: function (from, to, percent) {
+        $(this.el).find('.percent').text(Math.round(percent));
+      }
+    });
+
+    $('.min-chart#chart-conversion').easyPieChart({
+      barColor: "#9e9e9e",
+      onStep: function (from, to, percent) {
+        $(this.el).find('.percent').text(Math.round(percent));
+      }
+    });
+  });
   </script>
 
   <script>

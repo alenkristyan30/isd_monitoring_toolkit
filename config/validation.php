@@ -32,11 +32,11 @@ if( !empty($_POST) ) {
                 exit();
             }
             else {
-                $errors[] = ' * Username/Password combination is incorrect';
+                $errors[] = 'Username/Password combination is incorrect';
             }
         }
         else {
-            $errors[] = ' * Username doesn\'t exists';
+            $errors[] = 'Username doesn\'t exists';
         }
     }
 }
