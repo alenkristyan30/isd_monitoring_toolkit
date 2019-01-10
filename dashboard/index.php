@@ -6,6 +6,7 @@
   </div>
   <div id="main-wrapper">
     <?php include '../layout/top-bar.php'; ?>
+    <?php include '../layout/left-side-navbar.php'; ?>
     <?php include '../components/dashboard.php'; ?>
   </div>
   <script src="../assets/plugins/jquery/jquery.min.js"></script>
