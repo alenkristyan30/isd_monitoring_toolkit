@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-    <title></title>
+    <title>ISD Monitoring Toolkit</title>
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
     <link href="../assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
