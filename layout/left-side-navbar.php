@@ -24,7 +24,7 @@
         </li>
         <li class="nav-devider"></li>
         <li class="nav-small-cap">MANAGEMENT</li>
-        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Forms</span></a>
+        <li> <a class="has-arrow waves-effect waves-dark"  href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Forms</span></a>
           <ul aria-expanded="false" class="collapse">
             <li><a href="form-basic.html">User Account</a></li>
             <li><a href="form-layout.html">Admin Management</a></li>
