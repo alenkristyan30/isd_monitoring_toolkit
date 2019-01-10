@@ -3,15 +3,26 @@
   <div class="login-register">
     <div class="login-box card">
       <div class="card-body">
-        <form class="form-horizontal form-material" id="loginform" action="index.html">
+        <form class="form-horizontal form-material" action="<?php echo $_SERVER['PHP_SELF'] ?>"  method="post">
           <h3 class="box-title m-b-20">Sign In</h3>
+          <span>
+            <?php if(!empty($errors)) {?>
+            <div class="alert alert-warning fade show error" role="alert">
+              <?php foreach ($errors as $key => $value) {
+                              echo $value;
+                          } ?>
+            </div>
+            <?php } ?>
+          </span>
           <div class="form-group ">
             <div class="col-xs-12">
-              <input class="form-control" type="text" required="" placeholder="Username"> </div>
+              <input class="form-control" type="text" required placeholder="Username" id="username" name="username">
+            </div>
           </div>
           <div class="form-group">
             <div class="col-xs-12">
-              <input class="form-control" type="password" required="" placeholder="Password"> </div>
+              <input class="form-control" type="password" required placeholder="Password" id="password" name="password">
+            </div>
           </div>
           <div class="form-group">
             <div class="d-flex no-block align-items-center">
