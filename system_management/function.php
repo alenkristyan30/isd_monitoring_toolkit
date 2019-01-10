@@ -7,7 +7,7 @@
     $action = $_POST['action'];
     $id = $_POST['id'];
     if ($action == 'Add') {
-        mysqli_query($connect, "INSERT INTO infosys( code_name, sysname, sysdescription ,  created )VALUES('$codename' , '$sysname' , '$sysdes' , '$yrcreated')");
+        mysqli_query($connect, "INSERT INTO infosys( code_name, sysname, sysdescription ,  created )VALUES('$codename' , '$sysname' , '$sysdes' , '$yrcreated') ");
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
