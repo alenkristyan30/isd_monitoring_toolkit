@@ -6,7 +6,7 @@ var table = $('#myTable').DataTable({
         method: 'POST'
       },
       'columnDefs': [{
-        'targets': 12,
+        'targets': 13,
         'orderable': false
       }],
       "order": [
@@ -23,14 +23,13 @@ var table = $('#myTable').DataTable({
           page: 'current'
         }).data().each(function(group, i) {
             if (last !== group) {
-              $(rows).eq(i).before('<tr class="group"> <
-                td colspan = "100%" > ' + group + ' < /td> <
-                /tr>');
+              $(rows).eq(i).before('<tr class="group"> <td colspan = "100%" > ' + group + ' </td></tr>');
                 last = group;
               }
             });
         }
-      }); $('#myTable tbody').on('click', 'tr.group', function() {
+      });
+      $('#myTable tbody').on('click', 'tr.group', function() {
       var currentOrder = table.order()[0];
       if (currentOrder[0] === 7 && currentOrder[1] === 'asc') {
         table.order([7, 'desc']).draw();
@@ -212,24 +211,7 @@ var table = $('#myTable').DataTable({
       return false;
     }
 
-    $('#add').click(function() {
-      $('#modaltitle').text('Add');
-      $('#action').val('Add');
-      $('#surname').val('');
-      $('#firstname').val('');
-      $('#middlename').val('');
-      $('#nameext').val('');
-      $('#divsel').val('');
-      $('#secsel').val('');
-      $('#possel').val('');
-      $('#username').val('');
-      $('#password').val('');
-      $('#image_file').empty();
-      $('#male').prop('checked', false);
-      $('#female').prop('checked', false);
-      $('#vform').removeClass('was-validated');
-
-    }); $(document).on('click', 'a[name="edit"]', function() {
+     $(document).on('click', 'a[name="edit"]', function() {
       $('#modaltitle').text('Edit');
       $('#action').val('Edit');
       var id = $(this).attr('id');
@@ -260,7 +242,9 @@ var table = $('#myTable').DataTable({
           }
         }
       })
-    }); $(document).on('click', 'a[name="delete"]', function() {
+    });
+
+    $(document).on('click', 'a[name="delete"]', function() {
       $('#action').val('Delete');
       var id = $(this).attr('id');
       swal('Are you sure you want to delete this?', '', 'warning', {
@@ -282,7 +266,9 @@ var table = $('#myTable').DataTable({
           })
         }
       })
-    }); $(document).on('click', 'a[name="view"]', function() {
+    });
+
+    $(document).on('click', 'a[name="view"]', function() {
       $('#modalviewtitle').text('Details');
       $('#action').val('View');
       var id = $(this).attr('id');
