@@ -4,10 +4,10 @@
     $output = array('data' => array());
     while ($row = mysqli_fetch_assoc($sql)) {
         $button =
-        '<div class="btn-group mr-2" role="group" aria-label="First group">
-        <a name="view" id="'.$row['id'].'" class=" btn btn-circle"><i class="fas fa-eye" data-toggle="tooltip" data-placement="bottom" title="View" data-toggle="modal" data-target="#basicExampleModal"></i></a>
-        <a name="edit" id="'.$row['id'].'" class=" btn btn-circle"><i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i></a>
-        <a name="delete" id="'.$row['id'].'" class=" btn btn-circle"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete"></i></a>
+        '<div class="button-group mr-2 text-white" role="group" aria-label="First group">
+        <a class="btn btn-info waves-effect waves-light" name="view" id="'.$row['id'].'" ><span class="btn-label"><i class="fa fa-eye"></i></span>View</a>
+        <a class="btn btn-warning waves-effect waves-light" name="edit" id="'.$row['id'].'" ><span class="btn-label"><i class="fa fa-eye"></i></span>Edit</a>
+        <a class="btn btn-danger waves-effect waves-light" name="delete" id="'.$row['id'].'" ><span class="btn-label"><i class="fa fa-trash"></i></span>Delete</a>
         </div>
         ';
         $output['data'][] = array(

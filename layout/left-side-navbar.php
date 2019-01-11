@@ -4,7 +4,7 @@
       <ul id="sidebarnav">
         <li> <a class="waves-effect waves-dark" href="../dashboard" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
         <li class="nav-small-cap">MANAGEMENT</li>
-        <li> <a class="has-arrow waves-effect waves-dark"  href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Administration</span></a>
+        <li> <a class="has-arrow waves-effect waves-dark"  href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Acc Management</span></a>
           <ul aria-expanded="false" class="collapse">
             <li><a href="../account">User Account</a></li>
             <li><a href="../admin_management">Admin Management</a></li>

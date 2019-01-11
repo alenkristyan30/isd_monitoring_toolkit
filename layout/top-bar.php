@@ -111,15 +111,13 @@
                 <div class="dw-user-box">
                   <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
                   <div class="u-text">
-                    <h4>Steave Jobs</h4>
-                    <p class="text-muted">varun@gmail.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+                    <h4>Username</h4>
+                    <p class="text-muted">email</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
                   </div>
                 </div>
               </li>
               <li role="separator" class="divider"></li>
               <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
-              <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
-              <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
               <li role="separator" class="divider"></li>
