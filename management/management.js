@@ -6,7 +6,7 @@ var table = $('#myTable').DataTable({
         method: 'POST'
       },
       'columnDefs': [{
-        'targets': 13,
+        'targets': 12,
         'orderable': false
       }],
       "order": [

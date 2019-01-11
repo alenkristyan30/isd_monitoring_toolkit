@@ -153,9 +153,7 @@
                 <div class="form-group row m-t-40">
                   <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Office</label>
                   <div class="col-sm-8">
-                    <?php  require_once('../config/database.php');
-                      $sql = mysqli_query($connect, "SELECT * FROM tbloffice"); ?>
-                    <select class="form-control" id="inputEmail3" placeholder="Username">
+                    <select class="form-control" id="off" placeholder="Username">
                       <option value="">null</option>
                     </select>
                   </div>
