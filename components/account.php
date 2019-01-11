@@ -15,14 +15,13 @@
         <div class="card">
           <div class="card-body">
             <div class="table-responsive m-t-40 col-md-12">
-              <table id="myTable" class="table table-bordered table-striped">
+              <table id="myTable" class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Id</th>
-                    <th>Username</th>
-                    <th>Type</th>
-                    <th>Status</th>
-                    <th>Registered Date</th>
+                    <th>ID</th>
+                    <th>USERNAME</th>
+                    <th>TYPE</th>
+                    <th>STATUS</th>
                   </tr>
                 </thead>
               </table>

@@ -1,4 +1,3 @@
-<?php require_once('../config/session.php'); ?>
 <?php require_once('../config/database.php'); ?>
 <?php include '../layout/head.php'; ?>
 
@@ -38,7 +37,7 @@
             method: 'POST'
           },
           'columnDefs': [{
-            'targets': 4,
+            'targets': 3,
             'orderable': false
           }]
         });

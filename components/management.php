@@ -45,7 +45,7 @@
                     </th>
                     <th>UNIT
                     </th>
-                    <th colspan="50%">ACTION
+                    <th>ACTION
                     </th>
                   </tr>
                 </thead>
@@ -67,117 +67,144 @@
       </div>
       <div class="modal-body">
 
-        <form class="form-material form-horizontal" novalidate>
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="card-title">Personal Information</h4>
-              <h6 class="card-subtitle"></h6>
-              <div class="form-group row m-t-40">
-                <label for="firstname" class="col-sm-3 text-right control-label col-form-label" id="">Firstname <span class="text-danger">*</span></label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname" required>
+        <form class="form-material form-horizontal form-control-line" onsubmit="return Validate()" novalidate>
+          <div class="mx-auto p-5">
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="card-title">Personal Information</h4>
+                <h6 class="card-subtitle"></h6>
+                <div class="form-group row m-t-40 " id="firstnameform">
+                  <label for="firstname" class="col-sm-3 text-left control-label col-form-label" >Firstname</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname" required>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">MIddlename</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="Middlename">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Surname</label>
-                <div class="col-sm-9">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="Surname">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Gender</label>
-                <div class="col-sm-9">
-                  <input name="group1" type="radio" id="radio_1">
-                  <label for="radio_1">Female</label>
-                  <input name="group1" type="radio" id="radio_2">
-                  <label for="radio_2">Male</label>
 
+                <div class="form-group row" id="middlenameform">
+                  <label for="middlename" class="col-sm-3 text-left control-label col-form-label">MIddlename</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="middlename" name="middlename" placeholder="Middlename">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="example-month-input" class="col-sm-3 text-right control-label col-form-label">Length of Service</label>
-                <div class="col-sm-9">
-                  <input class="form-control" type="month" value="2011-08" id="example-month-input">
-                </div>
-              </div>
-            </div>
 
-            <div class="col-md-6">
-              <h4 class="card-title">Account</h4>
-              <h6 class="card-subtitle"></h6>
-              <div class="form-group row m-t-40">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Username</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="Firstname">
+                <div class="form-group row" id="surnameform">
+                  <label for="surname" class="col-sm-3 text-left control-label col-form-label">Surname</label>
+                  <div class="col-sm-8">
+                    <input type="email" class="form-control" id="surname" name="surname" placeholder="Surname">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Password</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control" id="inputEmail3" placeholder="Password">
-                </div>
-              </div>
-            </div>
+                <div class="form-group row" id="genderform">
+                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Gender</label>
+                  <div class="col-sm-8">
+                    <input name="gender" type="radio" id="female">
+                    <label for="female">Female</label>
+                    <input name="gender" type="radio" id="male">
+                    <label for="male">Male</label>
 
-            <div class="col-md-6 m-t-40">
-              <h4 class="card-title">Department</h4>
-              <h6 class="card-subtitle"></h6>
-              <div class="form-group row m-t-40">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Office</label>
-                <div class="col-sm-9">
-                  <select class="form-control" id="inputEmail3" placeholder="Username">
-                    <option value="">null</option>
-                  </select>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Division</label>
-                <div class="col-sm-9">
-                  <select class="form-control" id="inputEmail3" placeholder="Username">
-                    <option value="">null</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Section</label>
-                <div class="col-sm-9">
-                  <select class="form-control" id="inputEmail3" placeholder="Username">
-                    <option value="">null</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Unit</label>
-                <div class="col-sm-9">
-                  <select class="form-control" id="inputEmail3" placeholder="Username">
-                    <option value="">null</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Position</label>
-                <div class="col-sm-9">
-                  <select class="form-control" id="inputEmail3" placeholder="Username">
-                    <option value="">null</option>
-                  </select>
+                <div class="form-group row" id="lengthserviceform">
+                  <label for="lengthservice" class="col-sm-3 text-left control-label col-form-label">Length of Service</label>
+                  <div class="col-sm-8">
+                    <input class="form-control" type="month" id="lengthservice" name="lengthservice" required>
+                  </div>
                 </div>
               </div>
 
+              <div class="col-md-6 m-t-40">
+                <h4 class="card-title ">Account</h4>
+                <h6 class="card-subtitle"></h6>
+                <div class="form-group row m-t-40" id="typeform">
+
+                  <label for="type" class="col-sm-3 text-left control-label col-form-label">Type</label>
+                  <?php  require_once('../config/database.php');
+                    $sql = mysqli_query($connect, "SELECT * FROM tblusertype WHERE usertypeID != 1"); ?>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="type" name="type" placeholder="Type" required>
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['usertypeID']."'>".$row['usertypeTITLE']."</option>";
+                            }
+                        ?>
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="form-group row" id="usernameform">
+                  <label for="username" class="col-sm-3 text-left control-label col-form-label">Username</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Firstname">
+                  </div>
+                </div>
+
+                <div class="form-group row" id="passwordform">
+                  <label for="password" class="col-sm-3 text-left control-label col-form-label">Password</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 m-t-40">
+                <h4 class="card-title">Department</h4>
+                <h6 class="card-subtitle"></h6>
+                <div class="form-group row m-t-40">
+                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Office</label>
+                  <div class="col-sm-8">
+                    <?php  require_once('../config/database.php');
+                      $sql = mysqli_query($connect, "SELECT * FROM tbloffice"); ?>
+                    <select class="form-control" id="inputEmail3" placeholder="Username">
+                      <option value="">null</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Division</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="inputEmail3" placeholder="Username">
+                      <option value="">null</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Section</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="inputEmail3" placeholder="Username">
+                      <option value="">null</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Unit</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="inputEmail3" placeholder="Username">
+                      <option value="">null</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Position</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="inputEmail3" placeholder="Username">
+                      <option value="">null</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
 
 
+
       </div>
       <div class="modal-footer">
+        <input type="hidden" name="action" id="action">
+        <input type="hidden" name="id" id="id">
         <button type="submit" class="btn btn-info">Submit</button>
         <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>
-        <button type="reset" class="btn btn-inverse">Cancel</button>
       </div>
       </form>
     </div>
