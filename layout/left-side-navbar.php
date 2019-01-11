@@ -7,8 +7,8 @@
         <li> <a class="has-arrow waves-effect waves-dark"  href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Acc Management</span></a>
           <ul aria-expanded="false" class="collapse">
             <li><a href="../account">User Account</a></li>
-            <li><a href="../admin_management">Admin Management</a></li>
-            <li><a href="form-addons.html">User Management</a></li>
+            <li><a href="../management">User Management</a></li>
+
           </ul>
         </li>
         <li> <a class="has-arrow waves-effect waves-dark"  href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Forms</span></a>

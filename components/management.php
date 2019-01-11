@@ -19,27 +19,33 @@
               <table id="myTable" class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Id
+                    <th>ID
                     </th>
-                    <th>Username
+                    <th>USERNAME
                     </th>
-                    <th>Surname
+                    <th>FIRSTNAME
                     </th>
-                    <th>Firstname
+                    <th>MIDDLENAME
                     </th>
-                    <th>Middlename
+                    <th>SURNAME
                     </th>
-                    <th>Extension
+                    <th>GENDER
                     </th>
-                    <th>Division
+                    <th>SERVICE LENGTH
                     </th>
-                    <th>Section
+                    <th>TYPE
                     </th>
-                    <th>Position
+                    <th>OFFICE
                     </th>
-                    <th>Gender
+                    <th>DIVISION
                     </th>
-                    <th>Action
+                    <th>SECTION
+                    </th>
+                    <th>POSITION
+                    </th>
+                    <th>UNIT
+                    </th>
+                    <th colspan="50%">ACTION
                     </th>
                   </tr>
                 </thead>
@@ -61,15 +67,15 @@
       </div>
       <div class="modal-body">
 
-        <form class="form-material form-horizontal" method="post">
+        <form class="form-material form-horizontal" novalidate>
           <div class="row">
             <div class="col-md-6">
               <h4 class="card-title">Personal Information</h4>
               <h6 class="card-subtitle"></h6>
               <div class="form-group row m-t-40">
-                <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Firstname</label>
+                <label for="firstname" class="col-sm-3 text-right control-label col-form-label" id="">Firstname <span class="text-danger">*</span></label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="Firstname">
+                  <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname" required>
                 </div>
               </div>
               <div class="form-group row">
@@ -169,7 +175,9 @@
 
       </div>
       <div class="modal-footer">
+        <button type="submit" class="btn btn-info">Submit</button>
         <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>
+        <button type="reset" class="btn btn-inverse">Cancel</button>
       </div>
       </form>
     </div>

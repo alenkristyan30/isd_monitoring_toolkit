@@ -1,4 +1,3 @@
-<?php require_once('../config/session.php'); ?>
 <?php require_once('../config/database.php'); ?>
 <?php include '../layout/head.php'; ?>
 <body class="fix-header fix-sidebar card-no-border">
