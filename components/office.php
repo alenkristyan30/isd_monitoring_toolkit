@@ -65,7 +65,7 @@
             <div class="form-group row" id="officetypeform">
               <label for="officetypetxt" class="col-sm-3 text-left control-label col-form-label">Type</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control alphabetic" id="officetypetxt" name="officetypetxt" placeholder="Type" required>
+                <input type="text" class="form-control numeric" id="officetypetxt" name="officetypetxt" placeholder="Type" required>
               </div>
             </div>
 

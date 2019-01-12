@@ -143,6 +143,8 @@ $(document).ready(function() {
   });
 });
 $(document).ready(function() {
+  var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
   $(".numeric").keypress(function(e) {
     var key = e.which ? e.which : e.keyCode;
     if ((key >= 48 && key <= 57)|| specialKeys.indexOf(keyCode) != -1) {
