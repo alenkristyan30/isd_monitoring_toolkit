@@ -81,14 +81,14 @@
                 <div class="form-group row" id="middlenameform">
                   <label for="middlename" class="col-sm-3 text-left control-label col-form-label">MIddlename</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="middlename" name="middlename" placeholder="Middlename">
+                    <input type="text" class="form-control alphabetic" id="middlename" name="middlename" placeholder="Middlename">
                   </div>
                 </div>
 
                 <div class="form-group row" id="surnameform">
                   <label for="surname" class="col-sm-3 text-left control-label col-form-label">Surname</label>
                   <div class="col-sm-8">
-                    <input type="email" class="form-control" id="surname" name="surname" placeholder="Surname">
+                    <input type="email" class="form-control alphabetic" id="surname" name="surname" placeholder="Surname">
                   </div>
                 </div>
                 <div class="form-group row" id="genderform">
