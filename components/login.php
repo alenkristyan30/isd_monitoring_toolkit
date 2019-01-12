@@ -5,8 +5,8 @@
       <div class="card-body">
         <form class="form-horizontal form-material" action="<?php echo $_SERVER['PHP_SELF'] ?>"  method="post">
           <div class="text-center m-t-40">
-            <img src="../assets/images/logo.png" class="w-25" alt="">
-            <img src="../assets/images/centered-text.png" class="w-25" alt="">
+            <img src="../assets/images/logo.png" style="width: 50px" alt="">
+            <img src="../assets/images/centered-text.png" class="w-50" alt="">
           </div>
           <h3 class="box-title m-b-20">Sign In</h3>
           <span>
