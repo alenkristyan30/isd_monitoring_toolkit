@@ -22,6 +22,7 @@ function name_validation() {
     bool = true;
   }
 }
+
 function type_validation() {
   if ($('#divisiontypetxt').val() == '') {
     $('#divisiontypetxt').addClass('form-control-danger');
@@ -79,16 +80,22 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
-    $('#divisiontypetxt').val('');
+  $('#divisiontypetxt').val('');
   $('#divisiontypetxt').removeClass('form-control-danger');
   $('#divisiontypeform').removeClass('has-danger');
-      $('#divisionnametxt').val('');
+  $('#divisionnametxt').val('');
   $('#divisionnametxt').removeClass('form-control-danger');
   $('#divisionnameform').removeClass('has-danger');
 });
 
 $(document).on('click', 'a[name="edit"]', function() {
   $('#action').val('Edit');
+  $('#divisiontypetxt').val('');
+  $('#divisiontypetxt').removeClass('form-control-danger');
+  $('#divisiontypeform').removeClass('has-danger');
+  $('#divisionnametxt').val('');
+  $('#divisionnametxt').removeClass('form-control-danger');
+  $('#divisionnameform').removeClass('has-danger');
   var id = $(this).attr('id');
   $.ajax({
     url: 'fetch.php',

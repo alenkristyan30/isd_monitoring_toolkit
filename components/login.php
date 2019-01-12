@@ -4,11 +4,10 @@
     <div class="login-box card">
       <div class="card-body">
         <form class="form-horizontal form-material" action="<?php echo $_SERVER['PHP_SELF'] ?>"  method="post">
-          <div class="text-center m-t-40">
+          <div class="text-left  m-b-30">
             <img src="../assets/images/logo.png" style="width: 50px" alt="">
-            <img src="../assets/images/centered-text.png" class="w-50" alt="">
+            <img src="../assets/images/centered-text.png" style="height : 30px" alt="">
           </div>
-          <h3 class="box-title m-b-20">Sign In</h3>
           <span>
             <?php if(!empty($errors)) {?>
             <div class="alert alert-warning fade show error" role="alert">
