@@ -142,3 +142,11 @@ $(document).ready(function() {
     }
   });
 });
+$(document).ready(function() {
+  $(".numeric").keypress(function(e) {
+    var key = e.which ? e.which : e.keyCode;
+    if ((key >= 48 && key <= 57)|| specialKeys.indexOf(keyCode) != -1) {
+      e.preventDefault();
+    }
+  });
+});

@@ -35,9 +35,9 @@
               </div>
             </div>
           </div>
-          <div class="form-group text-center m-t-20">
+          <div class="form-group text-center 2">
             <div class="col-xs-12">
-              <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
+              <button class="btn btn-info btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
             </div>
           </div>
         </form>
