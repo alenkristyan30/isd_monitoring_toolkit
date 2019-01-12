@@ -11,12 +11,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
         <div class="card">
           <div class="card-body">
             <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="button">ADD Admin</button>
-            <div class="table-responsive m-t-40">
-              <table id="myTable" class="table table-striped">
+            <div class="table-responsive m-t-40 col-12">
+              <table id="myTable" class="table table-striped w-100">
                 <thead>
                   <tr>
                     <th>ID
@@ -54,7 +53,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
 

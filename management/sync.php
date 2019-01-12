@@ -14,9 +14,9 @@
     while ($row = mysqli_fetch_assoc($sql)) {
         $button =
         '<div class="row button-group text-white " role="group" aria-label="First group">
-            <a class="btn btn-info btn-block waves-effect waves-light" name="view" id="'.$row['userinfoID'].'"  >View</a>
-            <a class="btn btn-warning btn-block waves-effect waves-light" name="edit" id="'.$row['userinfoID'].'">Edit</a>
-            <a class="btn btn-danger btn-block waves-effect waves-light" name="delete" id="'.$row['userinfoID'].'">Delete</a>
+            <a class="btn btn-info waves-effect waves-light" name="view" id="'.$row['userinfoID'].'"  >View</a>
+            <a class="btn btn-warning waves-effect waves-light" name="edit" id="'.$row['userinfoID'].'">Edit</a>
+            <a class="btn btn-danger waves-effect waves-light" name="delete" id="'.$row['userinfoID'].'">Delete</a>
         </div>
         ';
         $output['data'][] = array(

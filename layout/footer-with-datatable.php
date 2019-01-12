@@ -15,3 +15,5 @@
 <script src="../assets/plugins/datatables/vfs_fonts.js"></script>
 <script src="../assets/plugins/datatables/buttons.html5.min.js"></script>
 <script src="../assets/plugins/datatables/buttons.print.min.js"></script>
+<script src="../assets/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="../assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
