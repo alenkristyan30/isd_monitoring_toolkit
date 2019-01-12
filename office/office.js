@@ -133,3 +133,12 @@ $(document).on('click', 'a[name="delete"]', function() {
     }
   })
 });
+
+$(document).ready(function() {
+  $(".alphabetic").keypress(function(e) {
+    var key = e.keyCode;
+    if (key >= 48 && key <= 57) {
+      e.preventDefault();
+    }
+  });
+});

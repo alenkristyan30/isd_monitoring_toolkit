@@ -59,13 +59,13 @@
             <div class="form-group row" id="officenameform">
               <label for="officenametxt" class="col-sm-3 text-left control-label col-form-label">Name</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="officenametxt" name="officenametxt" placeholder="Name" required>
+                <input type="text" class="form-control alphabetic" id="officenametxt" name="officenametxt" placeholder="Name" required>
               </div>
             </div>
             <div class="form-group row" id="officetypeform">
               <label for="officetypetxt" class="col-sm-3 text-left control-label col-form-label">Type</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="officetypetxt" name="officetypetxt" placeholder="Type" required>
+                <input type="text" class="form-control alphabetic" id="officetypetxt" name="officetypetxt" placeholder="Type" required>
               </div>
             </div>
 
