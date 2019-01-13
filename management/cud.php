@@ -27,11 +27,12 @@
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE tbluserinfo SET sname = '$sname', fname = '$fname' , mname = '$mname',  extname = '$extname', div_id = '$divsel', sec_id = '$secsel', pos_id = '$possel',  gender = '$gender' WHERE id = $id");
-        mysqli_query($connect, "UPDATE tbluseraccount SET username = '$username', password = MD5('$password') WHERE id = $id");
+        mysqli_query($connect, "UPDATE tbluserinfo SET userinfoSURNAME = '$surname', userinfoFIRSTNAME = '$firstname' , userinfoMIDDLENAME = '$middlename',  userinfoGENDER = '$gender', userinfoSERVICELENGTH = '$lservice',
+                                userinfoOFFICE = '$office', userinfoDIVISION = '$division',  userinfoSECTION = '$section', userinfoPOSITION = '$position' , userinfoUNIT = '$unit' WHERE userinfoID = $id");
+        mysqli_query($connect, "UPDATE tbluseraccount SET useraccountUSERNAME = '$username', useraccountPASSWORD = MD5('$password') , useraccountTYPE ='$type'  WHERE useraccountID = $id");
         echo 'Update Successfully';
     }
     if ($action == 'Delete') {
-        mysqli_query($connect, "DELETE FROM userinfo WHERE id = $id");
-        mysqli_query($connect, "DELETE FROM useracc WHERE id = $id");
+        mysqli_query($connect, "DELETE FROM tbluserinfo WHERE userinfoID = $id");
+        mysqli_query($connect, "DELETE FROM tbluseraccount WHERE useraccountID = $id");
     }
