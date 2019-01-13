@@ -110,13 +110,9 @@ $(document).on('click', 'a[name="edit"]', function() {
 $(document).on('click', 'a[name="delete"]', function() {
   $('#action').val('Delete');
   var id = $(this).attr('id');
-  swal({ title: 'Are you sure?',
-  text: "You won't be able to revert this!",
-  type: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!'
+  swal('Are you sure you want to delete this?', '', 'warning', {
+    buttons: true,
+    dangerMode: true
   }).then((value) => {
     if (value) {
       $.ajax({
