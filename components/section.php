@@ -50,7 +50,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         </div>
         <div class="modal-body">
-          <form class="form-material form-horizontal form-control-line" id="vform" onsubmit="return validate()" method="POST" novalidate>
+          <form class="form-horizontal form-control-line" id="vform" onsubmit="return validate()" method="POST" novalidate>
 
             <h4 class="card-title">Section Information</h4>
             <h6 class="card-subtitle"></h6>

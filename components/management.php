@@ -65,7 +65,7 @@
       </div>
       <div class="modal-body">
 
-        <form class="form-material form-horizontal form-control-line" onsubmit="return Validate()" novalidate>
+        <form class="form-horizontal form-control-line" onsubmit="return Validate()" novalidate>
           <div class="mx-auto p-5">
             <div class="row">
               <div class="col-md-6">

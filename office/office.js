@@ -22,6 +22,7 @@ function name_validation() {
     bool = true;
   }
 }
+
 function type_validation() {
   if ($('#officetypetxt').val() == '') {
     $('#officetypetxt').addClass('form-control-danger');
@@ -79,10 +80,10 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
-    $('#officetypetxt').val('');
+  $('#officetypetxt').val('');
   $('#officetypetxt').removeClass('form-control-danger');
   $('#officetypeform').removeClass('has-danger');
-      $('#officenametxt').val('');
+  $('#officenametxt').val('');
   $('#officenametxt').removeClass('form-control-danger');
   $('#officenameform').removeClass('has-danger');
 });
@@ -144,11 +145,10 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
   var specialKeys = new Array();
-        specialKeys.push(8); //Backspace
-  $(".numeric").keypress(function(e) {
-    var key = e.which ? e.which : e.keyCode;
-    if ((key >= 48 && key <= 57)|| specialKeys.indexOf(keyCode) != -1) {
-      e.preventDefault();
-    }
-  });
+  specialKeys.push(8); //Backspace
+    $(".numeric").keypress(function(e) {
+      var keyCode = e.which ? e.which : e.keyCode
+      var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+      return ret;
+    });
 });
