@@ -1,19 +1,22 @@
 <?php
     session_start();
     include '../config/database.php';
-    $sname = $_POST['surname'];
-    $fname = $_POST['firstname'];
-    $mname = $_POST['middlename'];
-    $extname = $_POST['nameext'];
+    $firstname = $_POST['firstname'];
+    $middlename = $_POST['middlename'];
+    $surname = $_POST['surname'];
     $gender = $_POST['gender'];
-    $divsel = $_POST['divsel'];
-    $secsel = $_POST['secsel'];
-    $possel = $_POST['possel'];
+    $lservice = $_POST['lengthservice'];
+    $type = $_POST['usertypeselect'];
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $new_name = rand(). '.' ."jpeg";
-	  $destination = '../uploads/' . $new_name;
-    move_uploaded_file($_FILES['image_file']['tmp_name'], $destination);
+
+    $office = $_POST['officeselect'];
+    $division= $_POST['divisionselect'];
+    $section = $_POST['sectionselect'];
+    $position = $_POST['positionselect'];
+    $unit = $_POST['unitselect'];
+
+
     $action = $_POST['action'];
     $id = $_POST['id'];
     if ($action == 'Add'){

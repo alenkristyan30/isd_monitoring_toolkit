@@ -52,7 +52,7 @@
       </div>
       <div class="modal-body">
 
-        <form class="form-horizontal form-control-line" onsubmit="return Validate()" novalidate>
+        <form class="form-horizontal form-control-line" onsubmit="return Validate()" method="post" novalidate>
           <div class="mx-auto p-5">
             <div class="row">
               <div class="col-md-6">
@@ -101,11 +101,11 @@
                 <h6 class="card-subtitle"></h6>
                 <div class="form-group row m-t-40" id="typeform">
 
-                  <label for="type" class="col-sm-3 text-left control-label col-form-label">Type</label>
+                  <label for="usertypeselect" class="col-sm-3 text-left control-label col-form-label">Type</label>
                   <?php  require_once('../config/database.php');
                     $sql = mysqli_query($connect, "SELECT * FROM tblusertype WHERE usertypeID != 1"); ?>
                   <div class="col-sm-8">
-                    <select class="form-control" id="type" name="type" placeholder="Type" required>
+                    <select class="form-control" id="usertypeselect" name="usertypeselect" placeholder="Type" required>
                       <?php
                           while ($row = mysqli_fetch_assoc($sql))
                           {
@@ -181,20 +181,32 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Position</label>
+                  <label for="positionselect" class="col-sm-3 text-left control-label col-form-label">Position</label>
+                  <?php  require_once('../config/database.php');
+                    $sql = mysqli_query($connect, "SELECT * FROM tblposition"); ?>
                   <div class="col-sm-8">
-                    <select class="form-control" id="inputEmail3" placeholder="Username">
-                      <option value="">null</option>
+                    <select class="form-control" id="positionselect" name="positionselect" placeholder="Username">
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['positionID']."'>".$row['positionNAME']."</option>";
+                            }
+                        ?>
                     </select>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Unit</label>
+                  <label for="unitselect" class="col-sm-3 text-left control-label col-form-label">Unit</label>
                   <?php  require_once('../config/database.php');
-                    $sql = mysqli_query($connect, "SELECT * FROM tblsection"); ?>
+                    $sql = mysqli_query($connect, "SELECT * FROM tblunit"); ?>
                   <div class="col-sm-8">
-                    <select class="form-control" id="inputEmail3" placeholder="Username">
-                      <option value="">null</option>
+                    <select class="form-control" id="unitselect" name="unitselect" placeholder="Username">
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['unitID']."'>".$row['unitNAME']."</option>";
+                            }
+                        ?>
                     </select>
                   </div>
                 </div>
