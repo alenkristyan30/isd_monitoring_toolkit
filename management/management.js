@@ -144,8 +144,8 @@ function validateAll() {
         swal(data, '', 'success', {
           closeOnClickOutside: false
         }).then((value) => {
-          $('#exampleModalCenter').modal('hide');
-          toastr["success"]("Successfully Added");
+          $('#myModal').modal('hide');
+          //toastr["success"]("Successfully Added");
           table.ajax.reload();
         })
       }
@@ -218,6 +218,15 @@ function Validate() {
   validateAll();
   return false;
 }
+
+$('#btnadd').click(function() {
+  $('#action').val('Add');
+  $('#firstname').val('');
+  $('#firstname').removeClass('form-control-danger');
+  $('#firstnameform').removeClass('has-danger');
+
+});
+
 
 $(document).on('click', 'a[name="edit"]', function() {
   $('#modaltitle').text('Edit');

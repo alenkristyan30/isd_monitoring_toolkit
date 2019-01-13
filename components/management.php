@@ -13,7 +13,7 @@
     <div class="row">
       <div class="card">
         <div class="card-body">
-          <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="button">Add Account</button>
+          <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">Add Account</button>
           <div class="table-responsive m-t-40 col-12">
             <table id="myTable" class="table dataTable table-striped w-100">
               <thead>
@@ -52,7 +52,7 @@
       </div>
       <div class="modal-body">
 
-        <form class="form-horizontal form-control-line" onsubmit="return Validate()" method="post" novalidate>
+        <form class="form-horizontal form-control-line" onsubmit="return Validate()" id="vform" method="POST" novalidate>
           <div class="mx-auto p-5">
             <div class="row">
               <div class="col-md-6">
