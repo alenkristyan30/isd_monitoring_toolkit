@@ -233,7 +233,7 @@ $(document).on('click', 'a[name="edit"]', function() {
   $('#action').val('Edit');
   var id = $(this).attr('id');
   $.ajax({
-    url: 'fetch_single.php',
+    url: 'fetch.php',
     method: 'POST',
     data: {
       id: id
@@ -241,17 +241,22 @@ $(document).on('click', 'a[name="edit"]', function() {
     dataType: 'json',
     success: function(data) {
       $('#id').val(id);
-      $('label').addClass("active");
-      $('#exampleModalCenter').modal('show');
-      $('#surname').val(data.sname);
-      $('#firstname').val(data.fname);
-      $('#middlename').val(data.mname);
-      $('#nameext').val(data.extname);
-      $('#divsel').val(data.divsel);
-      $('#secsel').val(data.secsel);
-      $('#possel').val(data.possel);
-      $('#password').val(data.password);
+      $('#myModal').modal('show');
+      $('#surname').val(data.surname);
+      $('#firstname').val(data.firstname);
+      $('#middlename').val(data.middlename);
+      $('#lengthservice').val(data.lservice);
+
       $('#username').val(data.username);
+      $('#password').val(data.password);
+      $('#usertypeselect').val(data.type);
+
+      $('#officeselect').val(data.office);
+      $('#divisionselect').val(data.division);
+      $('#sectionselect').val(data.section);
+      $('#positionselect').val(data.position);
+      $('#unitselect').val(data.unit);
+
       if (data.gender == 'Male') {
         $('#male').prop('checked', true);
       } else {
@@ -270,14 +275,14 @@ $(document).on('click', 'a[name="delete"]', function() {
   }).then((value) => {
     if (value) {
       $.ajax({
-        url: 'function.php',
+        url: 'cud.php',
         method: 'POST',
         data: {
           id: id,
           action: 'Delete'
         },
         success: function(data) {
-          toastr["info"]("I was launched via jQuery!");
+          //toastr["info"]("I was launched via jQuery!");
           table.ajax.reload();
         }
       })

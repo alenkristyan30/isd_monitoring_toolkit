@@ -52,7 +52,7 @@
       </div>
       <div class="modal-body">
 
-        <form class="form-horizontal form-control-line" onsubmit="return Validate()" id="vform" method="POST" novalidate>
+        <form class="form-horizontal form-control-line" onsubmit="return Validate()" id="vform" name="vform" method="POST" novalidate>
           <div class="mx-auto p-5">
             <div class="row">
               <div class="col-md-6">
