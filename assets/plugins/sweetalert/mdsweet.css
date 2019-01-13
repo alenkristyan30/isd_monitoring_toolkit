@@ -1,0 +1,106 @@
+.btn--cancel {
+    background-color: #f80!important;
+    color: #fff!important
+}
+
+.btn--cancel:hover {
+    background-color: #ff941a
+}
+
+.btn--cancel.focus,.btn--cancel:focus {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)
+}
+
+.btn--cancel.active,.btn--cancel:active,.btn--cancel:focus {
+    background-color: #995200
+}
+
+.btn--cancel.dropdown-toggle {
+    background-color: #f80!important
+}
+
+.btn--cancel.dropdown-toggle:focus,.btn--cancel.dropdown-toggle:hover {
+    background-color: #ff941a!important
+}
+
+.btn--cancel:not([disabled]):not(.disabled).active,.btn--cancel:not([disabled]):not(.disabled):active,.show>.btn--cancel.dropdown-toggle {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    background-color: #995200!important
+}
+
+.btn--cancel:not([disabled]):not(.disabled).active:focus,.btn--cancel:not([disabled]):not(.disabled):active:focus,.show>.btn--cancel.dropdown-toggle:focus {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)
+}
+
+
+.btn--danger {
+    background-color: #ff3547!important;
+    color: #fff!important
+}
+
+.btn--danger:hover {
+    background-color: #ff4f5e
+}
+
+.btn--danger.focus,.btn--danger:focus {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)
+}
+
+.btn--danger.active,.btn--danger:active,.btn--danger:focus {
+    background-color: #ce0012
+}
+
+.btn--danger.dropdown-toggle {
+    background-color: #ff3547!important
+}
+
+.btn--danger.dropdown-toggle:focus,.btn--danger.dropdown-toggle:hover {
+    background-color: #ff4f5e!important
+}
+
+.btn--danger:not([disabled]):not(.disabled).active,.btn--danger:not([disabled]):not(.disabled):active,.show>.btn--danger.dropdown-toggle {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    background-color: #ce0012!important
+}
+
+.btn--danger:not([disabled]):not(.disabled).active:focus,.btn--danger:not([disabled]):not(.disabled):active:focus,.show>.btn--danger.dropdown-toggle:focus {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)
+}
+
+.btn--confirm {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8
+}
+
+.btn--confirm:hover {
+    color: #fff;
+    background-color: #138496;
+    border-color: #117a8b
+}
+
+.btn--confirm.focus,.btn--confirm:focus {
+    box-shadow: 0 0 0 .2rem rgba(23,162,184,.5)
+}
+
+.btn--confirm.disabled,.btn--confirm:disabled {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8
+}
+
+.btn--confirm:not(:disabled):not(.disabled).active,.btn--confirm:not(:disabled):not(.disabled):active,.show>.btn--confirm.dropdown-toggle {
+    color: #fff;
+    background-color: #117a8b;
+    border-color: #10707f
+}
+
+.btn--confirm:not(:disabled):not(.disabled).active:focus,.btn--confirm:not(:disabled):not(.disabled):active:focus,.show>.btn--confirm.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(23,162,184,.5)
+}
