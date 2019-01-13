@@ -2,57 +2,44 @@
   <div class="container-fluid">
     <div class="row page-titles">
       <div class="col-md-5 col-8 align-self-center">
-        <h3 class="text-themecolor m-b-0 m-t-0">Admin Management</h3>
+        <h3 class="text-themecolor m-b-0 m-t-0">User Management</h3>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
           <li class="breadcrumb-item active">Administration</li>
-          <li class="breadcrumb-item active"><a href="javascript:void(0)">Admin Management</a></li>
+          <li class="breadcrumb-item active"><a href="javascript:void(0)">User Management</a></li>
         </ol>
       </div>
     </div>
     <div class="row">
-        <div class="card">
-          <div class="card-body">
-            <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="button">ADD Admin</button>
-            <div class="table-responsive m-t-40 col-12">
-              <table id="myTable" class="table table-striped w-100">
-                <thead>
-                  <tr>
-                    <th>ID
-                    </th>
-                    <th>USERNAME
-                    </th>
-                    <th>FIRSTNAME
-                    </th>
-                    <th>MIDDLENAME
-                    </th>
-                    <th>SURNAME
-                    </th>
-                    <th>GENDER
-                    </th>
-                    <th>SERVICE LENGTH
-                    </th>
-                    <th>TYPE
-                    </th>
-                    <th>OFFICE
-                    </th>
-                    <th>DIVISION
-                    </th>
-                    <th>SECTION
-                    </th>
-                    <th>POSITION
-                    </th>
-                    <th>UNIT
-                    </th>
-                    <th>ACTION
-                    </th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
+      <div class="card">
+        <div class="card-body">
+          <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="button">Add Account</button>
+          <div class="table-responsive m-t-40 col-12">
+            <table id="myTable" class="table dataTable table-striped w-100">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>USERNAME</th>
+                  <th>FIRSTNAME</th>
+                  <th>MIDDLENAME</th>
+                  <th>SURNAME</th>
+                  <th>GENDER</th>
+                  <th>SERVICE LENGTH</th>
+                  <th>TYPE</th>
+                  <th>OFFICE</th>
+                  <th>DIVISION</th>
+                  <th>SECTION</th>
+                  <th>POSITION</th>
+                  <th>UNIT</th>
+                  <th>ACTION
+                  </th>
+                </tr>
+              </thead>
+            </table>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
 
@@ -72,7 +59,7 @@
                 <h4 class="card-title">Personal Information</h4>
                 <h6 class="card-subtitle"></h6>
                 <div class="form-group row m-t-40 " id="firstnameform">
-                  <label for="firstname" class="col-sm-3 text-left control-label col-form-label" >Firstname</label>
+                  <label for="firstname" class="col-sm-3 text-left control-label col-form-label">Firstname</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname" required>
                   </div>
@@ -109,7 +96,7 @@
                 </div>
               </div>
 
-              <div class="col-md-6 m-t-40">
+              <div class="col-md-6">
                 <h4 class="card-title ">Account</h4>
                 <h6 class="card-subtitle"></h6>
                 <div class="form-group row m-t-40" id="typeform">
@@ -149,34 +136,47 @@
                 <h4 class="card-title">Department</h4>
                 <h6 class="card-subtitle"></h6>
                 <div class="form-group row m-t-40">
-                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Office</label>
+                  <label for="officeselect" class="col-sm-3 text-left control-label col-form-label">Office</label>
+                  <?php  require_once('../config/database.php');
+                    $sql = mysqli_query($connect, "SELECT * FROM tbloffice"); ?>
                   <div class="col-sm-8">
-                    <select class="form-control" id="off" placeholder="Username">
-                      <option value="">null</option>
+                    <select class="form-control" id="officeselect" name="officeselect" placeholder="Office">
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['officeID']."'>".$row['officeNAME']."</option>";
+                            }
+                        ?>
                     </select>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Division</label>
+                  <label for="divisionselect" class="col-sm-3 text-left control-label col-form-label">Division</label>
+                  <?php  require_once('../config/database.php');
+                    $sql = mysqli_query($connect, "SELECT * FROM tbldivision"); ?>
                   <div class="col-sm-8">
-                    <select class="form-control" id="inputEmail3" placeholder="Username">
-                      <option value="">null</option>
+                    <select class="form-control" id="divisionselect" name="divisionselect" placeholder="Division">
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['divisionID']."'>".$row['divisionNAME']."</option>";
+                            }
+                        ?>
                     </select>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Section</label>
+                  <label for="sectionselect" class="col-sm-3 text-left control-label col-form-label">Section</label>
+                  <?php  require_once('../config/database.php');
+                    $sql = mysqli_query($connect, "SELECT * FROM tblsection"); ?>
                   <div class="col-sm-8">
-                    <select class="form-control" id="inputEmail3" placeholder="Username">
-                      <option value="">null</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Unit</label>
-                  <div class="col-sm-8">
-                    <select class="form-control" id="inputEmail3" placeholder="Username">
-                      <option value="">null</option>
+                    <select class="form-control" id="sectionselect" name="sectionselect" placeholder="Username">
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['sectionID']."'>".$row['sectionNAME']."</option>";
+                            }
+                        ?>
                     </select>
                   </div>
                 </div>
@@ -188,6 +188,17 @@
                     </select>
                   </div>
                 </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Unit</label>
+                  <?php  require_once('../config/database.php');
+                    $sql = mysqli_query($connect, "SELECT * FROM tblsection"); ?>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="inputEmail3" placeholder="Username">
+                      <option value="">null</option>
+                    </select>
+                  </div>
+                </div>
+
 
               </div>
             </div>
