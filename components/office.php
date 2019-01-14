@@ -25,7 +25,7 @@
                   <tr>
                     <th>ID</th>
                     <th>NAME</th>
-                    <th>TYPE</th>
+                    <th>LEVEL</th>
                     <th>ACTION</th>
                   </tr>
                 </thead>
