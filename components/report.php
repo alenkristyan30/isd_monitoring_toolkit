@@ -19,13 +19,12 @@
           <div class="card-body">
             <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">ADD OFFICE</button>
             <div class="table-responsive m-t-40 col-12">
-              <table id="myTable" class="table table-striped w-100">
+              <table id="myTable" class="table table-hover table-bordered w-100">
                 <thead>
                   <tr>
                     <th>ID</th>
                     <th>USER NAME</th>
                     <th>SYSTEM NAME</th>
-                    <th>USAGEROLES</th>
                     <th>REPORT CATEGORY</th>
                     <th>PRIORITY</th>
                     <th>SEVERITY</th>

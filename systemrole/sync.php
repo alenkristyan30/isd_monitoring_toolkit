@@ -4,7 +4,7 @@
     $output = array('data' => array());
     while ($row = mysqli_fetch_assoc($sql)) {
       $button =
-      '<div class="row button-group text-white " role="group" aria-label="First group">
+      '<div class="w-100 button-group text-white " role="group" aria-label="First group">
           <a class="btn btn-warning waves-effect waves-light" name="edit" id="'.$row['systemroleID'].'">Edit</a>
           <a class="btn btn-danger waves-effect waves-light" name="delete" id="'.$row['systemroleID'].'">Delete</a>
       </div>

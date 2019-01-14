@@ -27,7 +27,7 @@ var table = $('#myTable').DataTable({
       page: 'current'
     }).data().each(function(group, i) {
       if (last !== group) {
-        $(rows).eq(i).before('<tr class="group"> <td colspan="100%" > ' + group + ' </td></tr>');
+        $(rows).eq(i).before('<tr class="group"> <td colspan="100%" ><strong>' + group + '</strong></td></tr>');
         last = group;
       }
     });
