@@ -28,6 +28,7 @@
             <li><a href="../systemrole">System Roles</a></li>
           </ul>
         </li>
+        <li> <a class="waves-effect waves-dark" href="../dashboard" aria-expanded="false"><i class="mdi mdi-comment-question-outline"></i><span class="hide-menu">Question </span></a></li>
 
         <li class="nav-devider"></li>
         <li class="nav-small-cap">REPORTS</li>
