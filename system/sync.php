@@ -15,8 +15,8 @@
             $row['infosystemABBREVIATION'],
             $row['infosystemTYPE'],
             $row['infosystemDATECREATED'],
+            $row['infosystemDEVELOPER'],
             $row['infosystemUSAGEROLES'],
-            $row['infosystemTYPE'],
             $button
 
 

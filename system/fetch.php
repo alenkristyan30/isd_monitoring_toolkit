@@ -8,7 +8,8 @@
         "abbreviation" => $row['infosystemABBREVIATION'],
         "type" => $row['infosystemTYPE'],
         "datecreated" => $row['infosystemDATECREATED'],
-        "roles" => $row['infosystemUSAGEROLES']
+        "roles" => $row['infosystemUSAGEROLES'],
+        "developer" => $row['infosystemDEVELOPER']
 
     );
     echo json_encode($output);
