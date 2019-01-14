@@ -224,6 +224,24 @@ $('#btnadd').click(function() {
   $('#firstname').val('');
   $('#firstname').removeClass('form-control-danger');
   $('#firstnameform').removeClass('has-danger');
+  $('#middlename').val('');
+  $('#middlename').removeClass('form-control-danger');
+  $('#middlenameform').removeClass('has-danger');
+  $('#surname').val('');
+  $('#surname').removeClass('form-control-danger');
+  $('#surnameform').removeClass('has-danger');
+  $('#lengthservice').val('');
+  $('#lengthservice').removeClass('form-control-danger');
+  $('#lengthserviceform').removeClass('has-danger');
+  $('#username').val('');
+  $('#username').removeClass('form-control-danger');
+  $('#usernameform').removeClass('has-danger');
+  $('#password').val('');
+  $('#password').removeClass('form-control-danger');
+  $('#passwordform').removeClass('has-danger');
+  $('#male').prop('checked', false);
+  $('#female').prop('checked', false);
+
 
 });
 

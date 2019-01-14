@@ -13,7 +13,7 @@
             $row['infosystemID'],
             $row['infosystemNAME'],
             $row['infosystemABBREVIATION'],
-            $row['infosystemTYPE'],
+            $row['infosystemDEVELOPMENTTYPE'],
             $row['infosystemDATECREATED'],
             $row['infosystemDEVELOPER'],
             $row['infosystemUSAGEROLES'],

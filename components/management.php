@@ -81,9 +81,9 @@
                 <div class="form-group row" id="genderform">
                   <label for="inputEmail3" class="col-sm-3 text-left control-label col-form-label">Gender</label>
                   <div class="col-sm-8">
-                    <input name="gender" type="radio" id="female">
+                    <input name="gender" type="radio" id="female" value="female" >
                     <label for="female">Female</label>
-                    <input name="gender" type="radio" id="male">
+                    <input name="gender" type="radio" id="male" value="male">
                     <label for="male">Male</label>
 
                   </div>

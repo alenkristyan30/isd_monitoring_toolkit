@@ -6,7 +6,7 @@
     $output = array(
         "name" => $row['infosystemNAME'],
         "abbreviation" => $row['infosystemABBREVIATION'],
-        "type" => $row['infosystemTYPE'],
+        "type" => $row['infosystemDEVELOPMENTTYPE'],
         "datecreated" => $row['infosystemDATECREATED'],
         "roles" => $row['infosystemUSAGEROLES'],
         "developer" => $row['infosystemDEVELOPER']
