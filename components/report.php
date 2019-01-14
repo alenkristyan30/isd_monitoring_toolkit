@@ -15,45 +15,15 @@
 
     <section>
       <div class="row">
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Basic Table</h4>
-              <h6 class="card-subtitle">Add class <code>.table</code></h6>
-              <div class="table-responsive">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Username</th>
-                      <th>Role</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Deshmukh</td>
-                      <td>Prohaska</td>
-                      <td>@Genelia</td>
-                      <td><span class="label label-danger">admin</span> </td>
-                    </tr>
-
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="card">
           <div class="card-body">
+            <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">ADD OFFICE</button>
             <div class="table-responsive m-t-40 col-12">
               <table id="myTable" class="table table-striped w-100">
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>USERNAME</th>
+                    <th>USER NAME</th>
                     <th>SYSTEM NAME</th>
                     <th>USAGEROLES</th>
                     <th>REPORT CATEGORY</th>
@@ -74,7 +44,6 @@
 
 
 
-
   </div>
 </div>
 
@@ -92,46 +61,53 @@
             <div class="row">
               <div class="col-md-6">
 
-                <h4 class="card-title">infosystem Information</h4>
+                <h4 class="card-title">Report Information</h4>
                 <h6 class="card-subtitle"></h6>
-                <div class="form-group row" id="infosystemnameform">
-                  <label for="infosystemnametxt" class="col-sm-3 text-left control-label col-form-label">Name</label>
+                <div class="form-group row" id="reportidform">
+                  <label for="reportidtxt" class="col-sm-3 text-left control-label col-form-label">Report ID</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control alphabetic" id="infosystemnametxt" name="infosystemnametxt" placeholder="Name" required>
+                    <input type="text" class="form-control alphabetic" id="reportidtxt" name="reportidtxt" placeholder="Report ID" required>
                   </div>
                 </div>
-                <div class="form-group row" id="infosystemabbreviationform">
-                  <label for="infosystemabbreviationtxt" class="col-sm-3 text-left control-label col-form-label">Abbreviation</label>
+                <div class="form-group row" id="reportnameform">
+                  <label for="reportnametxt" class="col-sm-3 text-left control-label col-form-label">Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control alphabetic" id="infosystemabbreviationtxt" name="infosystemabbreviationtxt" placeholder="Abbreviation" required>
+                    <input type="text" class="form-control alphabetic" id="reportnametxt" name="reportnametxt" placeholder="Name" required>
                   </div>
                 </div>
-                <div class="form-group row" id="infosystemdeveloperform">
-                  <label for="infosystemdevelopertxt" class="col-sm-3 text-left control-label col-form-label">Developer</label>
+                <div class="form-group row" id="reportrolesform">
+                  <label for="reportrolestxt" class="col-sm-3 text-left control-label col-form-label">Usage Roles</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control alphabetic" id="infosystemdevelopertxt" name="infosystemdevelopertxt" placeholder="Developer" required>
+                    <input type="text" class="form-control alphabetic" id="reportrolestxt" name="reportrolestxt" placeholder="Usage Roles" required>
                   </div>
                 </div>
-                <div class="form-group row" id="infosystemdatecreatedform">
-                  <label for="infosystemdatecreatedtxt" class="col-sm-3 text-left control-label col-form-label">Date Created</label>
+
+                <div class="form-group row" id="reportcategorytxtform">
+                  <label for="reportcategorytxt" class="col-sm-3 text-left control-label col-form-label">Report Category</label>
                   <div class="col-sm-8">
-                    <input type="month" class="form-control alphabetic" id="infosystemdatecreatedtxt" name="infosystemdatecreatedtxt" placeholder="Date Created" required>
+                    <input type="text" class="form-control alphabetic" id="reportcategorytxt" name="reportcategorytxt" placeholder="Report Category" required>
+                  </div>
+                </div>
+                <div class="form-group row" id="reportdatecreatedform">
+                  <label for="reportdatecreatedtxt" class="col-sm-3 text-left control-label col-form-label">Date Created</label>
+                  <div class="col-sm-8">
+                    <input type="month" class="form-control alphabetic" id="reportdatecreatedtxt" name="reportdatecreatedtxt" placeholder="Date Created" required>
                   </div>
                 </div>
 
 
               </div>
               <div class="col-md-6">
-                <div class="form-group row" id="infosystemtypeform">
-                  <label for="infosystemtypetxt" class="col-sm-3 text-left control-label col-form-label">Development Type</label>
+                <div class="form-group row" id="reporttypeform">
+                  <label for="reporttypetxt" class="col-sm-3 text-left control-label col-form-label">Development Type</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control numeric" id="infosystemtypetxt" name="infosystemtypetxt" placeholder="Development Type" required>
+                    <input type="text" class="form-control numeric" id="reporttypetxt" name="reporttypetxt" placeholder="Development Type" required>
                   </div>
                 </div>
-                <div class="form-group row" id="infosystemrolesform">
-                  <label for="infosystemrolestxt" class="col-sm-3 text-left control-label col-form-label">Usage Roles</label>
+                <div class="form-group row" id="reportrolesform">
+                  <label for="reportrolestxt" class="col-sm-3 text-left control-label col-form-label">Usage Roles</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control numeric" id="infosystemrolestxt" name="infosystemrolestxt" placeholder="Usage Roles" required>
+                    <input type="text" class="form-control numeric" id="reportrolestxt" name="reportrolestxt" placeholder="Usage Roles" required>
                   </div>
                 </div>
               </div>
