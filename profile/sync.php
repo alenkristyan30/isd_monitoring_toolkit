@@ -12,7 +12,7 @@
         $output['data'][] = array(
             $row['officeID'],
             $row['officeNAME'],
-            $row['officeLEVEL'],
+            $row['officeTYPE'],
             $button
 
 

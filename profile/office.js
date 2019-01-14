@@ -23,14 +23,14 @@ function name_validation() {
   }
 }
 
-function level_validation() {
-  if ($('#officeleveltxt').val() == '') {
-    $('#officeleveltxt').addClass('form-control-danger');
-    $('#officelevelform').addClass('has-danger');
+function type_validation() {
+  if ($('#officetypetxt').val() == '') {
+    $('#officetypetxt').addClass('form-control-danger');
+    $('#officetypeform').addClass('has-danger');
     bool = false;
   } else {
-    $('#officeleveltxt').removeClass('form-control-danger');
-    $('#officelevelform').removeClass('has-danger');
+    $('#officetypetxt').removeClass('form-control-danger');
+    $('#officetypeform').removeClass('has-danger');
     bool = true;
   }
 }
@@ -63,16 +63,16 @@ $('#officenametxt').bind('input', function() {
 });
 
 
-$('#officeleveltxt').blur(function() {
-  level_validation();
+$('#officetypetxt').blur(function() {
+  type_validation();
 });
-$('#officeleveltxt').bind('input', function() {
-  level_validation();
+$('#officetypetxt').bind('input', function() {
+  type_validation();
 });
 
 
 function validate() {
-  level_validation();
+  type_validation();
   name_validation();
   validateAll();
   return false;
@@ -80,9 +80,9 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
-  $('#officeleveltxt').val('');
-  $('#officeleveltxt').removeClass('form-control-danger');
-  $('#officelevelform').removeClass('has-danger');
+  $('#officetypetxt').val('');
+  $('#officetypetxt').removeClass('form-control-danger');
+  $('#officetypeform').removeClass('has-danger');
   $('#officenametxt').val('');
   $('#officenametxt').removeClass('form-control-danger');
   $('#officenameform').removeClass('has-danger');
@@ -101,7 +101,7 @@ $(document).on('click', 'a[name="edit"]', function() {
     success: function(data) {
       $('#id').val(id);
       $('#myModal').modal('show');
-      $('#officeleveltxt').val(data.type);
+      $('#officetypetxt').val(data.type);
       $('#officenametxt').val(data.name);
     }
   })

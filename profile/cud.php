@@ -1,16 +1,16 @@
 <?php
     session_start();
     include '../config/database.php';
-    $type = $_POST['officeleveltxt'];
+    $type = $_POST['officetypetxt'];
     $name = $_POST['officenametxt'];
     $action = $_POST['action'];
     $id = $_POST['id'];
     if ($action == 'Add'){
-        mysqli_query($connect, "INSERT INTO tbloffice ( officeNAME , officeLEVEL )VALUES( '$name' , '$type' )");
+        mysqli_query($connect, "INSERT INTO tbloffice ( officeNAME , officeTYPE )VALUES( '$name' , '$type' )");
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE tbloffice SET officeNAME = '$name' , officeLEVEL = '$type' WHERE officeID = $id");
+        mysqli_query($connect, "UPDATE tbloffice SET officeNAME = '$name' , officeTYPE = '$type' WHERE officeID = $id");
 
         echo 'Update Successfully';
     }

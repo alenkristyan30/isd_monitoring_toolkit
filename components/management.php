@@ -181,21 +181,6 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="positionselect" class="col-sm-3 text-left control-label col-form-label">Position</label>
-                  <?php  require_once('../config/database.php');
-                    $sql = mysqli_query($connect, "SELECT * FROM tblposition"); ?>
-                  <div class="col-sm-8">
-                    <select class="form-control" id="positionselect" name="positionselect" placeholder="Username">
-                      <?php
-                          while ($row = mysqli_fetch_assoc($sql))
-                          {
-                            echo "<option value='".$row['positionID']."'>".$row['positionNAME']."</option>";
-                            }
-                        ?>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group row">
                   <label for="unitselect" class="col-sm-3 text-left control-label col-form-label">Unit</label>
                   <?php  require_once('../config/database.php');
                     $sql = mysqli_query($connect, "SELECT * FROM tblunit"); ?>
@@ -210,6 +195,22 @@
                     </select>
                   </div>
                 </div>
+                <div class="form-group row">
+                  <label for="positionselect" class="col-sm-3 text-left control-label col-form-label">Position</label>
+                  <?php  require_once('../config/database.php');
+                    $sql = mysqli_query($connect, "SELECT * FROM tblposition"); ?>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="positionselect" name="positionselect" placeholder="Username">
+                      <?php
+                          while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['positionID']."'>".$row['positionNAME']."</option>";
+                            }
+                        ?>
+                    </select>
+                  </div>
+                </div>
+
 
 
               </div>

@@ -5,6 +5,6 @@
     $row = mysqli_fetch_assoc($sql);
     $output = array(
         "name" => $row['officeNAME'],
-        "type" => $row['officeLEVEL']
+        "type" => $row['officeTYPE']
     );
     echo json_encode($output);
