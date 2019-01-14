@@ -3,10 +3,11 @@
     <section>
       <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-          <h3 class="text-themecolor m-b-0 m-t-0">Account</h3>
+          <h3 class="text-themecolor m-b-0 m-t-0">ICT Projects</h3>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
             <li class="breadcrumb-item active">System</li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">ICT Projects</a></li>
           </ol>
         </div>
       </div>
@@ -28,7 +29,6 @@
                     <th>TYPE</th>
                     <th>DATE CREATED</th>
                     <th>DEVELOPER</th>
-                    <th>USAGEROLES</th>
                     <th>ACTION</th>
                   </tr>
                 </thead>
@@ -98,16 +98,7 @@
                     </select>
                   </div>
                 </div>
-                <div class="form-group row" id="infosystemrolesform">
-                  <label for="infosystemrolestxt" class="col-sm-3 text-left control-label col-form-label">Usage Roles</label>
-                  <div class="col-sm-8">
-                    <select class="form-control numeric" id="infosystemrolestxt" name="infosystemrolestxt" placeholder="Usage Roles" required>
-                      <option value="1">Admin</option>
-                      <option value="2">User</option>
-                      <option value="3">Guest</option>
-                    </select>
-                  </div>
-                </div>
+
               </div>
             </div>
 

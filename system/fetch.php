@@ -8,7 +8,6 @@
         "abbreviation" => $row['infosystemABBREVIATION'],
         "type" => $row['infosystemDEVELOPMENTTYPE'],
         "datecreated" => $row['infosystemDATECREATED'],
-        "roles" => $row['infosystemUSAGEROLES'],
         "developer" => $row['infosystemDEVELOPER']
 
     );

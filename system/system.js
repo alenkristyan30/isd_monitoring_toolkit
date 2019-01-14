@@ -6,7 +6,7 @@ var table = $('#myTable').DataTable({
     method: 'POST'
   },
   'columnDefs': [{
-    'targets': 7,
+    'targets': 6,
     'orderable': false
   }]
 });
@@ -153,7 +153,6 @@ $(document).on('click', 'a[name="edit"]', function() {
       $('#infosystemabbreviationtxt').val(data.abbreviation);
       $('#infosystemdevelopertxt').val(data.developer)
       $('#infosystemdatecreatedtxt').val(data.datecreated);
-      $('#infosystemrolestxt').val(data.roles)
     }
   })
 });
