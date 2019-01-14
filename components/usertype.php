@@ -20,7 +20,7 @@
             <div class="card-body">
               <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">ADD USERTYPE</button>
               <div class="table-responsive m-t-40 col-12">
-                <table id="myTable" class="table table-striped">
+                <table id="myTable" class="table table-hover table-bordered">
                   <thead>
                     <tr>
                       <th>ID</th>

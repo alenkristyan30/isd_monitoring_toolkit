@@ -14,7 +14,7 @@
       <div class="card">
         <div class="card-body">
           <div class="table-responsive m-t-40">
-            <table id="myTable" class="table table-striped col-12">
+            <table id="myTable" class="table table-hover table-bordered col-12">
               <thead>
                 <tr>
                   <th class="text-sm">ID</th>
