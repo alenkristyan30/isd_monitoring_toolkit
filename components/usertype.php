@@ -3,11 +3,11 @@
     <section>
       <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-          <h3 class="text-themecolor m-b-0 m-t-0">Account</h3>
+          <h3 class="text-themecolor m-b-0 m-t-0">User Type</h3>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-            <li class="breadcrumb-item active">Administration</li>
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Account</a></li>
+            <li class="breadcrumb-item active">Account</li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">User Type</a></li>
           </ol>
         </div>
       </div>

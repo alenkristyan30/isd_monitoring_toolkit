@@ -3,32 +3,65 @@
     <section>
       <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-          <h3 class="text-themecolor m-b-0 m-t-0">Account</h3>
+          <h3 class="text-themecolor m-b-0 m-t-0">Overall System Report</h3>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-            <li class="breadcrumb-item active">System</li>
+            <li class="breadcrumb-item active">Report</li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Overall System Report</a></li>
           </ol>
         </div>
       </div>
     </section>
 
-
     <section>
       <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Basic Table</h4>
+              <h6 class="card-subtitle">Add class <code>.table</code></h6>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                      <th>Role</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Deshmukh</td>
+                      <td>Prohaska</td>
+                      <td>@Genelia</td>
+                      <td><span class="label label-danger">admin</span> </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="card">
           <div class="card-body">
-            <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">ADD SYSTEM</button>
             <div class="table-responsive m-t-40 col-12">
               <table id="myTable" class="table table-striped w-100">
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>NAME</th>
-                    <th>ABBREVIATION</th>
-                    <th>TYPE</th>
-                    <th>DATE CREATED</th>
-                    <th>DEVELOPER</th>
+                    <th>USERNAME</th>
+                    <th>SYSTEM NAME</th>
                     <th>USAGEROLES</th>
+                    <th>REPORT CATEGORY</th>
+                    <th>PRIORITY</th>
+                    <th>SEVERITY</th>
+                    <th>STATUS</th>
+                    <th>REPORTED DATE</th>
+                    <th>FIXED DATE</th>
                     <th>ACTION</th>
                   </tr>
                 </thead>

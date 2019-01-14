@@ -3,11 +3,11 @@
     <section>
       <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-          <h3 class="text-themecolor m-b-0 m-t-0">Account</h3>
+          <h3 class="text-themecolor m-b-0 m-t-0">Division</h3>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-            <li class="breadcrumb-item active">Administration</li>
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Account</a></li>
+            <li class="breadcrumb-item active">Department</li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Division</a></li>
           </ol>
         </div>
       </div>
@@ -18,7 +18,7 @@
       <div class="row">
         <div class="card">
           <div class="card-body">
-            <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">ADD USERTYPE</button>
+            <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">ADD DIVISION</button>
             <div class="table-responsive m-t-40 col-12">
               <table id="myTable" class="table table-striped w-100">
                 <thead>
