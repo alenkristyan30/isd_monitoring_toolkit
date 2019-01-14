@@ -1,6 +1,6 @@
 <?php
     include '../config/database.php';
-    $sql = mysqli_query($connect, "SELECT * FROM tbldivision");
+    $sql = mysqli_query($connect, "SELECT divisionID , divisionNAME , officeNAME FROM tbldivision INNER JOIN tbloffice ON tbloffice.officeID = tbldivision.divisionOFFICE ");
     $output = array('data' => array());
     while ($row = mysqli_fetch_assoc($sql)) {
       $button =
@@ -12,7 +12,7 @@
         $output['data'][] = array(
             $row['divisionID'],
             $row['divisionNAME'],
-            $row['divisionTYPE'],
+            $row['officeNAME'],
             $button
 
 

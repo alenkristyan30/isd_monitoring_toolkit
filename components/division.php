@@ -25,7 +25,7 @@
                   <tr>
                     <th>ID</th>
                     <th>NAME</th>
-                    <th>TYPE</th>
+                    <th>OFFICE</th>
                     <th>ACTION</th>
                   </tr>
                 </thead>
@@ -61,9 +61,18 @@
               </div>
             </div>
             <div class="form-group row" id="divisiontypeform">
-              <label for="divisiontypetxt" class="col-sm-3 text-left control-label col-form-label">Type</label>
+              <label for="divisionofficetxt" class="col-sm-3 text-left control-label col-form-label">Office</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="divisiontypetxt" name="divisiontypetxt" placeholder="Type" required>
+                <?php  require_once('../config/database.php');
+                  $sql = mysqli_query($connect, "SELECT * FROM tbloffice"); ?>
+                <select class="form-control" id="divisionofficetxt" name="divisionofficetxt" placeholder="Office" required>
+                  <?php
+                      while ($row = mysqli_fetch_assoc($sql))
+                      {
+                        echo "<option value='".$row['officeID']."'>".$row['officeNAME']."</option>";
+                        }
+                    ?>
+                  </select>
               </div>
             </div>
 

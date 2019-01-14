@@ -47,6 +47,18 @@ function developer_validation() {
   }
 }
 
+function type_validation() {
+  if ($('#infosystemtypetxt').val() == '') {
+    $('#infosystemtypetxt').addClass('form-control-danger');
+    $('#infosystemtypeform').addClass('has-danger');
+    bool = false;
+  } else {
+    $('#infosystemtypetxt').removeClass('form-control-danger');
+    $('#infosystemtypeform').removeClass('has-danger');
+    bool = true;
+  }
+}
+
 function validateAll() {
   if (bool) {
     $.ajax({
@@ -88,6 +100,13 @@ $('#infosystemdevelopertxt').bind('input', function() {
   developer_validation();
 });
 
+$('#infosystemtypetxt').blur(function() {
+  type_validation();
+});
+$('#infosystemtypetxt').bind('input', function() {
+  type_validation();
+});
+
 
 
 
@@ -101,6 +120,7 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
+  $("infosystemtypetxt").val("1").selected();
   $('#infosystemtypetxt').val('');
   $('#infosystemtypetxt').removeClass('form-control-danger');
   $('#infosystemtypeform').removeClass('has-danger');
@@ -110,6 +130,9 @@ $('#btnadd').click(function() {
   $('#infosystemabbreviationtxt').val('');
   $('#infosystemabbreviationtxt').removeClass('form-control-danger');
   $('#infosystemabbreviationform').removeClass('has-danger');
+  $('#infosystemtypetxt').val('');
+  $('#infosystemtypetxt').removeClass('form-control-danger');
+  $('#infosystemtypeform').removeClass('has-danger');
 });
 
 $(document).on('click', 'a[name="edit"]', function() {

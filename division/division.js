@@ -8,7 +8,38 @@ var table = $('#myTable').DataTable({
   'columnDefs': [{
     'targets': 3,
     'orderable': false
-  }]
+  },{
+    "visible": false,
+    "targets": 2
+  }],
+
+  "order": [
+    [2, 'asc']
+  ],
+  "displayLength": 25,
+  "drawCallback": function(settings) {
+    var api = this.api();
+    var rows = api.rows({
+      page: 'current'
+    }).nodes();
+    var last = null;
+    api.column(2, {
+      page: 'current'
+    }).data().each(function(group, i) {
+      if (last !== group) {
+        $(rows).eq(i).before('<tr class="group"> <td colspan="100%" > ' + group + ' </td></tr>');
+        last = group;
+      }
+    });
+  }
+});
+$('#myTable tbody').on('click', 'tr.group', function() {
+  var currentOrder = table.order()[0];
+  if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+    table.order([2, 'desc']).draw();
+  } else {
+    table.order([2, 'asc']).draw();
+  }
 });
 
 function name_validation() {
@@ -24,12 +55,12 @@ function name_validation() {
 }
 
 function type_validation() {
-  if ($('#divisiontypetxt').val() == '') {
-    $('#divisiontypetxt').addClass('form-control-danger');
+  if ($('#divisionofficetxt').val() == '') {
+    $('#divisionofficetxt').addClass('form-control-danger');
     $('#divisiontypeform').addClass('has-danger');
     bool = false;
   } else {
-    $('#divisiontypetxt').removeClass('form-control-danger');
+    $('#divisionofficetxt').removeClass('form-control-danger');
     $('#divisiontypeform').removeClass('has-danger');
     bool = true;
   }
@@ -63,10 +94,10 @@ $('#divisionnametxt').bind('input', function() {
 });
 
 
-$('#divisiontypetxt').blur(function() {
+$('#divisionofficetxt').blur(function() {
   type_validation();
 });
-$('#divisiontypetxt').bind('input', function() {
+$('#divisionofficetxt').bind('input', function() {
   type_validation();
 });
 
@@ -80,8 +111,8 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
-  $('#divisiontypetxt').val('');
-  $('#divisiontypetxt').removeClass('form-control-danger');
+  $('#divisionofficetxt').val('');
+  $('#divisionofficetxt').removeClass('form-control-danger');
   $('#divisiontypeform').removeClass('has-danger');
   $('#divisionnametxt').val('');
   $('#divisionnametxt').removeClass('form-control-danger');
@@ -90,8 +121,8 @@ $('#btnadd').click(function() {
 
 $(document).on('click', 'a[name="edit"]', function() {
   $('#action').val('Edit');
-  $('#divisiontypetxt').val('');
-  $('#divisiontypetxt').removeClass('form-control-danger');
+  $('#divisionofficetxt').val('');
+  $('#divisionofficetxt').removeClass('form-control-danger');
   $('#divisiontypeform').removeClass('has-danger');
   $('#divisionnametxt').val('');
   $('#divisionnametxt').removeClass('form-control-danger');
@@ -107,7 +138,7 @@ $(document).on('click', 'a[name="edit"]', function() {
     success: function(data) {
       $('#id').val(id);
       $('#myModal').modal('show');
-      $('#divisiontypetxt').val(data.type);
+      $('#divisionofficetxt').val(data.office);
       $('#divisionnametxt').val(data.name);
     }
   })

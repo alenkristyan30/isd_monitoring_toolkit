@@ -92,13 +92,20 @@
                 <div class="form-group row" id="infosystemtypeform">
                   <label for="infosystemtypetxt" class="col-sm-3 text-left control-label col-form-label">Development Type</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control numeric" id="infosystemtypetxt" name="infosystemtypetxt" placeholder="Development Type" required>
+                    <select class="form-control" id="infosystemtypetxt" name="infosystemtypetxt" placeholder="Development Type" required>
+                      <option value="1">in-house</option>
+                      <option value="2">outsource</option>
+                    </select>
                   </div>
                 </div>
                 <div class="form-group row" id="infosystemrolesform">
                   <label for="infosystemrolestxt" class="col-sm-3 text-left control-label col-form-label">Usage Roles</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control numeric" id="infosystemrolestxt" name="infosystemrolestxt" placeholder="Usage Roles" required>
+                    <select class="form-control numeric" id="infosystemrolestxt" name="infosystemrolestxt" placeholder="Usage Roles" required>
+                      <option value="1">Admin</option>
+                      <option value="2">User</option>
+                      <option value="3">Guest</option>
+                    </select>
                   </div>
                 </div>
               </div>

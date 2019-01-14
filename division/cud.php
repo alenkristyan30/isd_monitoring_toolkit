@@ -1,16 +1,16 @@
 <?php
     session_start();
     include '../config/database.php';
-    $type = $_POST['divisiontypetxt'];
+    $office = $_POST['divisionofficetxt'];
     $name = $_POST['divisionnametxt'];
     $action = $_POST['action'];
     $id = $_POST['id'];
     if ($action == 'Add'){
-        mysqli_query($connect, "INSERT INTO tbldivision ( divisionNAME , divisionTYPE )VALUES( '$name' , '$type' )");
+        mysqli_query($connect, "INSERT INTO tbldivision ( divisionNAME , divisionOFFICE )VALUES( '$name' , '$office' )");
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE tbldivision SET divisionNAME = '$name' , divisionTYPE = '$type' WHERE divisionID = $id");
+        mysqli_query($connect, "UPDATE tbldivision SET divisionNAME = '$name' , divisionOFFICE = '$office' WHERE divisionID = $id");
 
         echo 'Update Successfully';
     }
