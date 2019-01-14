@@ -79,10 +79,10 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
-    $('#sectiontypetxt').val('');
+  $('#sectiontypetxt').val('');
   $('#sectiontypetxt').removeClass('form-control-danger');
   $('#sectiontypeform').removeClass('has-danger');
-      $('#sectionnametxt').val('');
+  $('#sectionnametxt').val('');
   $('#sectionnametxt').removeClass('form-control-danger');
   $('#sectionnameform').removeClass('has-danger');
 });

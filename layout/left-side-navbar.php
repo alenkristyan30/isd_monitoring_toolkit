@@ -25,7 +25,7 @@
         <li> <a class="waves-effect waves-dark has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">System</span></a>
           <ul aria-expanded="false" class="collapse">
             <li><a href="../system">ICT Projects</a></li>
-            <li><a href="../division">Usage Roles</a></li>
+            <li><a href="../systemrole">System Roles</a></li>
           </ul>
         </li>
 

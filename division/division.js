@@ -111,7 +111,6 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
-  $('#divisionofficetxt').val('');
   $('#divisionofficetxt').removeClass('form-control-danger');
   $('#divisiontypeform').removeClass('has-danger');
   $('#divisionnametxt').val('');

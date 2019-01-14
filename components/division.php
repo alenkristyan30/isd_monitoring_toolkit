@@ -24,7 +24,7 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>NAME</th>
+                    <th>USAGE ROLE</th>
                     <th>OFFICE</th>
                     <th>ACTION</th>
                   </tr>
