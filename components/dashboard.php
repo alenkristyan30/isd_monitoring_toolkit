@@ -10,17 +10,17 @@
       </div>
     </div>
     <div class="row">
-      <!-- Column -->
       <div class="col-md-6 col-lg-3">
         <div class="card card-body">
-          <!-- Row -->
           <div class="row">
-            <!-- Column -->
             <div class="col p-r-0 align-self-center">
-              <h2 class="font-light m-b-0">324</h2>
+              <?php
+              require_once('../config/database.php');
+              $result = mysql_query($connect, "SELECT count(useraccountID) AS USERS FROM tbluseraccount WHERE useraccountTYPE =  2");
+              $data = mysql_fetch_assoc($result); ?>
+              <h2 class="font-light m-b-0"><?php echo $data['USERS']; ?></h2>
               <h6 class="text-muted">Total Users</h6>
             </div>
-            <!-- Column -->
             <div class="col text-right align-self-center">
               <div data-label="20%" class="css-bar m-b-0 css-bar-info css-bar-20"></div>
             </div>

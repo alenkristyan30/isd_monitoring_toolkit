@@ -16,12 +16,12 @@ if( !empty($_POST) ) {
     }
     else {
         // if username exists
-        $sql = "SELECT * FROM useracc WHERE username = '$username'";
+        $sql = "SELECT * FROM tbluseraccount WHERE username = '$username'";
         $query = $connect->query($sql);
         if( $query->num_rows > 0 ) {
             // check username and password
             $password = md5($password);
-            $sql = "SELECT * FROM useracc WHERE username = '$username' AND password = '$password'";
+            $sql = "SELECT * FROM tbluseraccount WHERE username = '$username' AND password = '$password'";
             $query = $connect->query($sql);
             $result = $query->fetch_array();
             $connect->close();

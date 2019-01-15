@@ -3,7 +3,7 @@
   <div class="login-register">
     <div class="login-box card">
       <div class="card-body">
-        <form class="form-horizontal form-material" action="<?php echo $_SERVER['PHP_SELF'] ?>"  method="post">
+        <form class="form-horizontal form-material" action="<?php echo $_SERVER['PHP_SELF'] ?>"  method="post" novalidate>
           <div class="text-left  m-b-30">
             <img src="../assets/images/logo.png" style="width: 50px" alt="">
             <img src="../assets/images/centered-text.png" style="height : 30px" alt="">
