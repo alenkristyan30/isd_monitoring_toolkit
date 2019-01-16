@@ -15,7 +15,7 @@
         <div class="card-body">
           <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">Add Account</button>
           <div class="table-responsive m-t-40 col-12">
-            <table id="myTable" class="table dataTable table-hover table-bordered w-100">
+            <table id="myTable" class="table dataTable table-hover w-100">
               <thead>
                 <tr>
                   <th>ID</th>

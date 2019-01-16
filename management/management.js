@@ -350,4 +350,3 @@ $(document).ready(function() {
     }
   });
 });
-view-source:http://demo.webslesson.info/live-table-insert-update-delete/
