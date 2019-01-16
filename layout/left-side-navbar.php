@@ -5,11 +5,10 @@
         <li> <a class="waves-effect waves-dark" href="../dashboard" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
         <li class="nav-devider"></li>
         <li class="nav-small-cap">MANAGEMENT</li>
-        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Account</span></a>
-          <ul aria-expanded="false" class="collapse">
-            <li><a href="../account">User Account</a></li>
-            <li><a href="../management">User Management</a></li>
-            <li><a href="../usertype">User Type</a></li>
+        <li id="acc_parent"> <a class="has-arrow waves-effect waves-dark" href="#"  aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Account</span></a>
+          <ul aria-expanded="false" class="collapse" id="acc_sub_parent">
+            <li id="acc_child1"><a href="../management" id="user_management">User Management</a></li>
+            <li id="acc_child2"><a href="../usertype" id="user_type">User Type</a></li>
           </ul>
         </li>
         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-domain"></i><span class="hide-menu">Department</span></a>

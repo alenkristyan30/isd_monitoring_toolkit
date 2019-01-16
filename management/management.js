@@ -6,7 +6,7 @@ var table = $('#myTable').DataTable({
     method: 'POST'
   },
   'columnDefs': [{
-    'targets': 13,
+    'targets': 14,
     'orderable': false
   }],
   "order": [
@@ -341,6 +341,13 @@ $(document).on('click', 'a[name="view"]', function() {
     }
   })
 });
+$(document).ready(function() {
+  $('#acc_parent').addClass("active");
+  $('#acc_sub_parent').addClass("in");
+  $('#acc_child1').addClass("active");
+  $('#user_management').addClass("active");
+});
+
 
 $(document).ready(function() {
   $(".alphabetic").keypress(function(e) {

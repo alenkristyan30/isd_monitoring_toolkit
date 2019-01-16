@@ -109,3 +109,9 @@ $(document).on('click', 'a[name="delete"]', function() {
     }
   })
 });
+$(document).ready(function() {
+  $('#acc_parent').addClass("active");
+  $('#acc_sub_parent').addClass("in");
+  $('#acc_child2').addClass("active");
+  $('#user_type').addClass("active");
+});

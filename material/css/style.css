@@ -63,6 +63,39 @@ File: scss
     left: calc(50% - 3.5px);
 }
 
+@font-face {
+    font-family: "MWF-MDL2";
+    src: url("https://www.microsoft.com/mwf/_h/v3.07/mwf.app/fonts/mwfmdl2-v3.07.woff") format("woff"),url("https://www.microsoft.com/mwf/_h/v3.07/mwf.app/fonts/mwfmdl2-v3.07.ttf") format("truetype"),url("https://www.microsoft.com/mwf/_h/v3.07/mwf.app/fonts/mwfmdl2-v3.07.svg") format("svg")
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'),url('../material/SegoeUI/normal.woff2') format("woff2"),url('../material/SegoeUI/normal.woff') format("woff"),url('../material/SegoeUI/normal.ttf') format("ttf");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'),url('../material/SegoeUI/light.woff2') format("woff2"),url('../material/SegoeUI/light.woff') format("woff"),url('../material/SegoeUI/light.ttf') format("ttf");
+    font-weight: 100
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'),url('../material/SegoeUI/semilight.woff2') format("woff2"),url('../material/SegoeUI/semilight.woff') format("woff"),url('../material/SegoeUI/semilight.ttf') format("ttf");
+    font-weight: 200
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'),url('../material/SegoeUI/semibold.woff2') format("woff2"),url('../material/SegoeUI/semibold.woff') format("woff"),url('../material/SegoeUI/semibold.ttf') format("ttf");
+    font-weight: 600
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'),url('../material/SegoeUI/bold.woff2') format("woff2"),url('../material/SegoeUI/bold.woff') format("woff"),url('../material/SegoeUI/bold.ttf') format("ttf");
+    font-weight: 700
+}
 /*
 Template Name: Material Pro Admin
 Author: Themedesigner

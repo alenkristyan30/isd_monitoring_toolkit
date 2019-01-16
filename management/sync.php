@@ -2,7 +2,7 @@
     include '../config/database.php';
     $sql = mysqli_query($connect,
     "SELECT tbluserinfo.userinfoID , useraccountUSERNAME , userinfoFIRSTNAME , userinfoMIDDLENAME , userinfoSURNAME , userinfoGENDER , userinfoSERVICELENGTH ,
-      usertypeTITLE , officeNAME , divisionNAME , positionNAME , sectionNAME , unitNAME FROM tbluserinfo
+      usertypeTITLE , officeNAME , divisionNAME , positionNAME , sectionNAME , unitNAME , useraccountSTATUS FROM tbluserinfo
       INNER JOIN tbluseraccount ON tbluseraccount.useraccountID = tbluserinfo.userinfoID
       INNER JOIN tbloffice ON tbloffice.officeID = tbluserinfo.userinfoOFFICE
       INNER JOIN tblusertype ON tblusertype.usertypeID = tbluseraccount.useraccountTYPE
@@ -33,6 +33,7 @@
             $row['positionNAME'],
             $row['sectionNAME'],
             $row['unitNAME'],
+            $row['useraccountSTATUS'],
             $button
         );
     }

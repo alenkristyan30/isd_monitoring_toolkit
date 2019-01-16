@@ -16,26 +16,24 @@
 
     <section>
       <div class="row">
-          <div class="card">
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">ADD USERTYPE</button>
-              <div class="table-responsive m-t-40 col-12">
-                <table id="myTable" class="table table-hover table-bordered">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>TITLE</th>
-                      <th>ACTION</th>
-                    </tr>
-                  </thead>
-                </table>
-              </div>
+        <div class="card">
+          <div class="card-body">
+            <button type="button" class="btn btn-primary" alt="default" data-toggle="modal" data-target="#myModal" name="btnadd" id="btnadd">ADD USERTYPE</button>
+            <div class="table-responsive m-t-40 col-12">
+              <table id="myTable" class="table table-hover w-100">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+              </table>
             </div>
           </div>
+        </div>
       </div>
     </section>
-
-
 
 
   </div>
