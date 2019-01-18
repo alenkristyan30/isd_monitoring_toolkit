@@ -1,7 +1,7 @@
 <?php
     session_start();
     include '../../config/database.php';
-    $office = $_POST['sectiondivisiontxt'];
+    $office = $_POST['divisionofficetxt'];
     $name = $_POST['divisionnametxt'];
     $action = $_POST['action'];
     $id = $_POST['id'];
