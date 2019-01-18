@@ -62,14 +62,29 @@
                 <h4 class="card-title">Office Information</h4>
                 <h6 class="card-subtitle"></h6>
 
-
-
                 <div class="form-group row m-b-15">
-                  <label class="col-sm-3 col-form-label">Theme White</label>
+                  <label class="col-sm-3 col-form-label">Report ID</label>
+                  <div class="col-sm-8">
+                    <?php  require_once('../../config/database.php');
+                  $sql = mysqli_query($connect, "SELECT * FROM tblreports"); ?>
+                    <select class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
+                      <option value="" selected disabled></option>
+                      <?php
+                      while ($row = mysqli_fetch_assoc($sql))
+                      {
+                        echo "<option value='".$row['reportID']."'>".$row['reportID']."</option>";
+                        }
+                    ?>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group row m-b-15" id="teamnametxtform">
+                  <label class="col-sm-3 col-form-label">Name</label>
                   <div class="col-sm-8">
                     <?php  require_once('../../config/database.php');
                   $sql = mysqli_query($connect, "SELECT * FROM tbluserinfo"); ?>
-                    <select class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
+                    <select class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white" id="teamnametxt" name="teamnametxt">
                       <option value="" selected disabled></option>
                       <?php
                       while ($row = mysqli_fetch_assoc($sql))
@@ -82,17 +97,11 @@
                 </div>
 
                 <div class="form-group row m-b-15" id="systemrolesystemtxtform">
-                  <label for="systemrolesystemtxt" class="col-sm-3 text-left control-label">ICT Project</label>
+                  <label for="systemrolesystemtxt" class="col-sm-3 text-left control-label">Role</label>
                   <div class="col-sm-8">
-                    <?php  require_once('../../config/database.php');
-                  $sql = mysqli_query($connect, "SELECT * FROM tblinfosystem"); ?>
-                    <select class="form-control" id="systemrolesystemtxt" name="systemrolesystemtxt" placeholder="ICT Project" required>
-                      <?php
-                      while ($row = mysqli_fetch_assoc($sql))
-                      {
-                        echo "<option value='".$row['infosystemID']."'>".$row['infosystemNAME']."</option>";
-                        }
-                    ?>
+                    <select class="form-control" id="systemrolesystemtxt" name="systemrolesystemtxt" placeholder="Role" required>
+                      <option value="Member">Member</option>;
+                      <option value="Leader">Leader</option>;
                     </select>
                   </div>
                 </div>
