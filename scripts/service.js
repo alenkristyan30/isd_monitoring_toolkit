@@ -1,20 +1,20 @@
 var bool = false;
-var table = $('#myteam').DataTable({
+var table = $('#myservice').DataTable({
   'order': [],
   'ajax': {
     url: 'sync.php',
     method: 'POST'
   },
   'columnDefs': [{
-    'targets': 3,
+    'targets': 2,
     'orderable': false
   },{
     "visible": false,
-    "targets": 2
+    "targets": 1
   }],
 
   "order": [
-    [2, 'asc']
+    [1, 'asc']
   ],
   "displayLength": 25,
   "drawCallback": function(settings) {
@@ -23,11 +23,11 @@ var table = $('#myteam').DataTable({
       page: 'current'
     }).nodes();
     var last = null;
-    api.column(2, {
+    api.column(1, {
       page: 'current'
     }).data().each(function(group, i) {
       if (last !== group) {
-        $(rows).eq(i).before('<tr class="group"> <td colspan="100%" > ' + group + ' </td></tr>');
+        $(rows).eq(i).before('<tr class="group"> <td colspan="100%" ><strong>' + group + '</strong></td></tr>');
         last = group;
       }
     });
@@ -35,33 +35,33 @@ var table = $('#myteam').DataTable({
 });
 $('#myTable tbody').on('click', 'tr.group', function() {
   var currentOrder = table.order()[0];
-  if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
-    table.order([2, 'desc']).draw();
+  if (currentOrder[0] === 1 && currentOrder[1] === 'asc') {
+    table.order([1, 'desc']).draw();
   } else {
-    table.order([2, 'asc']).draw();
+    table.order([1, 'asc']).draw();
   }
 });
 
 function name_validation() {
-  if ($('#systemrolenametxt').val() == '') {
-    $('#systemrolenametxt').addClass('is-invalid');
-    $('#systemrolenameform').addClass('is-invalid');
+  if ($('#servicenametxt').val() == '') {
+    $('#servicenametxt').addClass('is-invalid');
+    $('#servicenameform').addClass('is-invalid');
     bool = false;
   } else {
-    $('#systemrolenametxt').removeClass('is-invalid');
-    $('#systemrolenameform').removeClass('is-invalid');
+    $('#servicenametxt').removeClass('is-invalid');
+    $('#servicenameform').removeClass('is-invalid');
     bool = true;
   }
 }
 
-function system_validation() {
-  if ($('#systemrolesystemtxt').val() == '') {
-    $('#systemrolesystemtxt').addClass('is-invalid');
-    $('#systemroletypeform').addClass('is-invalid');
+function type_validation() {
+  if ($('#serviceofficetxt').val() == '') {
+    $('#serviceofficetxt').addClass('is-invalid');
+    $('#servicetypeform').addClass('is-invalid');
     bool = false;
   } else {
-    $('#systemrolesystemtxt').removeClass('is-invalid');
-    $('#systemroletypeform').removeClass('is-invalid');
+    $('#serviceofficetxt').removeClass('is-invalid');
+    $('#servicetypeform').removeClass('is-invalid');
     bool = true;
   }
 }
@@ -86,24 +86,24 @@ function validateAll() {
 }
 
 
-$('#systemrolenametxt').blur(function() {
+$('#servicenametxt').blur(function() {
   name_validation();
 });
-$('#systemrolenametxt').bind('input', function() {
+$('#servicenametxt').bind('input', function() {
   name_validation();
 });
 
 
-$('#systemrolesystemtxt').blur(function() {
-  system_validation();
+$('#serviceofficetxt').blur(function() {
+  type_validation();
 });
-$('#systemrolesystemtxt').bind('input', function() {
-  system_validation();
+$('#serviceofficetxt').bind('input', function() {
+  type_validation();
 });
 
 
 function validate() {
-  system_validation();
+  type_validation();
   name_validation();
   validateAll();
   return false;
@@ -111,21 +111,21 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
-  $('#systemrolesystemtxt').removeClass('is-invalid');
-  $('#systemroletypeform').removeClass('is-invalid');
-  $('#systemrolenametxt').val('');
-  $('#systemrolenametxt').removeClass('is-invalid');
-  $('#systemrolenameform').removeClass('is-invalid');
+  $('#serviceofficetxt').removeClass('is-invalid');
+  $('#servicetypeform').removeClass('is-invalid');
+  $('#servicenametxt').val('');
+  $('#servicenametxt').removeClass('is-invalid');
+  $('#servicenameform').removeClass('is-invalid');
 });
 
 $(document).on('click', 'a[name="edit"]', function() {
   $('#action').val('Edit');
-  $('#systemrolesystemtxt').val('');
-  $('#systemrolesystemtxt').removeClass('is-invalid');
-  $('#systemroletypeform').removeClass('is-invalid');
-  $('#systemrolenametxt').val('');
-  $('#systemrolenametxt').removeClass('is-invalid');
-  $('#systemrolenameform').removeClass('is-invalid');
+  $('#serviceofficetxt').val('');
+  $('#serviceofficetxt').removeClass('is-invalid');
+  $('#servicetypeform').removeClass('is-invalid');
+  $('#servicenametxt').val('');
+  $('#servicenametxt').removeClass('is-invalid');
+  $('#servicenameform').removeClass('is-invalid');
   var id = $(this).attr('id');
   $.ajax({
     url: 'fetch.php',
@@ -137,8 +137,8 @@ $(document).on('click', 'a[name="edit"]', function() {
     success: function(data) {
       $('#id').val(id);
       $('#myModal').modal('show');
-      $('#systemrolesystemtxt').val(data.system);
-      $('#systemrolenametxt').val(data.name);
+      $('#serviceofficetxt').val(data.office);
+      $('#servicenametxt').val(data.name);
     }
   })
 });
@@ -163,7 +163,7 @@ $(document).on('click', 'a[name="delete"]', function() {
               closeOnClickOutside: false
             })
             .then((value) => {
-              table.ajax.reload();
+                table.ajax.reload();
             })
         }
       })

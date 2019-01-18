@@ -55,7 +55,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Modal Message Header</h4>
+          <h4 class="modal-title">Office Information</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         </div>
         <form onsubmit="return validate()" id="vform" name="vform" method="POST" >
@@ -63,9 +63,6 @@
           <div class="modal-body">
             <div class="row">
               <div class="col-md-6">
-                <h4 class="card-title">Office Information</h4>
-                <h6 class="card-subtitle"></h6>
-
                 <div class="form-group row m-b-15" id="officeidform">
                   <label for="officeidtxt" class="col-md-3 col-sm-3 col-form-label">ID</label>
                   <div class="col-sm-8">
@@ -83,7 +80,7 @@
                 <div class="form-group row m-b-15" id="officelevelform">
                   <label for="officeleveltxt" class="col-md-3 col-sm-3 col-form-label">Level</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control numeric" id="officeleveltxt" name="officeleveltxt" placeholder="Level" >
+                    <input type="number" class="form-control numeric" min="1" max="9" id="officeleveltxt" name="officeleveltxt" placeholder="Level" >
                   </div>
                 </div>
 

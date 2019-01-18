@@ -4,12 +4,12 @@
     "SELECT tbluserinfo.userinfoID , useraccountUSERNAME , userinfoFIRSTNAME , userinfoMIDDLENAME , userinfoSURNAME , userinfoGENDER , userinfoSERVICELENGTH ,
       usertypeTITLE , officeNAME , divisionNAME , positionNAME , sectionNAME , unitNAME , useraccountSTATUS FROM tbluserinfo
       INNER JOIN tbluseraccount ON tbluseraccount.useraccountID = tbluserinfo.userinfoID
-      INNER JOIN tbloffice ON tbloffice.officeID = tbluserinfo.userinfoOFFICE
+      INNER JOIN tbloffice ON tbloffice.officeID = tbluserinfo.userinfoOFFICEID
       INNER JOIN tblusertype ON tblusertype.usertypeID = tbluseraccount.useraccountTYPE
-      INNER JOIN tbldivision ON tbldivision.divisionID = tbluserinfo.userinfoDIVISION
-      INNER JOIN tblsection ON tblsection.sectionID = tbluserinfo.userinfoSECTION
-      INNER JOIN tblposition ON tblposition.positionID = tbluserinfo.userinfoPOSITION
-      INNER JOIN tblunit ON tblunit.unitID = tbluserinfo.userinfoUNIT WHERE tbluseraccount.useraccountTYPE = 3");
+      INNER JOIN tbldivision ON tbldivision.divisionID = tbluserinfo.userinfoDIVISIONID
+      INNER JOIN tblsection ON tblsection.sectionID = tbluserinfo.userinfoSECTIONID
+      INNER JOIN tblposition ON tblposition.positionID = tbluserinfo.userinfoPOSITIONID
+      INNER JOIN tblunit ON tblunit.unitID = tbluserinfo.userinfoUNITID WHERE tbluseraccount.useraccountTYPE = 3");
     $output = array('data' => array());
     while ($row = mysqli_fetch_assoc($sql)) {
         $button =

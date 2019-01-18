@@ -35,7 +35,6 @@
         <table id="mydivision" class="table w-100">
           <thead>
             <tr>
-              <th>ID</th>
               <th>USAGE ROLE</th>
               <th>OFFICE</th>
               <th>ACTION</th>

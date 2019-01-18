@@ -147,11 +147,18 @@
                 </div>
 
                 <div class="form-group row m-b-15" id="lengthserviceform">
-                  <label for="lengthservice" class="col-md-3 col-sm-3 col-form-label">Length of Service</label>
-                  <div class="col-sm-8">
-                    <input class="form-control " type="month" id="lengthservice" name="lengthservice" required>
-                  </div>
-                </div>
+									<label for="lengthservice"  class="col-md-3 col-sm-3 col-form-label">Length of Service</label>
+									<div class="col-md-8">
+										<div class="input-group date" >
+											<input type="month" id="lengthservice" name="lengthservice" class="form-control">
+											<div class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
               </div>
 
               <div class="col-md-6">

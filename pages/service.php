@@ -4,17 +4,20 @@
   <li class="breadcrumb-item"><a href="javascript:;">Managed Tables</a></li>
 </ol>
 
-<h1 class="page-header">Section</h1>
+<h1 class="page-header">service</h1>
 <div class="row">
   <div class="col-lg-2">
     <p class="m-b-20">
-      <a href="#myModal" class="btn btn-sm btn-primary" data-toggle="modal" id="btnadd">Add Section</a>
+      <a href="#myModal" class="btn btn-sm btn-primary" data-toggle="modal" id="btnadd">Add service</a>
     </p>
   </div>
+
 </div>
 
 
 <div class="row">
+
+
   <div class="col-lg-6 ui-sortable">
     <div class="panel panel-inverse">
 
@@ -25,16 +28,15 @@
           <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
           <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
         </div>
-        <h4 class="panel-title">Section</h4>
+        <h4 class="panel-title">service</h4>
       </div>
 
       <div class="panel-body table-responsive">
-        <table id="mysection" class="table w-100">
+        <table id="myservice" class="table w-100">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>DIVISION</th>
+              <th>USAGE ROLE</th>
+              <th>OFFICE</th>
               <th>ACTION</th>
             </tr>
           </thead>
@@ -62,16 +64,26 @@
                 <h4 class="card-title">Office Information</h4>
                 <h6 class="card-subtitle"></h6>
 
-                <div class="form-group row m-b-15" id="sectionnameform">
-                  <label for="sectionnametxt" class="col-md-3 col-sm-3 col-form-label">Name</label>
+
+                <div class="form-group row m-b-15" id="servicenameform">
+                  <label for="servicenametxt" class="col-md-3 col-sm-3 col-form-label">Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="sectionnametxt" name="sectionnametxt" placeholder="Name" required>
+                    <input type="text" class="form-control alphabetic" id="servicenametxt" name="servicenametxt" placeholder="Name">
                   </div>
                 </div>
-                <div class="form-group row m-b-15" id="sectiondivisionform">
-                  <label for="sectiondivisiontxt" class="col-md-3 col-sm-3 col-form-label">Type</label>
+                <div class="form-group row" id="servicetypeform">
+                  <label for="serviceofficetxt" class="col-md-3 col-sm-3 col-form-label">Office</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="sectiondivisiontxt" name="sectiondivisiontxt" placeholder="Type" required>
+                    <?php  require_once('../../config/database.php');
+                    $sql = mysqli_query($connect, "SELECT * FROM tbloffice"); ?>
+                    <select class="form-control" id="serviceofficetxt" name="serviceofficetxt" placeholder="Office" required>
+                      <?php
+                        while ($row = mysqli_fetch_assoc($sql))
+                          {
+                            echo "<option value='".$row['officeID']."'>".$row['officeNAME']."</option>";
+                          }
+                        ?>
+                    </select>
                   </div>
                 </div>
 

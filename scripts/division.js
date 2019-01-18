@@ -6,15 +6,15 @@ var table = $('#mydivision').DataTable({
     method: 'POST'
   },
   'columnDefs': [{
-    'targets': 3,
+    'targets': 2,
     'orderable': false
   },{
     "visible": false,
-    "targets": 2
+    "targets": 1
   }],
 
   "order": [
-    [2, 'asc']
+    [1, 'asc']
   ],
   "displayLength": 25,
   "drawCallback": function(settings) {
@@ -23,7 +23,7 @@ var table = $('#mydivision').DataTable({
       page: 'current'
     }).nodes();
     var last = null;
-    api.column(2, {
+    api.column(1, {
       page: 'current'
     }).data().each(function(group, i) {
       if (last !== group) {
@@ -35,10 +35,10 @@ var table = $('#mydivision').DataTable({
 });
 $('#myTable tbody').on('click', 'tr.group', function() {
   var currentOrder = table.order()[0];
-  if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
-    table.order([2, 'desc']).draw();
+  if (currentOrder[0] === 1 && currentOrder[1] === 'asc') {
+    table.order([1, 'desc']).draw();
   } else {
-    table.order([2, 'asc']).draw();
+    table.order([1, 'asc']).draw();
   }
 });
 

@@ -1,16 +1,16 @@
 <?php
     session_start();
     include '../../config/database.php';
-    $type = $_POST['unittypetxt'];
+    $type = $_POST['unitdivisiontxt'];
     $name = $_POST['unitnametxt'];
     $action = $_POST['action'];
     $id = $_POST['id'];
     if ($action == 'Add'){
-        mysqli_query($connect, "INSERT INTO tblunit ( unitNAME , unitTYPE )VALUES( '$name' , '$type' )");
+        mysqli_query($connect, "INSERT INTO tblunit ( unitNAME , unitDIVISIONID )VALUES( '$name' , '$type' )");
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE tblunit SET unitNAME = '$name' , unitTYPE = '$type' WHERE unitID = $id");
+        mysqli_query($connect, "UPDATE tblunit SET unitNAME = '$name' , unitDIVISIONID = '$type' WHERE unitID = $id");
 
         echo 'Update Successfully';
     }

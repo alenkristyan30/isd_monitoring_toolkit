@@ -5,6 +5,6 @@
     $row = mysqli_fetch_assoc($sql);
     $output = array(
         "name" => $row['sectionNAME'],
-        "type" => $row['sectionTYPE']
+        "type" => $row['sectionDIVISIONID']
     );
     echo json_encode($output);

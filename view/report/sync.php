@@ -1,8 +1,8 @@
 <?php
     include '../../config/database.php';
     $sql = mysqli_query($connect, "SELECT reportID , userinfoFIRSTNAME , userinfoSURNAME , userinfoMIDDLENAME , infosystemABBREVIATION , reportCATEGORY , reportPRIORITY , reportSEVERITY , reportSTATUS , reportDATE , reportFIXEDDATE FROM tblreports
-                                    INNER JOIN tbluserinfo ON tbluserinfo.userinfoID = tblreports.userID
-                                    INNER JOIN tblinfosystem ON tblinfosystem.infosystemID = tblreports.systemID");
+                                    INNER JOIN tbluserinfo ON tbluserinfo.userinfoID = tblreports.reportUSERID
+                                    INNER JOIN tblinfosystem ON tblinfosystem.infosystemID = tblreports.reportSYSTEMID");
     $output = array('data' => array());
     while ($row = mysqli_fetch_assoc($sql)) {
       $fullname = '<p>'.$row['userinfoSURNAME'].' , '.$row['userinfoFIRSTNAME'].' '.$row['userinfoMIDDLENAME'].' </p>';

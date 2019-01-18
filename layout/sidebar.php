@@ -46,6 +46,7 @@
         </a>
         <ul class="sub-menu">
           <li><a href="../office">Office</a></li>
+          <li><a href="../service">Service</a></li>
           <li><a href="../division">Division</a></li>
           <li><a href="../section">Section</a></li>
           <li><a href="../unit">Unit</a></li>
@@ -74,7 +75,7 @@
           </a>
           <ul class="sub-menu">
             <li><a href="../report">Report</a></li>
-            <li><a href="../">Team</a></li>
+            <li><a href="../team">Team</a></li>
           </ul>
         </li>
       <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>

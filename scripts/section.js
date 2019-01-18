@@ -23,13 +23,13 @@ function name_validation() {
   }
 }
 function type_validation() {
-  if ($('#sectiontypetxt').val() == '') {
-    $('#sectiontypetxt').addClass('is-invalid');
-    $('#sectiontypeform').addClass('is-invalid');
+  if ($('#sectiondivisiontxt').val() == '') {
+    $('#sectiondivisiontxt').addClass('is-invalid');
+    $('#sectiondivisionform').addClass('is-invalid');
     bool = false;
   } else {
-    $('#sectiontypetxt').removeClass('is-invalid');
-    $('#sectiontypeform').removeClass('is-invalid');
+    $('#sectiondivisiontxt').removeClass('is-invalid');
+    $('#sectiondivisionform').removeClass('is-invalid');
     bool = true;
   }
 }
@@ -62,10 +62,10 @@ $('#sectionnametxt').bind('input', function() {
 });
 
 
-$('#sectiontypetxt').blur(function() {
+$('#sectiondivisiontxt').blur(function() {
   type_validation();
 });
-$('#sectiontypetxt').bind('input', function() {
+$('#sectiondivisiontxt').bind('input', function() {
   type_validation();
 });
 
@@ -79,9 +79,9 @@ function validate() {
 
 $('#btnadd').click(function() {
   $('#action').val('Add');
-  $('#sectiontypetxt').val('');
-  $('#sectiontypetxt').removeClass('is-invalid');
-  $('#sectiontypeform').removeClass('is-invalid');
+  $('#sectiondivisiontxt').val('');
+  $('#sectiondivisiontxt').removeClass('is-invalid');
+  $('#sectiondivisionform').removeClass('is-invalid');
   $('#sectionnametxt').val('');
   $('#sectionnametxt').removeClass('is-invalid');
   $('#sectionnameform').removeClass('is-invalid');
@@ -100,7 +100,7 @@ $(document).on('click', 'a[name="edit"]', function() {
     success: function(data) {
       $('#id').val(id);
       $('#myModal').modal('show');
-      $('#sectiontypetxt').val(data.type);
+      $('#sectiondivisiontxt').val(data.type);
       $('#sectionnametxt').val(data.name);
     }
   })

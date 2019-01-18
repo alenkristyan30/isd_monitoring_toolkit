@@ -1,7 +1,7 @@
 <?php
     session_start();
     include '../../config/database.php';
-    $type = $_POST['sectiontypetxt'];
+    $type = $_POST['sectiondivisiontxt'];
     $name = $_POST['sectionnametxt'];
     $action = $_POST['action'];
     $id = $_POST['id'];
@@ -10,7 +10,7 @@
         echo 'Added Successfully';
     }
     if ($action == 'Edit') {
-        mysqli_query($connect, "UPDATE tblsection SET sectionNAME = '$name' , sectionTYPE = '$type' WHERE sectionID = $id");
+        mysqli_query($connect, "UPDATE tblsection SET sectionNAME = '$name' , sectionDIVISIONID = '$type' WHERE sectionID = $id");
 
         echo 'Update Successfully';
     }

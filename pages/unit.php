@@ -37,7 +37,7 @@
             <tr>
               <th>ID</th>
               <th>NAME</th>
-              <th>TYPE</th>
+              <th>DIVISION</th>
               <th>ACTION</th>
             </tr>
           </thead>
@@ -71,10 +71,10 @@
                     <input type="text" class="form-control" id="unitnametxt" name="unitnametxt" placeholder="Name" required>
                   </div>
                 </div>
-                <div class="form-group row m-b-15" id="unittypeform">
-                  <label for="unittypetxt" class="col-sm-3 text-left control-label">Type</label>
+                <div class="form-group row m-b-15" id="unitdivisionform">
+                  <label for="unitdivisiontxt" class="col-sm-3 text-left control-label">Type</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="unittypetxt" name="unittypetxt" placeholder="Type" required>
+                    <input type="text" class="form-control" id="unitdivisiontxt" name="unitdivisiontxt" placeholder="Type" required>
                   </div>
                 </div>
 

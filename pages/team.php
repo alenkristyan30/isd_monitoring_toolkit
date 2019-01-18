@@ -32,7 +32,6 @@
         <table id="myteam" class="table w-100">
           <thead>
             <tr>
-              <th>ID</th>
               <th>NAME</th>
               <th>ROLE</th>
               <th>REPORT ID</th>

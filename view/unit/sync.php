@@ -12,7 +12,7 @@
         $output['data'][] = array(
             $row['unitID'],
             $row['unitNAME'],
-            $row['unitTYPE'],
+            $row['unitDIVISIONID'],
             $button
 
 
